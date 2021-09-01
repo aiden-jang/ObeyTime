@@ -13,12 +13,14 @@
 !/log/.keep
 !/tmp/.keep
 
-# Ignore uploaded files in development
+# Ignore pidfiles, but keep the directory.
+/tmp/pids/*
+!/tmp/pids/
+!/tmp/pids/.keep
+
+# Ignore uploaded files in development.
 /storage/*
 !/storage/.keep
-
-/node_modules
-/yarn-error.log
 
 /public/assets
 .byebug_history
@@ -26,10 +28,7 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-
 node_modules/
-bundle.js
-bundle.js.map
-.byebug_history
+bundle.js*
 .DS_Store
 npm-debug.log
