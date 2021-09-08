@@ -44,7 +44,7 @@ class LogInForm extends React.Component {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to ObeyTime!
+            <h2>Please sign in</h2>
           <br/>
           Please log in or {this.props.otherForm}
           <div onClick={this.props.closeModal} className="close-x">X</div>

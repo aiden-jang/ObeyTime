@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; 
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -7,22 +8,28 @@ class NavBar extends React.Component {
 
   render () {     
     return (
-      <div className="nav">
-        { this.props.currentUser ? (
-          <hgroup className="header-group">
-            <h2 className="header-name">Hello, {this.props.currentUser.email}!</h2>
-            <button className="header-button" onClick={this.props.logout}>Log Out</button>
-            <li>User Acccount</li>
-            <li>Upcoming reservations</li>
-            <li>Notification</li>
-          </hgroup>
-      ) : (
-      <nav className="login-signup">
-        <button onClick={() => this.props.openModal('signup')}>Signup</button>
-        <button onClick={() => this.props.openModal('login')}>Login</button>
-      </nav>
-    )}
-    </div>
+      <div className="navbar">
+        <div className="logo">
+          <Link to={"/"}>OpenTable</Link>
+        </div>
+        <div className="user-features">
+          { this.props.currentUser ? (
+            <div className="singed-in">
+              <button className="logout-button" onClick={this.props.logout}>Log Out</button>
+              <li>User Acccount</li>
+              <li>Upcoming reservations</li>
+              <li>Notification</li>
+            </div>
+          ) : (
+            <div className="login-signup">
+              <button className="btn signup" onClick={() => this.props.openModal('signup')}>Sign up</button>
+              <button className="btn login" onClick={() => this.props.openModal('login')}>Sign in</button>
+            </div>
+          )}
+        </div>
+        <div className="search">
+        </div>
+      </div>
     )
   }
 }
