@@ -1,6 +1,7 @@
 import React from 'react';
-import GreetingContainer from './greeting/greeting_container';
+import NavBar from './main/nav_bar_container';
 import Modal from './modal/modal';
+import Home from './main/home';
 import {
   Route,
   Redirect,
@@ -13,10 +14,8 @@ const App = () => (
   <div>
     <Modal />
     <header>
-      <Link to="/" className="header-link">
-        <h1>ObeyTime</h1>
-      </Link>
-      <GreetingContainer />
+    <NavBar />
+      <Route exact path="/" component={Home}/>
     </header>
   </div>
 );
