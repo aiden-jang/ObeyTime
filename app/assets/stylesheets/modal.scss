@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
 .modal-background {
     position: fixed;
     top: 0;
@@ -14,13 +16,90 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 500px;
+    height: 550px;
     width: 440px; 
     border-radius: 5px;
+    overflow-y: auto;
+
 }
 
-.login-form-container {
+.session-form {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.close-x {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+}
+
+.login-input {
+    width: 350px;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: .05rem solid #d8d9db;
+
+}
+
+.session-submit {
+    width: 350px;
+    height: 50px;
+    margin-bottom: 10px;
+    background-color: #da3743;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    font-size: 18px;
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.session-submit:hover {
+    background-color: #a1232c;
+    transition: background-color .4s;
+}
+
+.session-demo {
+    width: 350px;
+    height: 50px;
+    margin-bottom: 10px;
+    background-color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: .05rem solid #d8d9db;
+    cursor: pointer;
+
+}
+
+.session-new-signup {
+    background-color: transparent;
+    border: 0px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    color: #da3743;
+}
+
+.session-demo:hover {
+    border: 2px solid #a1232c;
+    transition: border .4s;
+}
+
+input{
+    text-indent: 10px;
+}
+
+hr {
+    border: 1px solid rgba(0,0,0,.12);
+    border-width: 0.5px;
+
 }

@@ -28,6 +28,7 @@ class LogInForm extends React.Component {
     const demoUser = Object.assign({}, this.props.demo);
     this.props.processForm(demoUser).then(this.props.closeModal);
   }
+
   renderErrors() {
     return(
       <ul>
@@ -42,35 +43,39 @@ class LogInForm extends React.Component {
 
   render() {
     return (
-      <div className="login-form-container">
+      <div className="session-form">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-            <h2>Please sign in</h2>
-          <br/>
-          Please log in or {this.props.otherForm}
           <div onClick={this.props.closeModal} className="close-x">X</div>
+
+          <h2>Please sign in</h2>
+          <hr/>
           {this.renderErrors()}
-          <div className="login-form">
+          <br/>
+
+          <div className="session-form-container">
+            <input type="text"
+              value={this.state.email}
+              onChange={this.update('email')}
+              className="login-input"
+              placeholder="Email"
+            />
             <br/>
-            <label>email:
-              <input type="text"
-                value={this.state.email}
-                onChange={this.update('email')}
-                className="login-input"
-              />
-            </label>
+            <input type="password"
+              value={this.state.password}
+              onChange={this.update('password')}
+              className="login-input"
+              placeholder="Password"
+            />
             <br/>
-            <label>Password:
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="login-input"
-              />
-            </label>
+            <input className="session-submit" type="submit" value="Sign In" />
+            <hr/>
             <br/>
-            <input className="session-submit" type="submit" value={this.props.formType} />
-            <button className="session-demo" onClick ={this.handleDemo}>Sign In As Demo</button> 
+            <p className="alternative">Don't want to complete the form?</p>
+            <br/>
+            <button className="session-demo" onClick ={this.handleDemo}>Continue with Demo Account</button> 
           </div>
         </form>
+        <p className="login-input-new">New to ObeyTime? {this.props.otherForm} </p>
       </div>
     );
   }

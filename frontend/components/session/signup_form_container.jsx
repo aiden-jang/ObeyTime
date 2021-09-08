@@ -6,17 +6,15 @@ import SignUpForm from './signup_form';
 
 const mapStateToProps = ({ errors }) => ({
   errors: errors.session,
-  formType: 'signup'
+  demo: {
+    email: "demo@mail.com",
+    password: "password123"
+  }
 });
 
 const mapDispatchToProps = dispatch => ({
   processForm: (user) => dispatch(signup(user)),
-  closeModal: () => dispatch(closeModal()),
-  otherForm: (
-      <button onClick={() => dispatch(openModal('login'))}>
-        Login
-      </button>
-  )
+  closeModal: () => dispatch(closeModal())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignUpForm);
