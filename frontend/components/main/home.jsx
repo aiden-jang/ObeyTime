@@ -1,5 +1,5 @@
 import React from 'react'; 
-import Footer from './footer';
+import SearchBar from '../search/search_bar'
 
 class Home extends React.Component {
     constructor(props) {
@@ -8,11 +8,8 @@ class Home extends React.Component {
 
     render () {
         return (
-            <div className="home-page">
-                <p>This will be my main</p>
-                <footer>
-                    <Footer />
-                </footer>
+            <div className="home-page-search">
+                <SearchBar />
             </div>
         )
     }; 

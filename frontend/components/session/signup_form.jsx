@@ -12,6 +12,8 @@ class SignUpForm extends React.Component {
       primary_location: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemo = this.handleDemo.bind(this); 
+
   }
 
   update(field) {
@@ -25,6 +27,13 @@ class SignUpForm extends React.Component {
     const user = Object.assign({}, this.state);
     this.props.processForm(user).then(this.props.closeModal);
   }
+
+  handleDemo(e) {
+    e.preventDefault();
+    const demoUser = Object.assign({}, this.props.demo);
+    this.props.loginDemo(demoUser).then(this.props.closeModal);
+  }
+
 
   renderErrors() {
     return(
@@ -104,4 +113,4 @@ class SignUpForm extends React.Component {
   }
 }
 
-export default withRouter(SignUpForm);
+export default SignUpForm;

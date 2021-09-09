@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
+import NavBarProfile from './nav_bar_profile';
+import NavBarReservation from './nav_bar_reservation';
+import NavBarNotification from './nav_bar_notification';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -16,9 +19,9 @@ class NavBar extends React.Component {
           { this.props.currentUser ? (
             <div className="singed-in">
               <button className="logout-button" onClick={this.props.logout}>Log Out</button>
-              <li>User Acccount</li>
-              <li>Upcoming reservations</li>
-              <li>Notification</li>
+              <NavBarProfile />
+              <NavBarReservation />
+              <NavBarNotification />
             </div>
           ) : (
             <div className="login-signup">

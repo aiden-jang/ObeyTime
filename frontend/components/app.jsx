@@ -2,6 +2,10 @@ import React from 'react';
 import NavBar from './main/nav_bar_container';
 import Modal from './modal/modal';
 import Home from './main/home';
+import Footer from './main/footer';
+
+import SearchPage from './search/search_page';
+
 import {
   Route,
   Redirect,
@@ -12,11 +16,12 @@ import {
 
 const App = () => (
   <div>
-    <Modal />
-    <header>
-    <NavBar />
+      <Modal />
+      <Route path='/' component={NavBar} />
       <Route exact path="/" component={Home}/>
-    </header>
+      <Route exact path='/search' component={SearchPage} />
+      <Route path='/' component={Footer} />
+
   </div>
 );
 
