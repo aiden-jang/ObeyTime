@@ -23,3 +23,8 @@
   body {
     font-family: 'Raleway', sans-serif;
   }
+
+  @import './reset';
+  @import './modal';
+  @import './nav_bar';
+  @import './search_bar';

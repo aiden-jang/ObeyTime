@@ -3,22 +3,22 @@
     display: flex; 
     background-color: white;
     border: 1px black solid;
-    padding: 18px;
-    border-top: 28px solid #f1f2f4;;
-    
+    padding: 20px;
+    border-top: 30px solid #f1f2f4;
+    text-align: center;
+
 }
 
 .user-features {
-    position: fixed;
+    position: absolute;
     right: 20px;
 }
-
-
+  
 .btn {
     padding: 8px 12px;
     margin: -10px 5px;
     font-family: 'Raleway', sans-serif;
-    font-size: 15px;
+    font-size: 18px;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -32,10 +32,4 @@
 .login {
     background-color: white;
     border: .0625rem solid #d8d9db;
-}
-
-.notification-container {
-    background-color: white;
-    width:100px;
-    height:200px;
 }

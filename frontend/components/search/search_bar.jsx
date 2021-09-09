@@ -14,12 +14,12 @@ class SearchBar extends React.Component {
         return (
             <div className="search-form">
                 <form onSubmit={this.handleSubmit} className="search-form-box">
+
                     <h1 id="search-title">Find your table for any occasion</h1>
                     <br/>
-                    
                     <div className="search-form-input">
                         <input className="search-input date" type="date" />
-                        <input className="search-input time" type="time" value="18:30" />
+                        <input className="search-input time" type="time" />
                         <select className="search-input party" defaultValue="2">
                             <option value="1">1 person</option>
                             <option value="2">2 people</option>
