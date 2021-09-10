@@ -13,7 +13,7 @@
     position: absolute;
     right: 20px;
 }
-  
+
 .btn {
     padding: 8px 12px;
     margin: -10px 5px;
@@ -33,3 +33,25 @@
     background-color: white;
     border: .0625rem solid #d8d9db;
 }
+
+.nav-bar-profile {
+    display: flex;
+    border:1px solid black;
+    margin-right:100px;
+}
+
+.nav-bar-profile-show {
+    display: block;
+    position: absolute;
+    right: 70%;
+
+    background-color: white;
+    width: 300px; 
+    border-radius: 5px;
+    border:1px solid lightgray;
+}
+.nav-bar-profile-show ul {
+    list-style-type: none;
+
+}
+

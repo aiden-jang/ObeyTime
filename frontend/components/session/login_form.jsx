@@ -10,6 +10,9 @@ class LogInForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDemo = this.handleDemo.bind(this); 
   }
+  componentDidMount() {
+    this.props.clearErrors();
+  }
 
   update(field) {
     return e => this.setState({
@@ -19,12 +22,15 @@ class LogInForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    this.props.clearErrors();
     const user = Object.assign({}, this.state);
     this.props.processForm(user).then(this.props.closeModal);
+    
   }
 
   handleDemo(e) {
     e.preventDefault();
+    this.props.clearErrors();
     const demoUser = Object.assign({}, this.props.demo);
     this.props.processForm(demoUser).then(this.props.closeModal);
   }

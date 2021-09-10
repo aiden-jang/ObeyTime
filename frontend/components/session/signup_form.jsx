@@ -15,7 +15,9 @@ class SignUpForm extends React.Component {
     this.handleDemo = this.handleDemo.bind(this); 
 
   }
-
+  componentDidMount() {
+    this.props.clearErrors();
+  }
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -24,12 +26,14 @@ class SignUpForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    this.props.clearErrors();
     const user = Object.assign({}, this.state);
     this.props.processForm(user).then(this.props.closeModal);
   }
 
   handleDemo(e) {
     e.preventDefault();
+    this.props.clearErrors();
     const demoUser = Object.assign({}, this.props.demo);
     this.props.loginDemo(demoUser).then(this.props.closeModal);
   }
@@ -57,7 +61,6 @@ class SignUpForm extends React.Component {
           <h2>Welcome to ObeyTime!</h2>
           <hr/>
           {this.renderErrors()}
-          <br/>
 
           <div className="session-form-container">
             <input type="text"
@@ -92,7 +95,7 @@ class SignUpForm extends React.Component {
               value={this.state.primary_location}
               onChange={this.update('primary_location')}
               className="login-input">
-              <option value="" selected disabled hidden>Primary Dining Location *</option>
+              <option value="" disabled hidden>Primary Dining Location *</option>
               <option value="NYC">New York / Tri-State Area</option>
               <option value="SFB">San Francisco Bay Area</option>
               <option value="HI">Hawaii</option>
