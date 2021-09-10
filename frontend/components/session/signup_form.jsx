@@ -77,7 +77,7 @@ class SignUpForm extends React.Component {
               placeholder="Last Name *"
             />
             <br/>
-            <input type="text"
+            <input type="email"
               value={this.state.email}
               onChange={this.update('email')}
               className="login-input"

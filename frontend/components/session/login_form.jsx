@@ -59,7 +59,7 @@ class LogInForm extends React.Component {
           <br/>
 
           <div className="session-form-container">
-            <input type="text"
+            <input type="email"
               value={this.state.email}
               onChange={this.update('email')}
               className="login-input"
