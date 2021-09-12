@@ -29,11 +29,11 @@ const Modal = ({modal, closeModal}) => {
 }
 
 const mapStateToProps = state => ({
-    modal: state.ui.modal
+  modal: state.ui.modal
 });
 
 const mapDispatchToProps = dispatch => ({
-    closeModal: () => dispatch(closeModal())
+  closeModal: () => dispatch(closeModal())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Modal);

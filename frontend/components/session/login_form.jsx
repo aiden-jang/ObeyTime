@@ -25,7 +25,6 @@ class LogInForm extends React.Component {
     this.props.clearErrors();
     const user = Object.assign({}, this.state);
     this.props.processForm(user).then(this.props.closeModal);
-    
   }
 
   handleDemo(e) {

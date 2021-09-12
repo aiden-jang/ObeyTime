@@ -13,8 +13,8 @@ export const receiveRestaurant = restaurant => ({
     restaurant 
 });
 
-export const fetchRestaurants = () => dispatch => (
-    APIUtil.fetchRestaurants()
+export const fetchRestaurants = filters => dispatch => (
+    APIUtil.fetchRestaurants(filters)
         .then(restaurants => (dispatch(receiveRestaurants(restaurants)))
     )
 );

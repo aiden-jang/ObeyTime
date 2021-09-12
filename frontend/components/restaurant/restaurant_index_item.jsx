@@ -1,9 +1,9 @@
 import React from 'react';
 
-const RestaurantItem = props => {
+const RestaurantIndexItem = props => {
   return (
-    <h2>{props.restaurant.name}</h2>
+    <h2>hey {props.restaurant.name}</h2>
   )
 }
 
-export default RestaurantItem;
+export default RestaurantIndexItem;

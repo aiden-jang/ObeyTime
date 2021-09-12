@@ -3,7 +3,7 @@ import NavBar from './main/nav_bar_container';
 import Modal from './modal/modal';
 import Home from './main/home';
 import Footer from './main/footer';
-import SearchPage from './search/search_page';
+import SearchContainer from './search/search_container';
 import RestaurantShowContainer from './restaurant/restaurant_show_container'
 
 import {
@@ -19,7 +19,7 @@ const App = () => (
       <Modal />
       <Route path='/' component={NavBar} />
       <Route exact path="/" component={Home}/>
-      <Route exact path='/search' component={SearchPage} />
+      <Route exact path='/search' component={SearchContainer} />
       <Route exact path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
   </div>
 );
