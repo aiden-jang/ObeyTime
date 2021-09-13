@@ -1,5 +1,6 @@
 import React from 'react'; 
-import SearchBar from '../search/search_bar'
+import SearchBar from '../search/search_bar';
+import RecommendRestaurants from './recommend_restaurants';
 
 class Home extends React.Component {
     constructor(props) {
@@ -10,6 +11,7 @@ class Home extends React.Component {
         return (
             <div className="home-page-search">
                 <SearchBar />
+                <RecommendRestaurants />
             </div>
         )
     }; 

@@ -21,8 +21,8 @@ const App = () => (
       <Route exact path="/" component={Home}/>
       <Route exact path='/search' component={SearchContainer} />
       <Route exact path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
+      <Route path='/' component={Footer} />
   </div>
 );
-//      <Route path='/' component={Footer} />
 
 export default App;
