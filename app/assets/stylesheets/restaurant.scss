@@ -1,8 +1,13 @@
 .restaurant-show-image {
-    display: block;
-    height: 250px; 
-    background-image: image-url('home-search-bar-background.jpeg');
-    background-size: 100%, 100%;
+    border: 2px solid red;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    height: 250px;
+}
+.restaurant-show-image {
+    width: 100%;
 }
 
 .restaurant-show-main {

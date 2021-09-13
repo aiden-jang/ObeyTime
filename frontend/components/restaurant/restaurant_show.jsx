@@ -11,7 +11,9 @@ class RestaurantShow extends React.Component {
 
         return (
             <div className="restaurant-show-outer">
+
                 <div className="restaurant-show-image">
+                    <img src={restaurant.photoUrl} />
                 </div>
                 <div className="restaurant-show-main">
                     <h1>{restaurant.name}</h1>

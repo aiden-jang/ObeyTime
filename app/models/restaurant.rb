@@ -20,4 +20,5 @@
 class Restaurant < ApplicationRecord
     validates :name, :address, :phone_number, :hours, :payment_option, :price_range, :dining_style, :cuisine, :neighborhood, :parking_details, :description, presence: true 
 
+    has_one_attached :photo
 end
