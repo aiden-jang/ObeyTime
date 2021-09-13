@@ -3,7 +3,7 @@ class Api::RestaurantsController < ApplicationController
         restaurants = Restaurant.all
 
         if params[:price]
-            restaurants = Restaurant.where('price_range = ?', params[:price])
+            restaurants = Restaurant.where('price_range IN (?)', params[:price])
         end
   
       
