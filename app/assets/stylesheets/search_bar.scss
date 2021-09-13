@@ -27,7 +27,8 @@
     cursor: pointer;
     border: 1px solid rgb(212, 212, 212);
     font-family: 'Raleway', sans-serif;
-
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 .search-form-input input[type="time"]{
     width: 120px;
@@ -42,7 +43,8 @@
     text-align: center;
     border: 1px solid rgb(212, 212, 212);
     font-family: 'Raleway', sans-serif;
-
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 .search-form-input input[type="text"]{
     margin-left: 20px;
@@ -71,7 +73,6 @@
 .search-form-input input[type="submit"]:hover {
     background-color: #a1232c;
     transition: background-color .4s;
-    
 }
 
     

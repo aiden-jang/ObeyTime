@@ -1,8 +1,15 @@
 import React from 'react';
 import RestaurantIndexItem from './restaurant_index_item';
+import { useDispatch } from 'react-redux';
+import { fetchRestaurants } from '../../actions/restaurant_actions';
 
 const RestaurantIndex = ({restaurants}) => {
-  if (!restaurants) return null;
+  const dispatch = useDispatch();
+
+  if (restaurants.length === 0) {
+    dispatch(fetchRestaurants());
+
+  }
   return (
       <div>
         <h1>Restaurants: </h1>

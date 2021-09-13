@@ -5,11 +5,10 @@ import SearchResult from './search_result';
 import RestaurantIndex from '../restaurant/restaurant_index';
 
 const SearchPage = ({ restaurants, updateFilter, clearFilter, location}) => {
-    
 
     return (
         <div>
-            {location.state.input}
+            { location.state ? (location.state.input) : (<p>empty</p>)}
             <SearchPageSearchBar />
             <SearchFilter 
              updateFilter={updateFilter}
@@ -24,3 +23,4 @@ const SearchPage = ({ restaurants, updateFilter, clearFilter, location}) => {
 };
 
 export default SearchPage;
+
