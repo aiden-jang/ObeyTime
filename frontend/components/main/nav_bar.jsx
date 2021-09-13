@@ -11,7 +11,9 @@ class NavBar extends React.Component {
     return (
       <div className="navbar">
         <div className="logo">
-          <Link to={"/"}>OpenTable</Link>
+          <Link to={"/"}>
+            <img src={window.logo} alt='Logo' />
+          </Link>
         </div>
         <div className="user-features">
           { this.props.currentUser ? (

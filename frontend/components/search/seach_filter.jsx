@@ -30,7 +30,7 @@ class SearchFilter extends React.Component {
 
     render () {
         return (
-            <div className="search-filter-form">
+            <div className="search-filter-content">
             <label>Price
                 <input type="checkbox" value="$" onChange={this.priceHandleChange} />
                 <label>$</label>
@@ -46,4 +46,5 @@ class SearchFilter extends React.Component {
         )
     }
 }
+
 export default SearchFilter;

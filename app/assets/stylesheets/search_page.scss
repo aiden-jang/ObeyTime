@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 .search-page-form {
     display: flex;
@@ -8,6 +9,36 @@
     overflow: hidden;
     background-color: rgb(124, 124, 124);
 }
+.search-page {
 
-.search-filter-form {
 }
+.search-filter-container {
+    display: block;
+
+    position: relative;
+    margin-left: 100px;
+    margin-top: 20px;
+    width: 250px;
+}
+.search-filter-content {
+    
+}
+
+.search-result-container {
+    display: block;
+
+    position: relative;
+    margin-left: 400px;
+ 
+    width: 600px;
+}
+
+.search-result-content {
+    flex-direction: row;
+}
+
+.search-result-restaurant {
+    width: 600px;
+    height: 100px;
+}
+

@@ -2,7 +2,10 @@ import React from 'react';
 
 const RestaurantIndexItem = props => {
   return (
-    <h2>hey {props.restaurant.name}</h2>
+    <div className="search-result-restaurant">
+             <hr />
+      <h2>{props.restaurant.name}</h2>
+    </div>
   )
 }
 

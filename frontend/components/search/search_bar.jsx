@@ -8,7 +8,7 @@ class SearchBar extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this)
         this.updateInput = this.updateInput.bind(this)
         this.state = {
-            input: 'yo'
+            input: 'test input'
         };
     }
 
