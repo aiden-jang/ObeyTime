@@ -4,6 +4,9 @@ class ReservationConfirmForm extends React.Component {
     constructor(props) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
+        if (!this.props.location.state) {
+            this.props.history.push('/');
+        }
         const { party_size, date, time, restaurant, currentUser } = this.props.location.state
         this.state = {
             party_size,

@@ -10,6 +10,7 @@ import RestaurantShowContainer from './restaurant/restaurant_show_container'
 import ReservationConfirmContainer from './reservation/reservation_confirm_container'
 import ReservationShowContainer from './reservation/reservation_show_container'
 import ReservationCancel from './reservation/reservation_cancel'
+import ReservationCancelConfirm from './reservation/reservation_cancel_confirm'
 
 import {
   Route,
@@ -29,6 +30,8 @@ const App = () => (
 <Switch>
       <ProtectedRoute exact path='/booking/details' component={ReservationConfirmContainer} />
       <ProtectedRoute exact path='/book/cancel' component={ReservationCancel} />
+      <ProtectedRoute exact path='/book/cancel/confirm' component={ReservationCancelConfirm} />
+
       <ProtectedRoute exact path ="/reservations/:reservationId" component={ReservationShowContainer} />
       <Route exact path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
   </Switch>
