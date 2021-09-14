@@ -7,9 +7,11 @@ class LogInForm extends React.Component {
       email: '',
       password: ''
     };
+
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDemo = this.handleDemo.bind(this); 
   }
+
   componentDidMount() {
     this.props.clearErrors();
   }
@@ -24,18 +26,20 @@ class LogInForm extends React.Component {
     e.preventDefault();
     this.props.clearErrors();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user).then(this.props.closeModal);
+    this.props.processForm(user)
+      .then(this.props.closeModal);
   }
 
   handleDemo(e) {
     e.preventDefault();
     this.props.clearErrors();
     const demoUser = Object.assign({}, this.props.demo);
-    this.props.processForm(demoUser).then(this.props.closeModal);
+    this.props.processForm(demoUser)
+      .then(this.props.closeModal);
   }
 
   renderErrors() {
-    return(
+    return (
       <ul>
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
@@ -43,17 +47,20 @@ class LogInForm extends React.Component {
           </li>
         ))}
       </ul>
-    );
+    )
   }
 
   render() {
     return (
       <div className="session-form">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          <div onClick={this.props.closeModal} className="close-x">X</div>
+          <div onClick={this.props.closeModal} className="close-x">
+            X
+          </div>
 
           <h2>Please sign in</h2>
           <hr/>
+
           {this.renderErrors()}
           <br/>
 
@@ -72,9 +79,11 @@ class LogInForm extends React.Component {
               placeholder="Password"
             />
             <br/>
+
             <input className="session-submit" type="submit" value="Sign In" />
             <hr/>
             <br/>
+            
             <p className="alternative">Don't want to complete the form?</p>
             <br/>
             <button className="session-demo" onClick ={this.handleDemo}>Continue with Demo Account</button> 

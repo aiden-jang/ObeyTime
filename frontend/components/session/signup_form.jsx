@@ -1,5 +1,4 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 
 class SignUpForm extends React.Component {
   constructor(props) {
@@ -11,13 +10,15 @@ class SignUpForm extends React.Component {
       last_name: '',
       primary_location: ''
     };
+
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDemo = this.handleDemo.bind(this); 
-
   }
+
   componentDidMount() {
     this.props.clearErrors();
   }
+
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -38,9 +39,8 @@ class SignUpForm extends React.Component {
     this.props.loginDemo(demoUser).then(this.props.closeModal);
   }
 
-
   renderErrors() {
-    return(
+    return (
       <ul className="session-errors">
         <br/>
         {this.props.errors.map((error, i) => (
@@ -49,17 +49,20 @@ class SignUpForm extends React.Component {
           </li>
         ))}
       </ul>
-    );
+    )
   }
 
   render() {
     return (
       <div className="session-form">
         <form onSubmit={this.handleSubmit} className="signup-form-box">
-          <div onClick={this.props.closeModal} className="close-x">X</div>
+          <div onClick={this.props.closeModal} className="close-x">
+            X
+          </div>
 
           <h2>Welcome to ObeyTime!</h2>
           <hr/>
+
           {this.renderErrors()}
 
           <div className="session-form-container">
@@ -91,6 +94,7 @@ class SignUpForm extends React.Component {
               placeholder="Enter password *"
             />
             <br/>
+
             <select 
               value={this.state.primary_location}
               onChange={this.update('primary_location')}
@@ -101,9 +105,11 @@ class SignUpForm extends React.Component {
               <option value="HI">Hawaii</option>
             </select>
             <br/>
+
             <input className="session-submit" type="submit" value="Create Account" />
             <hr/>
             <br/>
+            
             <p className="alternative">Don't want to complete the form?</p>
             <br/>
             <button className="session-demo" onClick ={this.handleDemo}>Continue with Demo Account</button> 
