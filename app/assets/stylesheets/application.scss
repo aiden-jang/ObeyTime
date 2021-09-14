@@ -21,9 +21,6 @@
     padding: 0;
   }
 
-  body {
-    font-family: 'Raleway', sans-serif;
-  }
 
   @import './reset';
   @import './modal';
@@ -31,3 +28,7 @@
   @import './search_bar';
   @import './restaurant.scss';
   @import './search_page.scss';
+  
+  body {
+    font-family: 'Raleway', sans-serif;
+  }

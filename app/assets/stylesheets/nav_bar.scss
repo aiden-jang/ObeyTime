@@ -48,12 +48,38 @@
     width: 300px; 
     border-radius: 5px;
     border:1px solid lightgray;
+    text-align: left;
+
+}
+.nav-bar-profile-show h3 {
+    margin: 20px 20px;
+    font-weight: bolder;
 }
 .nav-bar-profile-show ul {
     list-style-type: none;
 }
+.nav-bar-profile-show li {
+    height: 30px;
+    padding-top: 10px;
+    font-size: 16px;  
+    text-indent: 20px;
+    color: rgb(131, 131, 131);
+    cursor: pointer;
+}
 
+.nav-bar-profile-show li:hover {
+    background-color:rgb(240, 240, 240);
+
+}
 .logo img {
     width: 150px;
     margin: -20px 10px;
+}
+
+.nav-bar-profile-show button {
+    color: #da3743;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    margin-left: -5px;
 }
