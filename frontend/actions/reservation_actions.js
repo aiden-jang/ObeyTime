@@ -21,30 +21,25 @@ export const removeReservation = reservationId => ({
 
 export const fetchReservations = () => dispatch => (
     APIUtil.fetchReservations(filters)
-        .then(reservations => (dispatch(receiveReservations(reservations)))
-    )
+        .then(reservations => (dispatch(receiveReservations(reservations))))
 );
 
 export const fetchReservation = reservationId => dispatch => (
     APIUtil.fetchReservation(reservationId)
-        .then(reservation => (dispatch(receiveReservation(reservation)))
-    )
+        .then(reservation => (dispatch(receiveReservation(reservation))))
 );
 
 export const createReservation = reservation => dispatch => (
     APIUtil.createReservation(reservation)
-        .then(reservation => (dispatch(receiveReservation(reservation)))
-    )
+        .then(reservation => (dispatch(receiveReservation(reservation))))
 );
 
 export const updateReservation = reservation => dispatch => (
     APIUtil.updateReservation(reservation)
-        .then(reservation => (dispatch(receiveReservation(reservation)))
-    )
+        .then(reservation => (dispatch(receiveReservation(reservation))))
 );
 
 export const deleteReservation = reservationId => dispatch => (
     APIUtil.deleteReservation(reservationId)
-        .then(() => (dispatch(removeReservation()))
-    )
+        .then(() => (dispatch(removeReservation())))
 );
