@@ -7,11 +7,12 @@ import Home from './main/home';
 import Footer from './main/footer';
 import SearchContainer from './search/search_container';
 import RestaurantShowContainer from './restaurant/restaurant_show_container'
-import ReservationConfirmContainer from './reservation/reservation_confirm_container'
+import ReservationConfirmForm from './reservation/reservation_confirm_form'
 import ReservationShowContainer from './reservation/reservation_show_container'
 import ReservationCancel from './reservation/reservation_cancel'
 import ReservationCancelConfirm from './reservation/reservation_cancel_confirm'
-
+import ReservationModify from './reservation/reservation_modify'
+import ReservationEditForm from './reservation/reservation_edit_form'
 import {
   Route,
   Redirect,
@@ -28,12 +29,18 @@ const App = () => (
       <Route exact path='/search' component={SearchContainer} />
 
 <Switch>
-      <ProtectedRoute exact path='/booking/details' component={ReservationConfirmContainer} />
+      <Route exact path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
+      <ProtectedRoute exact path='/booking/details' component={ReservationConfirmForm} />
+
+      <ProtectedRoute exact path='/book/modify' component={ReservationModify} />
+      <ProtectedRoute exact path='/booking/details/edit' component={ReservationEditForm} />
+
+      <ProtectedRoute exact path='/booking/view/:reservationId' component={ReservationShowContainer} />
+    
+      <ProtectedRoute exact path ="/reservations/:reservationId" component={ReservationShowContainer} />
+
       <ProtectedRoute exact path='/book/cancel' component={ReservationCancel} />
       <ProtectedRoute exact path='/book/cancel/confirm' component={ReservationCancelConfirm} />
-
-      <ProtectedRoute exact path ="/reservations/:reservationId" component={ReservationShowContainer} />
-      <Route exact path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
   </Switch>
 
       <Route path='/' component={Footer} />

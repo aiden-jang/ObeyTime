@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux';
-import { createReservation } from '../../actions/reservation_actions';
+import { updateReservation } from '../../actions/reservation_actions';
 
-class ReservationConfirmForm extends React.Component {
+class ReservationEditForm extends React.Component {
     constructor(props) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -12,9 +12,9 @@ class ReservationConfirmForm extends React.Component {
             this.props.history.push('/');
             window.location.reload();
         }
-
-        const { party_size, date, time, restaurant, currentUser } = this.props.location.state
+        const { party_size, date, time, restaurant, currentUser} = this.props.location.state
         this.state = {
+            id: this.props.location.state.reservationId,
             party_size,
             date,
             time,
@@ -28,7 +28,7 @@ class ReservationConfirmForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.createReservation(this.state)
+        this.props.updateReservation(this.state)
             .then(res => this.props.history.push(`/booking/view/${res.reservation.id}`));
     }
     updatePhoneNumber(e) {
@@ -79,7 +79,7 @@ class ReservationConfirmForm extends React.Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-    createReservation: (reservation) => dispatch(createReservation(reservation)),
+    updateReservation: (reservation) => dispatch(updateReservation(reservation)),
 });
 
-export default connect(null, mapDispatchToProps)(ReservationConfirmForm);
+export default connect(null, mapDispatchToProps)(ReservationEditForm);

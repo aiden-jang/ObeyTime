@@ -1,6 +1,6 @@
 export const fetchReservations = () => (
     $.ajax({
-        url: '/api/reservations',
+        url: '/api/reservations'
     })
 );
     
