@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser as farUser } from '@fortawesome/free-regular-svg-icons'
 
 const NavBarProfile = props => {
     const [visible, setVisible] = useState(false);
@@ -15,7 +17,7 @@ const NavBarProfile = props => {
     return (
         <div className="nav-bar-profile" onBlur={hideMenu}>
             <div className="nav-bar-profile-content" onClick={handleDropdownMenu}>
-                <span>PROFILE</span>
+                <FontAwesomeIcon className="profile" icon={farUser} />
                 { visible && (
                     <div onMouseLeave={hideMenu}>
                         <div className="nav-bar-profile-show">
