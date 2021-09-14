@@ -1,4 +1,5 @@
-import React from 'react'; 
+import React from 'react';
+import ReservationForm from '../reservation/reservation_form';
 
 class RestaurantShow extends React.Component {
     componentDidMount () {
@@ -7,8 +8,8 @@ class RestaurantShow extends React.Component {
 
     render() {
         if (!this.props.restaurant) return null;
-        const { restaurant } = this.props;
-
+        const { restaurant, openModal, currentUser } = this.props;
+        
         return (
             <div className="restaurant-show-outer">
 
@@ -25,6 +26,11 @@ class RestaurantShow extends React.Component {
                         <p>{restaurant.description}</p>
                     </div>
                 </div>
+                <ReservationForm
+                    restaurant={restaurant}
+                    openModal={openModal}
+                    currentUser={currentUser}
+                />
                 <div className="restaurant-show-side">
                     <div className="restaurant-show-side-info">
                     <p>{restaurant.address}</p>

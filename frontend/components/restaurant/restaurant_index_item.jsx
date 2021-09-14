@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 const RestaurantIndexItem = props => {
+
   return (
     <div className="search-result-restaurant">
       <hr />
