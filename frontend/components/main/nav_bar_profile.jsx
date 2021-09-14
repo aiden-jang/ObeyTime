@@ -16,30 +16,32 @@ const NavBarProfile = props => {
         <div className="nav-bar-profile" onBlur={hideMenu}>
             <div className="nav-bar-profile-content" onClick={handleDropdownMenu}>
                 <span>PROFILE</span>
-                {visible && (<div onMouseLeave={hideMenu}>
-                    <div className="nav-bar-profile-show">
-                        <h3>Hello, {props.currentUser.first_name}!</h3>
-                        <br />
-                        <hr />
-                        <ul>
-                            <li>
-                                My Profile
-                            </li>
-                            <li>
-                                My Dining History
-                            </li>
-                            <li>
-                                My Saved Restaurants
-                            </li>
-                            <li>
-                                <button className="logout-button" onClick={props.logout}>Log Out</button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>)}
+                { visible && (
+                    <div onMouseLeave={hideMenu}>
+                        <div className="nav-bar-profile-show">
+                            <h3>Hello, {props.currentUser.first_name}!</h3>
+                            <br />
+                            <hr />
+                            <ul>
+                                <li>
+                                   My Profile
+                                </li>
+                                <li>
+                                    My Dining History
+                                </li>
+                                <li>
+                                    My Saved Restaurants
+                                </li>
+                                <li>
+                                    <button className="logout-button" onClick={props.logout}>Sign out</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>)
+                }
             </div>
         </div>
-    );
+    )
 };
 
 export default NavBarProfile;

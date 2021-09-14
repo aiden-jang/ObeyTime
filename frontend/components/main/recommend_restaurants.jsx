@@ -1,7 +1,7 @@
 import React from 'react';
 
 const RecommendRestaurants = () => {
-    return(
+    return (
         <div>
             <p>RecommendRestaurants</p>
         </div>
