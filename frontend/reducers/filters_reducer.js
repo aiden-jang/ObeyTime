@@ -1,7 +1,9 @@
 import { UPDATE_FILTER, CLEAR_FILTER } from '../actions/filter_actions';
 
 const defaultFilters = Object.freeze({
-  price: ''
+  price: [],
+  cuisine: [],
+  neighborhood: []
 });
 
 const filtersReducer = (state = defaultFilters, action) => {
@@ -16,6 +18,14 @@ const filtersReducer = (state = defaultFilters, action) => {
       if (action.filter === 'price') {
         newFilter = {
           price: [] 
+        }
+      } else if (action.filter === 'cuisine') {
+        newFilter = {
+          cuisine: []
+        }
+      }  else if (action.filter === 'neighborhood') {
+        newFilter = {
+          neighborhood: []
         }
       } else {
         newFilter = defaultFilters

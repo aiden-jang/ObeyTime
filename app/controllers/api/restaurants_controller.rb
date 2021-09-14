@@ -5,8 +5,13 @@ class Api::RestaurantsController < ApplicationController
         if params[:price]
             restaurants = Restaurant.where('price_range IN (?)', params[:price])
         end
-  
-      
+        if params[:cuisine]
+            restaurants = restaurants.where('cuisine IN (?)', params[:cuisine])
+        end
+        if params[:neighborhood]
+            restaurants = restaurants.where('neighborhood IN (?)', params[:neighborhood])
+        end
+        
         @restaurants = restaurants
         render :index 
     end
