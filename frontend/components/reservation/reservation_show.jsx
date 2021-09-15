@@ -49,7 +49,7 @@ class ReservationShow extends React.Component {
                             <p><FontAwesomeIcon  className="confirm" icon={fasCheckCircle} /> Reservation confirmed</p>
                         </div>
                         <p><FontAwesomeIcon icon={farCalendar} /> {reservation.date}</p>
-                        <p><FontAwesomeIcon icon={farClock} /> {reservation.time.slice(11,16)}</p>
+                        <p><FontAwesomeIcon icon={farClock} /> {reservation.time}</p>
                         <p><FontAwesomeIcon icon={farUser} /> {reservation.party_size} people</p>
                         <Link to={{
                             pathname: '/book/modify',

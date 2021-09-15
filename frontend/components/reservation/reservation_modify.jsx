@@ -1,5 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faUser as farUser,
+  faClock as farClock,
+  faCalendar as farCalendar,
+} from '@fortawesome/free-regular-svg-icons';
 
 class ReservationModify extends React.Component {
     constructor(props) {
@@ -36,10 +42,12 @@ class ReservationModify extends React.Component {
             <div className="reservation-modify">
                 <div className="reservation-modify-info">
                     <h1>Your current reservation</h1>
+                    <img src="" />
                 <h2>{restaurant.name}</h2>
-                <p>{this.state.date}</p>
-                <p>{this.state.time.slice(11,16)}</p>
-                <p>{this.state.party_size}</p>
+
+                <p><FontAwesomeIcon icon={farCalendar} /> {this.state.date}</p>
+                <p><FontAwesomeIcon icon={farClock} /> {this.state.time}</p>
+                <p><FontAwesomeIcon icon={farUser} /> {this.state.party_size} People</p>
                 </div>
                 <hr />
                 <div className="reservation-modify-form">
@@ -79,7 +87,7 @@ class ReservationModify extends React.Component {
                                         reservationId: reservation.id
                                     }
                                 }}>
-                                    <input type="submit" value={this.state.time} />
+                                    <input className="reservation-modify-new-time" type="submit" value={this.state.time} />
                                 </Link>
                             ) : (
                                 <div></div>

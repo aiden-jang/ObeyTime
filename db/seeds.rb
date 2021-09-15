@@ -90,23 +90,26 @@ restaurant5 = Restaurant.create!(
 )
 
 
-# photo1 = URI.open('https://obeytime-dev.s3.amazonaws.com/restaurant_1.jpg')
-# photo2 = URI.open('https://obeytime-dev.s3.amazonaws.com/restaurant_2.jpg')
-# photo3 = URI.open('https://obeytime-dev.s3.amazonaws.com/restaurant_3.jpg')
-# photo4 = URI.open('https://obeytime-dev.s3.amazonaws.com/restaurant_4.jpg')
-# photo5 = URI.open('https://obeytime-dev.s3.amazonaws.com/restaurant_5.jpg')
+photo1 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant_1.jpg')
+photo2 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant_2.jpg')
+photo3 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant_3.jpg')
+photo4 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant_4.jpg')
+photo5 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant_5.jpg')
 
-# restaurant1.photo.attach(io: photo1, filename: 'restaurant_1.jpg')
-# restaurant2.photo.attach(io: photo2, filename: 'restaurant_2.jpg')
-# restaurant3.photo.attach(io: photo3, filename: 'restaurant_3.jpg')
-# restaurant4.photo.attach(io: photo4, filename: 'restaurant_4.jpg')
-# restaurant5.photo.attach(io: photo5, filename: 'restaurant_5.jpg')
+restaurant1.photo.attach(io: photo1, filename: 'restaurant_1.jpg')
+restaurant2.photo.attach(io: photo2, filename: 'restaurant_2.jpg')
+restaurant3.photo.attach(io: photo3, filename: 'restaurant_3.jpg')
+restaurant4.photo.attach(io: photo4, filename: 'restaurant_4.jpg')
+restaurant5.photo.attach(io: photo5, filename: 'restaurant_5.jpg')
 
 # reservation1 = Reservation.create!(
+#     user_id: 1,
+#     restaurant_id: 1,
+#     phone_number: 123456789,
+#     email: user1.email,
 #     party_size: 2,
 #     date: '2021-12-20',
 #     time: "18:00",
 #     special_request: "",
-#     user_id: 1,
-#     restaurant_id: 1
+
 # )

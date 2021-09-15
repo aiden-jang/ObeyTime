@@ -67,7 +67,7 @@ class ReservationConfirmForm extends React.Component {
           <h3>Diner details</h3>
           <p>{currentUser.first_name} {currentUser.last_name} (<span>Not {currentUser.first_name}?</span>)</p>
               
-          <input type="text" placeholder="Phone number" onChange={this.update('phone_number')}/>
+          <input type="text" placeholder="Phone number" onChange={this.update('phone_number')} required />
           <input type="email" value={currentUser.email} readOnly/>
           <br />
           <textarea placeholder="Add a special request (optional)" onChange={this.update('special_request')}/>
