@@ -1,5 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faUser as farUser,
+  faClock as farClock,
+  faCalendar as farCalendar,
+} from '@fortawesome/free-regular-svg-icons';
+import {
+    faCheckCircle as fasCheckCircle,
+    faMapMarkerAlt as fasMapMarkerAlt
+} from '@fortawesome/free-solid-svg-icons';
 
 class ReservationShow extends React.Component {
     constructor(props) {
@@ -28,20 +38,19 @@ class ReservationShow extends React.Component {
             this.props.history.push('/');
             window.location.reload();
         }
-
+        
         return (
             <div className="reservation-show">
                 <div className="reservation-confirm">
-                    <div className="reservation-confirm-note">
-                        <h1>Thanks {currentUser.first_name}! Your reservation is confirmed.</h1>
-                    </div>
                     <div className="reservation-restaurant">
                         <img src="" />
                         <h2>{restaurant.name}</h2>
-
-                        <p>{reservation.date}</p>
-                        <p>{reservation.time.slice(11,16)}</p>
-                        <p>{reservation.party_size} people</p>
+                        <div className="reservation-restaurant-confirm">
+                            <p><FontAwesomeIcon  className="confirm" icon={fasCheckCircle} /> Reservation confirmed</p>
+                        </div>
+                        <p><FontAwesomeIcon icon={farCalendar} /> {reservation.date}</p>
+                        <p><FontAwesomeIcon icon={farClock} /> {reservation.time.slice(11,16)}</p>
+                        <p><FontAwesomeIcon icon={farUser} /> {reservation.party_size} people</p>
                         <Link to={{
                             pathname: '/book/modify',
                             state: {
@@ -63,9 +72,21 @@ class ReservationShow extends React.Component {
                             <button>Cancel</button>
                         </Link>
                     </div>
+                    <div className="reservation-side-info">
+                        <h2>What to know before you go</h2>
+                        <h3>A note from the restaurant</h3>
+                        <p>Thank you for choosing {restaurant.name}.
+                        We are pleased to confirm your dining reservation made through ObeyTime. 
+                        If you have a change of plans and need to cancel or reschedule, 
+                        please let us know. We look forward to welcoming you!</p>
+                    </div>
                 </div>
                 <div className="reservation-side-user-info">
-                    <h3>{currentUser.first_name} {currentUser.last_name}</h3>
+                    <div className="reservation-side-user-info-content">
+                        <h2><FontAwesomeIcon icon={farUser} /> {currentUser.first_name} {currentUser.last_name}</h2>
+                        <h3><FontAwesomeIcon icon={fasMapMarkerAlt} />  {currentUser.primary_location}</h3>
+                    </div>
+                    
                 </div>
             </div>
         )

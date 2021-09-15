@@ -1,12 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import { createReservation } from '../../actions/reservation_actions';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faUser as farUser,
   faClock as farClock,
   faCalendar as farCalendar,
-} from '@fortawesome/free-regular-svg-icons'
+} from '@fortawesome/free-regular-svg-icons';
 
 class ReservationConfirmForm extends React.Component {
   constructor(props) {
