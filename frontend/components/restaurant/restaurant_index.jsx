@@ -5,17 +5,15 @@ const RestaurantIndex = ({restaurants}) => {
   
   return (
       <div className="search-result-content">
-  
         {restaurants.map(restaurant => (
           <RestaurantIndexItem
             restaurant={restaurant}
             key={restaurant.id}
           />
         ))}
-               <hr />
-
-      </div>
-    )
+        <hr />
+    </div>
+  )
 };
 
 export default RestaurantIndex;
