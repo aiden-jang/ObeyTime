@@ -1,13 +1,3 @@
-.reservation-form {
-    display: block;
-    position: relative;
-    left: 70%;
-    width: 20%;
-    height: fit-content;
-    top: -150px;
-    background-color: white;
-}
-
 .reservation-confirm-form {
     display: block;
     margin-left: 10%;
@@ -15,7 +5,8 @@
 }
 .reservation-confirm-form h1 {
     margin-top: 20px;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bolder;
 }
 .reservation-confirm-form-overview{
     display: block;
@@ -34,14 +25,17 @@
     font-size: 24px;
     left: 90px;
     top: -65px;
+    font-weight: bolder;
+
 }
 .reservation-confirm-form-overview p {
     display: inline;
     position: relative;
     font-size: 16px;
     left: 90px;
-    top: -55px;
+    top: -45px;
     margin-right: 30px;
+    
 }
 .reservation-confirm-form-info {
     display: block;
@@ -75,6 +69,8 @@
     margin-right: 20px;
     border: 1px solid lightgray;
     border-radius: 5px;
+    resize: vertical;
+
 }
 
 .reservation-confirm-form-info input[type="email"] {
@@ -100,10 +96,10 @@
 } 
 .reservation-confirm-form-note {
     display: block;
-    position: relative;
-    width: 25%;
-    left:70%;
-    top:-400px;
+    position: absolute;
+    width: 20%;
+    top: 150px;
+    left: 70%;
 }
 
 .reservation-confirm-form-note h3 {
@@ -187,4 +183,60 @@
     padding-top:5px;
     padding-left:20px;
     padding-bottom:50px;
+}
+
+
+
+.reservation-form {
+    display: block;
+    position: relative;
+    left: 70%;
+    width: 20%;
+    height: fit-content;
+    top: -150px;
+    background-color: white;
+    box-shadow: 5px 5px 5px #cccccc, -5px 0px 5px #cccccc;
+    border: 1px solid rgb(206, 206, 206)
+}
+
+.reservation-form-box {
+    margin:20px 20px;
+}
+.reservation-form-box h3{
+    text-align: center;
+    font-size: 18px;
+    font-weight:bolder;
+}
+.reservation-form-input {
+    margin-top: -10px;
+    line-height: 1.4;
+}
+.reservation-form-input select {
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    cursor: pointer;
+}
+.reservation-form-input select:hover {
+    border-bottom: 1px solid #da3743;
+}
+.reservation-form-input input {
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    cursor: pointer;
+}
+
+.reservation-form-input input:hover {
+    border-bottom: 1px solid #da3743;
+}
+.reservation-form-input input[type="submit"] {
+    margin-top: 10px;
+    border: none;
+    background-color: #da3743;
+    color: white;
+    height: 40px;
+    border-radius: 5px;
 }

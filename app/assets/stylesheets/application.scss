@@ -16,19 +16,14 @@
  @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
  
-  body {
-    margin: 0;
-    padding: 0;
-  }
-
-
-  @import './reset';
-  @import './modal';
-  @import './nav_bar';
-  @import './search_bar';
-  @import './restaurant.scss';
-  @import './search_page.scss';
+ @import './reset';
+ @import './modal';
+ @import './nav_bar';
+ @import './search_bar';
+ @import './restaurant.scss';
+ @import './search_page.scss';
   
-  body {
-    font-family: 'Raleway', sans-serif;
-  }
+
+ body {
+  font-family: 'Raleway', sans-serif;
+}
