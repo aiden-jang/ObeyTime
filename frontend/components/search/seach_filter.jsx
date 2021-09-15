@@ -1,4 +1,12 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+    faMoneyBillAlt as farMoneyBillAlt,
+    faMap as farMap
+  } from '@fortawesome/free-regular-svg-icons';
+  import {
+      faUtensils as fasUtensils
+  } from '@fortawesome/free-solid-svg-icons';
 
 class SearchFilter extends React.Component {
     constructor(props) {
@@ -66,49 +74,91 @@ class SearchFilter extends React.Component {
     render () {
         return (
             <div className="search-filter-content">
-            <label>Price
-                <br />
-                <input type="checkbox" value="$" onChange={this.priceHandleChange} />
-                <label>$</label>
-                <input type="checkbox" value="$$" onChange={this.priceHandleChange} />
-                <label>$$</label>
-                <input type="checkbox" value="$$$" onChange={this.priceHandleChange} />
-                <label>$$$</label>
-                <input type="checkbox" value="$$$$" onChange={this.priceHandleChange} />
-                <label>$$$$</label>
-            </label>
-            <br />
-            <label>Cuisine
-                <br />
-                <input type="checkbox" value="American" onChange={this.cuisineHandleChange} />
-                <label>American</label>
-                <input type="checkbox" value="Mexican" onChange={this.cuisineHandleChange} />
-                <label>Mexican</label>
-                <input type="checkbox" value="Italian" onChange={this.cuisineHandleChange} />
-                <label>Italian</label>
-                <input type="checkbox" value="Spanish" onChange={this.cuisineHandleChange} />
-                <label>Spanish</label>
-            </label>
-            <br/>
-            <label>Neighborhood
-                <br />
-                <input type="checkbox" value="Hell's Kitchen" onChange={this.neighborhoodHandleChange} />
-                <label>Hell's Kitchen</label>
-                <input type="checkbox" value="Koreatown" onChange={this.neighborhoodHandleChange} />
-                <label>Koreatown</label>
-                <input type="checkbox" value="Hudson Yards" onChange={this.neighborhoodHandleChange} />
-                <label>Hudson Yards</label>
-                <input type="checkbox" value="Chelsea" onChange={this.neighborhoodHandleChange} />
-                <label>Chelsea</label>
-                <input type="checkbox" value="SoHo" onChange={this.neighborhoodHandleChange} />
-                <label>SoHo</label>
-                <input type="checkbox" value="East Village" onChange={this.neighborhoodHandleChange} />
-                <label>East Village</label>
-                <input type="checkbox" value="Little Italy" onChange={this.neighborhoodHandleChange} />
-                <label>Little Italy</label>
-            </label>
-            <br/>
-        </div>
+                <div className="search-filter-price">
+                    <label className="search-filter-name">
+                        <FontAwesomeIcon icon={farMoneyBillAlt} /> Price
+                        <br />
+                        <label>
+                            <input type="checkbox" value="$" onChange={this.priceHandleChange} />
+                            $
+                        </label>
+                        <label>
+                            <input type="checkbox" value="$$" onChange={this.priceHandleChange} />
+                            $$
+                        </label>
+                        <label>
+                            <input type="checkbox" value="$$$" onChange={this.priceHandleChange} />
+                            $$$
+                        </label>
+                        <label>
+                            <input type="checkbox" value="$$$$" onChange={this.priceHandleChange} />
+                            $$$$
+                        </label>
+                    </label>
+                </div>       
+                <hr />
+                <div className="search-filter-cuisine">
+                    <label className="search-filter-name">
+                        <FontAwesomeIcon icon={fasUtensils} /> Cuisine
+                    <br />
+                        <label>
+                            <input type="checkbox" value="American" onChange={this.cuisineHandleChange} />
+                            American
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Italian" onChange={this.cuisineHandleChange} />
+                            Italian
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Spanish" onChange={this.cuisineHandleChange} />
+                            Spanish
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Korean" onChange={this.cuisineHandleChange} />
+                            Korean
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Japanese" onChange={this.cuisineHandleChange} />
+                            Japanese
+                        </label>
+                    </label>
+                </div>
+                <hr />
+                <div className="search-filter-neighborhood">
+                    <label className="search-filter-name">
+                        <FontAwesomeIcon icon={farMap} /> Neighborhood
+                        <br />
+                        <label>
+                            <input type="checkbox" value="Hell's Kitchen" onChange={this.neighborhoodHandleChange} />
+                            Hell's Kitchen
+                        </label>
+                        <label>
+                        <input type="checkbox" value="Koreatown" onChange={this.neighborhoodHandleChange} />
+                            Koreatown
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Hudson Yards" onChange={this.neighborhoodHandleChange} />
+                            Hudson Yards
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Chelsea" onChange={this.neighborhoodHandleChange} />
+                            Chelsea
+                        </label>
+                        <label>
+                            <input type="checkbox" value="SoHo" onChange={this.neighborhoodHandleChange} />
+                            SoHo
+                        </label>
+                        <label>
+                            <input type="checkbox" value="East Village" onChange={this.neighborhoodHandleChange} />
+                            East Village
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Little Italy" onChange={this.neighborhoodHandleChange} />
+                            Little Italy
+                        </label>
+                    </label>
+                </div>
+            </div>
         )
     }
 }

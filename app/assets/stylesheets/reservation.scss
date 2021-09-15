@@ -226,11 +226,11 @@
 
 .reservation-form {
     display: block;
-    position: relative;
+    position: absolute;
     left: 70%;
     width: fit-content;
     height: fit-content;
-    top: -150px;
+    top: 320px;
     background-color: white;
     box-shadow: 5px 5px 5px #cccccc, -5px 0px 5px #cccccc;
     border: 1px solid rgb(206, 206, 206)

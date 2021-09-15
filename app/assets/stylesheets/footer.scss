@@ -1,8 +1,19 @@
 .footer {
-    
     display:block; 
-    position: relative;
     background-color: #2d333f;
     height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.footer-container {
+    font-size: 28px;
+
+}
+
+.footer-container a{
+    color:white;
+    margin-right: 10px;
+    margin-left: 10px;
 }

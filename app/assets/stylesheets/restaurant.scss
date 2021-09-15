@@ -1,45 +1,82 @@
 .restaurant-show-image {
-    border: 2px solid red;
     justify-content: center;
     display: flex;
-    flex-direction: row;
+    height: 300px;
     overflow: hidden;
-    height: 250px;
 }
-.restaurant-show-image {
+
+.restaurant-show-image img {
     width: 100%;
-}
+    height: 200%;
+    margin-top: -100px;
+  }
 
 .restaurant-show-main {
     display: block;
     position: relative;
-    margin-left: 10%;
-    margin-top: -60px;
+    left: 10%;
+    top: -70px;
     width: 50%;
     background-color: white;
+    padding-bottom: 700px;
+}
 
+.restaurant-show-main-content {
+    display: block;
+    position: relative;
+    left: 30px;
+    top: 30px;
+}
+ 
+.restaurant-show-main-content h1 {
+    font-size: 40px;
+}
+
+.restaurant-show-main hr {
+    display: block;
+    width: 80%;
+    margin-top: 20px;
+}
+.restaurant-show-main-info {
+    margin-top: 20px;
+}
+.restaurant-show-main-info *{
+    display: inline-block;
+    font-size: 20px;
+}
+.restaurant-show-main-info p{
+    margin-left: 10px;
+    margin-right: 30px;
+    font-size: 16px;
+}
+.restaurant-show-description {
+    margin-top: 40px;
+}
+.restaurant-show-description p {
+    font-size: 16px;
+    color: rgb(75, 75, 75);
 }
 .restaurant-show-side {
     display: block;
-    margin-top: 0px;
-    position: relative;
+    top: 650px;
+    position: absolute;
     left: 70%;
     width: 20%;
     background-color: white;
 }
-
-.restaurant-show-main h1 {
-    font-size: 40px;
-    margin: 20px 50px;
-}
-
-.restaurant-show-main hr {
-    width: 90%
-}
-.restaurant-show-main-info p{
-    display: inline-block;
-    margin: 10px 50px;
-}
 .restaurant-show-side-info {
-    margin: 10px 20px;
+    display: block;
+}
+
+.restaurant-show-side-info {
+    line-height: 1.4;
+}
+.restaurant-show-side-info ul li:nth-child(odd) {
+    word-spacing: 10px;
+}
+
+.restaurant-show-side-info ul li:nth-child(2n){
+    text-indent: 25px;
+    margin-bottom: 15px;
+    color: rgb(58, 58, 58);
 }
