@@ -2,7 +2,11 @@ import React from 'react'
 import { connect } from 'react-redux';
 import { createReservation } from '../../actions/reservation_actions';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser as farUser } from '@fortawesome/free-regular-svg-icons'
+import {
+  faUser as farUser,
+  faClock as farClock,
+  faCalendar as farCalendar,
+} from '@fortawesome/free-regular-svg-icons'
 
 class ReservationConfirmForm extends React.Component {
   constructor(props) {
@@ -54,9 +58,9 @@ class ReservationConfirmForm extends React.Component {
           <h2>{restaurant.name}</h2>
           <br />
           
-          <p>{date}</p>
-          <p>{time}</p>
-          <p><FontAwesomeIcon className="profile" icon={farUser} /> {party_size} people</p>
+          <p><FontAwesomeIcon icon={farCalendar} /> {date}</p>
+          <p><FontAwesomeIcon icon={farClock} /> {time}</p>
+          <p><FontAwesomeIcon icon={farUser} /> {party_size} people</p>
           <br />  
         </div>
         <form onSubmit={this.handleSubmit} className="reservation-confirm-form-info">
