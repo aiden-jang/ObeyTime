@@ -13,7 +13,6 @@ const NavBarProfile = props => {
         if (e.target.contains(e.relatedTarget)) return null        
         setVisible(false);
     };
-
     return (
         <div className="nav-bar-profile" onBlur={hideMenu}>
             <div className="nav-bar-profile-content" onClick={handleDropdownMenu}>
@@ -34,8 +33,8 @@ const NavBarProfile = props => {
                                 <li>
                                     My Saved Restaurants
                                 </li>
-                                <li>
-                                    <button className="logout-button" onClick={props.logout}>Sign out</button>
+                                <li onClick={props.logout}>
+                                    Sign out
                                 </li>
                             </ul>
                         </div>
