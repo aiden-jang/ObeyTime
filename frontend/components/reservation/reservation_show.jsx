@@ -86,7 +86,6 @@ class ReservationShow extends React.Component {
                         <h2><FontAwesomeIcon icon={farUser} /> {currentUser.first_name} {currentUser.last_name}</h2>
                         <h3><FontAwesomeIcon icon={fasMapMarkerAlt} />  {currentUser.primary_location}</h3>
                     </div>
-                    
                 </div>
             </div>
         )

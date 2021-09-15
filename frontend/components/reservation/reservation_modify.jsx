@@ -10,58 +10,58 @@ import {
 class ReservationModify extends React.Component {
     constructor(props) {
         super(props);
+
         if (!props.location.state) {
             props.history.push('/');
-            window.location.reload();
+            window.location.reload();   
         }
+
         this.modifyReservation = this.modifyReservation.bind(this);
-        this.changeDate = this.changeDate.bind(this);
-        this.changeTime = this.changeTime.bind(this);
+        this.update = this.update.bind(this);
         this.displayTime = this.displayTime.bind(this);
         this.state = this.props.location.state.reservation;
- 
     }
 
-    changeDate(e) {
-        this.setState({date: e.target.value})
+    update(field) {
+        return e => this.setState({
+          [field]: e.target.value
+        });
     }
-    changeTime(e) {
-        this.setState({time: e.target.value})
-    }
+
     modifyReservation (e) {
+        e.preventDefault();
         this.props.updateReservation(this.state)
         .then(this.props.history.push('/booking/details/edit'))
     }
+
     displayTime (e) {
         this.setState({displayTime: true})
     }
+
     render () {
         const {currentUser, restaurant, reservation} = this.props.location.state
-    
+
         return(
             <div className="reservation-modify">
                 <div className="reservation-modify-info">
                     <h1>Your current reservation</h1>
+                    
                     <img src="" />
-                <h2>{restaurant.name}</h2>
+                    <h2>{restaurant.name}</h2>
 
-                <p><FontAwesomeIcon icon={farCalendar} /> {this.state.date}</p>
-                <p><FontAwesomeIcon icon={farClock} /> {this.state.time}</p>
-                <p><FontAwesomeIcon icon={farUser} /> {this.state.party_size} People</p>
+                    <p><FontAwesomeIcon icon={farCalendar} /> {reservation.date}</p>
+                    <p><FontAwesomeIcon icon={farClock} /> {reservation.time}</p>
+                    <p><FontAwesomeIcon icon={farUser} /> {reservation.party_size} People</p>
                 </div>
                 <hr />
+
                 <div className="reservation-modify-form">
                     <h2>Modify your reservation</h2>
                     <div className="reservation-modify-form-box">
                         <div className="reservation-modify-input">
-                            <input className="reservation-modify date" value={this.state.date} onChange={this.changeDate} type="date" />
-                            <select className="reservation-modify time" value={this.state.time} onChange={this.changeTime} >
-                                <option value="5:30 PM">5:30 PM</option>
-                                <option value="6:00 PM">6:00 PM</option>
-                                <option value="6:30 PM">6:30 PM</option>
-                                <option value="7:00 PM">7:00 PM</option>
-                            </select>
-                            <select className="reservation-modify party" defaultValue="2">
+                            <input className="reservation-modify date" value={this.state.date} onChange={this.update('date')} type="date" />
+                            <input className="reservation-modify time" value={this.state.time} onChange={this.update('time')} type="time" />
+                            <select className="reservation-modify party" defaultValue="2" onChange={this.update('party_size')}>
                                 <option value="1">1 person</option>
                                 <option value="2">2 people</option>
                                 <option value="3">3 people</option>
@@ -74,8 +74,8 @@ class ReservationModify extends React.Component {
                                 <option value="10">10 people</option>
                             </select>
                             <input className="reservation-modify submit" type="submit" value="Find a new table" onClick={this.displayTime} />
-                            { this.state.displayTime ? (
 
+                            { this.state.displayTime ? (
                                 <Link to={{
                                     pathname: '/booking/details/edit',
                                     state: {
