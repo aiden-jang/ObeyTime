@@ -43,7 +43,7 @@ class ReservationShow extends React.Component {
             <div className="reservation-show">
                 <div className="reservation-confirm">
                     <div className="reservation-restaurant">
-                        <img src="" />
+                        <img src={restaurant.photoUrl} />
                         <h2>{restaurant.name}</h2>
                         <div className="reservation-restaurant-confirm">
                             <p><FontAwesomeIcon  className="confirm" icon={fasCheckCircle} /> Reservation confirmed</p>

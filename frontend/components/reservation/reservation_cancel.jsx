@@ -10,33 +10,50 @@ const ReservationCancel = props => {
     }
 
     const { reservation, restaurant, currentUser } = props.location.state
-
     return(
         <div className="reservation-cancel">
             <div className="reservation-cancel-head">
                 <h1>Cancel Your Reservation</h1>
             </div>
-            <div className="reservation-cancel-info">
-                <img />
-                <h2>GUESTS</h2>
-                <p>{reservation.party_size}</p>
-                <h2>DATE</h2>
-                <p>{reservation.date}</p>
-                <h2>TIME</h2>
-                <p>{reservation.time}</p>
-                <h2>RESTAURANT</h2>
-                <p>{restaurant.name}</p>
+            <div className="reservation-cancel-background">
+                <div className="reservation-cancel-container">
+                    <div className="reservation-cancel-info">
+                        <img src={restaurant.photoUrl} />
+                        <div className="reservation-cancel-info-guests">
+                            <h2>GUESTS</h2>
+                            <p>{reservation.party_size} people</p>
+                        </div>
+                        <div className="reservation-cancel-info-date">
+                            <h2>DATE</h2>
+                            <p>{reservation.date}</p>
+                        </div>
+                        <div className="reservation-cancel-info-time">
+                            <h2>TIME</h2>
+                            <p>{reservation.time}</p>
+                        </div>
+                        <div className="reservation-cancel-info-rest">
+                            <h2>RESTAURANT</h2>
+                            <Link className="reservation-cancel-link"
+                                to={{
+                                pathname: `../restaurants/${restaurant.id}`,
+                            }}>
+                                <p>{restaurant.name}</p>
+                            </Link>
+                        </div>
+                        <hr />
+                        {console.log(currentUser)}
+                        <Link to={{
+                            pathname: '/book/cancel/confirm',
+                            state: {
+                                restaurantName: restaurant.name,
+                                currentUser: currentUser,
+                            }
+                        }}>
+                            <input type="submit" value='Cancel reservation' />
+                        </Link>
+                    </div>
+                </div>
             </div>
-
-                                <Link to={{
-                                    pathname: '/book/cancel/confirm',
-                                    state: {
-                                        restaurantName: restaurant.name,
-                                        currentUser: currentUser,
-                                    }
-                                }}>
-                                    <input type="submit" value='Cancel reservation' />
-                                </Link>
         </div>
     )
 }

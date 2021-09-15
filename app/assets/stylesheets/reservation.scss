@@ -17,6 +17,7 @@
     display: block;
     width: 70px;
     height: 70px;
+    border-radius: 5px;
 }
 
 .reservation-confirm-form-overview h2 {
@@ -148,11 +149,10 @@
 
 .reservation-restaurant img{
     position: relative;
-
+    border-radius: 10px;
     margin: 40px 40px;
     width: 120px;
     height: 120px;
-    border: 1px solid black;
 }
 .reservation-restaurant h2{
     position: relative;
@@ -302,7 +302,8 @@
     margin: 20px 10px;
     width: 80px;
     height: 80px;
-    border: 1px solid black;
+    border-radius: 10px;
+
 }
 
 .reservation-modify-info h2{
@@ -373,4 +374,98 @@
     position: relative;
     left: 50px;
     top: 50px;
+}
+
+
+.reservation-cancel-background {
+    display: block;
+    background-color: #f1f2f4;
+    padding-bottom: 150px;
+}
+.reservation-cancel-head {
+    display: block;
+    height: 90px;
+    width: 80%;
+}
+
+.reservation-cancel-head h1 {
+    position: relative;
+    left: 10%;
+    top: 30px;
+    font-size: 32px;
+    font-weight: bold;
+}
+.reservation-cancel-info img {
+    position: relative;
+    display: inline-block;
+
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+}
+.reservation-cancel-container {
+    display:block;
+    position: relative;
+    width: 75%;
+    left: 12%;
+    top: 40px;
+    border: 1px solid lightgray;
+    background-color: white;
+}
+.reservation-cancel-info {
+    margin: 20px 20px;
+}
+
+.reservation-cancel-info div{
+    position: relative;
+    display: inline-block;
+    left: 30px;
+    top: -20px;
+    margin-right: 60px;
+    line-height: 1.6;
+}
+
+.reservation-cancel-info div h2{
+    font-size: 16px;
+}
+
+.reservation-cancel-info div p{
+    font-size: 18px;
+
+    font-weight: bold;
+}
+.reservation-cancel-link {
+    text-decoration: none;
+    color:rgb(22, 155, 144);
+}
+.reservation-cancel-info input {
+    margin-top: 10px;
+    width: 200px;
+    height: 50px;
+    background-color: #da3743;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+.reservation-cancel-info input:hover {
+    background-color: #aa2b33;
+}
+
+.reservation-cancel-confirm {
+    display: block;
+    position: relative;
+    margin: 60px 120px;
+}
+
+.reservation-cancel-confirm h1{
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.reservation-cancel-confirm h2{
+    font-size: 20px;
+    font-weight: bold;
 }

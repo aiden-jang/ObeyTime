@@ -46,7 +46,7 @@ class ReservationModify extends React.Component {
                 <div className="reservation-modify-info">
                     <h1>Your current reservation</h1>
                     
-                    <img src="" />
+                    <img src={restaurant.photoUrl} />
                     <h2>{restaurant.name}</h2>
 
                     <p><FontAwesomeIcon icon={farCalendar} /> {reservation.date}</p>
@@ -74,7 +74,6 @@ class ReservationModify extends React.Component {
                                 <option value="10">10 people</option>
                             </select>
                             <input className="reservation-modify submit" type="submit" value="Find a new table" onClick={this.displayTime} />
-
                             { this.state.displayTime ? (
                                 <Link to={{
                                     pathname: '/booking/details/edit',
@@ -84,7 +83,9 @@ class ReservationModify extends React.Component {
                                         time: this.state.time,
                                         restaurant: restaurant,
                                         currentUser: currentUser,
-                                        reservationId: reservation.id
+                                        reservationId: reservation.id,
+                                        special_request: this.state.special_request,
+                                        phone_number: this.state.phone_number
                                     }
                                 }}>
                                     <input className="reservation-modify-new-time" type="submit" value={this.state.time} />

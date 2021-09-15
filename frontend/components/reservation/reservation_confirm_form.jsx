@@ -54,7 +54,7 @@ class ReservationConfirmForm extends React.Component {
         <br />
 
         <div className="reservation-confirm-form-overview">
-          <img src="" />
+          <img src={restaurant.photoUrl} />
           <h2>{restaurant.name}</h2>
           <br />
           
