@@ -102,14 +102,34 @@ restaurant3.photo.attach(io: photo3, filename: 'restaurant_3.jpg')
 restaurant4.photo.attach(io: photo4, filename: 'restaurant_4.jpg')
 restaurant5.photo.attach(io: photo5, filename: 'restaurant_5.jpg')
 
-# reservation1 = Reservation.create!(
-#     user_id: 1,
-#     restaurant_id: 1,
-#     phone_number: 123456789,
-#     email: user1.email,
-#     party_size: 2,
-#     date: '2021-12-20',
-#     time: "18:00",
-#     special_request: "",
+reservation1 = Reservation.create!(
+    user_id: 1,
+    restaurant_id: 4,
+    phone_number: '2015987986',
+    email: user1.email,
+    party_size: 5,
+    date: '2021-07-04',
+    time: '17:00',
+    special_request: ""
+)
+reservation2 = Reservation.create!(
+    user_id: 1,
+    restaurant_id: 3,
+    phone_number: '2015987986',
+    email: user1.email,
+    party_size: 2,
+    date: '2021-08-21',
+    time: '17:30',
+    special_request: ""
+)
 
-# )
+reservation3 = Reservation.create!(
+    user_id: 1,
+    restaurant_id: 1,
+    phone_number: '2015987986',
+    email: user1.email,
+    party_size: 2,
+    date: '2021-12-20',
+    time: '18:00',
+    special_request: ""
+)
