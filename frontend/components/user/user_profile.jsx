@@ -19,13 +19,12 @@ class Profile extends React.Component {
 
         return (
             <div className="user-profile-page">
-                <div className="user-profile-page-head">
+                <div className="user-profile-head">
                     <h1>{user.first_name} {user.last_name}</h1>
                 </div>
-                <div className="user-profile-page-body">
-                    <div className="user-profile-page-side">
+                <div className="user-profile-body">
+                    <div className="user-profile-side">
                         <Link className="link-styling" to="/my/profile"><h2>My Profile</h2></Link>
-                        <Link className="link-styling" to="/my/favorites"><h2>My Saved Restaurants</h2></Link>
                         <Link className="link-styling" to="/my/reservations"><h2>My Reservations</h2></Link>
                     </div>
                     <div className="user-profile-page-main">

@@ -6,9 +6,9 @@ const Home = () => {
     return (
         <div className="home-page">
             <SearchBar />
-            <RecommendRestaurants />
         </div>
     )
 }
+//<RecommendRestaurants />
 
 export default Home;

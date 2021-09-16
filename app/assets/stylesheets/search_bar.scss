@@ -2,11 +2,11 @@
 
 .search-form {
     display: flex;
-    height: 400px; 
+    height: 550px; 
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-image: image-url('home-search-bar-background.jpeg');
+    background: linear-gradient( rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5) ), url('home-search-bar-background.jpeg');
     background-size: 100%, 100%;
     background-position: 0px -100px;
 }
