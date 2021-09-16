@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchReservations } from '../../actions/reservation_actions';
 import { fetchRestaurants } from '../../actions/restaurant_actions'
-
+import UserReservationIndex from './user_reservation_index';
 
 class UserReservation extends React.Component {
     constructor(props){
@@ -16,22 +16,30 @@ class UserReservation extends React.Component {
     }
 
     render () {
-        if (!this.props.restaurants.length) return null;
-        if (!this.props.reservations.length) return null;
-        console.log(this.props)
+        if (!(this.props.restaurants.length && this.props.reservations.length)) return null;
+
+        const { currentUser } = this.props;
 
         return (
             <div className="user-profile-page">
                 <div className="user-profile-head">
-                    <h1>USER RESERVATION PAGE</h1>
+                    <h1>{currentUser.first_name} {currentUser.last_name}</h1>
                 </div>
                 <div className="user-profile-body">
                     <div className="user-profile-side">
-                        <Link className="user-profile-link-styling" to="/my/profile"><h2>Account Details</h2></Link>
-                        <Link className="user-profile-link-styling" to="/my/reservations"><h2>Reservations</h2></Link>
+                        <Link className="user-profile-link-styling" to="/my/profile">
+                            <h2>Account Details</h2>
+                        </Link>
+                        <Link className="user-profile-link-styling" to="/my/reservations">
+                            <h2>Reservations</h2>
+                        </Link>
                     </div>
-                    <div>
-                        
+                    <div className="user-reservation-list">
+                        <UserReservationIndex 
+                            reservations={this.props.reservations}
+                            restaurants={this.props.restaurants}
+                            currentUser={this.props.currentUser}
+                        />
                     </div>
                 </div>
             </div>
