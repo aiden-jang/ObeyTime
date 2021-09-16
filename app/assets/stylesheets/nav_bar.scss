@@ -73,6 +73,7 @@
     text-indent: 20px;
     color: rgb(131, 131, 131);
     cursor: pointer;
+    text-decoration: none;
 }
 
 .nav-bar-profile-show li:hover {
@@ -84,6 +85,6 @@
     margin: -20px 10px;
 }
 
-.nav-bar-profile-show li:last-child {
+.nav-bar-profile-show ul > li:last-child {
     color: #da3743;
 }

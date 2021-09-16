@@ -4,10 +4,24 @@ class SearchPageSearchBar extends React.Component {
     constructor(props) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.updateInput = this.updateInput.bind(this)
+        this.state = {
+            input: 'test input'
+        };
     }
 
-    handleSubmit(e) {
+    handleSubmit (e) {
         e.preventDefault();
+        this.props.history.push({
+            pathname: '/search',
+            state: this.state
+        })
+    }
+
+    updateInput(e) {
+        this.setState({
+            input: e.target.value
+        })
     }
 
     render () {

@@ -1,0 +1,78 @@
+.user-profile-page-head {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    border-bottom: 1px solid lightgray;
+}
+
+.user-profile-page-head h1{
+    text-indent: 100px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.user-profile-page-body {
+    background-color: rgb(241, 241, 241);
+}
+.user-profile-page-side {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 50px;
+    margin-left: 10%;
+    line-height: 3;
+  
+}
+.user-profile-page-main {
+    display: inline-block;
+    background-color: white;
+    width: 50%;
+    margin-top: 50px;
+    margin-bottom:50px;
+    margin-left: 3%;
+    padding: 40px;
+    border-radius: 5px;
+
+}
+.user-profile-page-main h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 600;
+}
+.user-profile-first-name {
+    display: inline-block;
+    margin-right:30px;
+}
+.user-profile-last-name {
+    display: inline-block;
+}
+
+.user-profile-first-name input,
+.user-profile-last-name input {
+    margin-top: 10px;
+    width: 250px;
+    height: 40px;
+    font-size: 18px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.user-profile-email,
+.user-profile-location {
+    margin: 20px 0;
+}
+
+.user-profile-email input,
+.user-profile-location input {
+    margin-top: 10px;
+    width: 500px;
+    height: 40px;
+    font-size: 18px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+
+.link-styling {
+    text-decoration: none;
+    color: rgb(85, 85, 85);
+}

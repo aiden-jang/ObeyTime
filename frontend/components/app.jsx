@@ -15,6 +15,8 @@ import ReservationModify from './reservation/reservation_modify'
 import ReservationEditForm from './reservation/reservation_edit_form'
 import ReservationCancel from './reservation/reservation_cancel'
 import ReservationCancelConfirm from './reservation/reservation_cancel_confirm'
+import UserProfile from './user/user_profile'
+import UserReservation from './user/user_reservation'
 
 const App = () => (
   <div>
@@ -25,6 +27,8 @@ const App = () => (
     <Route exact path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
 
     <Switch>
+      <ProtectedRoute exact path ="/my/profile" component={UserProfile} />
+      <ProtectedRoute exact path ="/my/reservations" component={UserReservation} />
       <ProtectedRoute exact path='/booking/details' component={ReservationConfirmForm} />
       <ProtectedRoute exact path='/booking/view/:reservationId' component={ReservationShowContainer} />
       <ProtectedRoute exact path='/book/modify' component={ReservationModify} />

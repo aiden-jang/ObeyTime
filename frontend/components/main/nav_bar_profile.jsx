@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser as farUser } from '@fortawesome/free-regular-svg-icons'
 
@@ -24,15 +26,12 @@ const NavBarProfile = props => {
                             <br />
                             <hr />
                             <ul>
-                                <li>
-                                   My Profile
-                                </li>
-                                <li>
-                                    My Dining History
-                                </li>
-                                <li>
-                                    My Saved Restaurants
-                                </li>
+                                <Link className="link-styling" to="/my/profile">
+                                    <li>My Profile</li>
+                                </Link>
+                                <Link className="link-styling" to="/my/reservations">
+                                    <li>My Dining History</li>
+                                </Link>
                                 <li onClick={props.logout}>
                                     Sign out
                                 </li>
