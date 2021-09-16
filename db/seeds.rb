@@ -8,8 +8,8 @@
 require 'open-uri'
 
 Restaurant.destroy_all
-User.destroy_all
 Reservation.destroy_all
+User.destroy_all
 
 user1 = User.create!(
     email: 'demo@mail.com',
