@@ -10,7 +10,7 @@ const UserReservationIndex = ({reservations, restaurants, currentUser}) => {
                 <h2>Upcoming Reservations</h2>
                 <hr />
                 {reservations.slice().reverse().map(reservation => 
-                    { if (reservation.user_id === currentUser.id && reservation.date > today) 
+                    { if (reservation.user_id === currentUser.id && reservation.date >= today) 
                         return (
                             <UserReservationIndexItem
                                 reservation={reservation}
