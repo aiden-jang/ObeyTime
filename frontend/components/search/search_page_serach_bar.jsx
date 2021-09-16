@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class SearchPageSearchBar extends React.Component {
     constructor(props) {
@@ -6,16 +7,15 @@ class SearchPageSearchBar extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.updateInput = this.updateInput.bind(this)
         this.state = {
-            input: 'test input'
+            
         };
     }
 
     handleSubmit (e) {
         e.preventDefault();
-        this.props.history.push({
-            pathname: '/search',
-            state: this.state
-        })
+        
+            this.props.updateFilter('search', this.state.input)
+            
     }
 
     updateInput(e) {
@@ -46,6 +46,7 @@ class SearchPageSearchBar extends React.Component {
                         <input type="text"
                             className="search-input filter"
                             placeholder="Location, Restaurant, or Cuisine"
+                            onChange={this.updateInput}
                         />
                         <input className="search-input submit" type="submit" value="Find a Table" />
                     </div>
@@ -55,4 +56,4 @@ class SearchPageSearchBar extends React.Component {
     }; 
 }
 
-export default SearchPageSearchBar;
+export default withRouter(SearchPageSearchBar);

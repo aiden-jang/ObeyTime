@@ -1,9 +1,15 @@
 class Api::RestaurantsController < ApplicationController    
     def index
-        restaurants = Restaurant.all
 
+        if params[:search]
+            restaurants = Restaurant.where('lower(cuisine) like ?', params[:search].downcase)
+            .or(Restaurant.where('lower(neighborhood) like ?', params[:search].downcase))
+            .or(Restaurant.where('lower(name) like ?', params[:search].downcase))
+        else
+            restaurants = Restaurant.all
+        end
         if params[:price]
-            restaurants = Restaurant.where('price_range IN (?)', params[:price])
+            restaurants = restaurants.where('price_range IN (?)', params[:price])
         end
         if params[:cuisine]
             restaurants = restaurants.where('cuisine IN (?)', params[:cuisine])

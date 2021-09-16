@@ -3,7 +3,8 @@ import { UPDATE_FILTER } from '../actions/filter_actions';
 const defaultFilters = Object.freeze({
   price: [],
   cuisine: [],
-  neighborhood: []
+  neighborhood: [],
+  search: ''
 });
 
 const filtersReducer = (state = defaultFilters, action) => {
