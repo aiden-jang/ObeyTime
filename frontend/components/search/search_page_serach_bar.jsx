@@ -21,12 +21,13 @@ class SearchPageSearchBar extends React.Component {
     }
 
     render () {
+        const today = new Date().toISOString().slice(0, 10);
         return (
             <div className="search-page-form">
                 <form onSubmit={this.handleSubmit} className="search-page-form-box">
                     <div className="search-form-input">
-                        <input className="search-input date" type="date" />
-                        <input className="search-input time" type="time" />
+                        <input className="search-input date" defaultValue={today} type="date" />
+                        <input className="search-input time" defaultValue="18:00" type="time" />
                         <select className="search-input party" defaultValue="2">
                             <option value="1">1 person</option>
                             <option value="2">2 people</option>

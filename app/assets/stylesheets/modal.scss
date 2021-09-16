@@ -20,6 +20,7 @@
     width: 440px; 
     border-radius: 5px;
     overflow-y: auto;
+    padding-top:40px;
 }
 
 .session-form {
@@ -28,10 +29,13 @@
     align-items: center;
 }
 
+.session-form h2 {
+    font-size: 20px;
+}
 .close-x {
     position: absolute;
     right: 20px;
-    top: 20px;
+    top: 40px;
     font-size: 20px;
     font-family: 'Raleway', sans-serif;
     cursor: pointer;
@@ -62,6 +66,9 @@
 .session-submit:hover {
     background-color: #a1232c;
     transition: background-color .4s;
+}
+.session-form-errors{ 
+    margin: 20px 40px;
 }
 
 .session-demo {

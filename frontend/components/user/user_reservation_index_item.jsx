@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const UserReservationIndexItem = ({ reservation, restaurants }) => {
+    const today = new Date().toISOString().slice(0, 10);
 
     const restaurant = restaurants.find(restaurant =>
         restaurant.id === reservation.restaurant_id);
@@ -15,9 +16,13 @@ const UserReservationIndexItem = ({ reservation, restaurants }) => {
                 </Link>
                 <p>{reservation.date} at {reservation.time} </p>
                 <p>Table for {reservation.party_size} people.</p>
-                <Link className="user-reservation-resv-link-styling" to={`/booking/view/${reservation.id}`}>
-                    <h2>View</h2>
-                </Link>
+                { (reservation.date >= today) ? (
+                    <Link className="user-reservation-resv-link-styling" to={`/booking/view/${reservation.id}`}>
+                        <h2>View</h2>
+                    </Link>
+                ) : (
+                    null
+                )}
             </div>
             <hr />
         </div>

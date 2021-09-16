@@ -9,11 +9,13 @@
 
 .footer-container {
     font-size: 28px;
-
 }
 
 .footer-container a{
     color:white;
     margin-right: 10px;
     margin-left: 10px;
+    &:hover {
+        color: darkgray;
+    }
 }

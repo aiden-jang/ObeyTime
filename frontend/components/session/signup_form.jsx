@@ -62,9 +62,10 @@ class SignUpForm extends React.Component {
 
           <h2>Welcome to ObeyTime!</h2>
           <hr/>
+          <div className="session-form-errors">
 
           {this.renderErrors()}
-
+          </div>
           <div className="session-form-container">
             <input type="text"
               value={this.state.first_name}

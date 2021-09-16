@@ -60,8 +60,10 @@ class LogInForm extends React.Component {
 
           <h2>Please sign in</h2>
           <hr/>
+          <div className="session-form-errors">
+            {this.renderErrors()}
 
-          {this.renderErrors()}
+          </div>
           <br/>
 
           <div className="session-form-container">
