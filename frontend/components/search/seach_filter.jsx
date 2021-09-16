@@ -20,8 +20,13 @@ class SearchFilter extends React.Component {
             neighborhood: []
         }
     }
+
     componentDidMount () {
-        this.props.fetchRestaurants();
+        if (this.props.searchTarget) {    
+            this.props.updateFilter('search', this.props.searchTarget);
+        } else {
+            this.props.fetchRestaurants();
+        }
     }
 
     neighborhoodHandleChange(e) {

@@ -7,10 +7,11 @@ class ReservationForm extends React.Component {
 
       this.update = this.update.bind(this);
       this.handleClick = this.handleClick.bind(this);
+      const today = new Date().toISOString().slice(0, 10);
 
       this.state = {
         party_size: 2,
-        date: '2021-12-24',
+        date: today,
         time: '18:00',
         displayTime: false
       }
@@ -68,7 +69,7 @@ class ReservationForm extends React.Component {
                           
                 <label>Date
                   <br />
-                  <input className="reservation-input date" value={this.state.date} type="date" onChange={this.update('date')} />
+                  <input className="reservation-input date" value={this.state.date} min={this.state.date} type="date" onChange={this.update('date')} />
                 </label>
                 <br />
                             

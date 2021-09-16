@@ -7,10 +7,7 @@ class SearchBar extends React.Component {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this)
         this.updateInput = this.updateInput.bind(this)
-        this.state = {
-            input: 'test input'
-        };
-        
+        this.state = {};
     }
     handleSubmit (e) {
         e.preventDefault();
@@ -21,11 +18,13 @@ class SearchBar extends React.Component {
     }
     updateInput(e) {
         this.setState({
-            input: e.target.value
+            searchTarget: e.target.value
         })
       }
   
     render() {
+        const today = new Date().toISOString().slice(0, 10)
+
         return (
             <div className="search-form">
                 <form onSubmit={this.handleSubmit} className="search-form-box">
@@ -33,8 +32,8 @@ class SearchBar extends React.Component {
                     <h1 id="search-title">Find your table for any occasion</h1>
                     <br/>
                     <div className="search-form-input">
-                        <input className="search-input date" type="date" />
-                        <input className="search-input time" type="time" />
+                        <input className="search-input date" type="date" defaultValue={today} min={today} />
+                        <input className="search-input time" type="time" defaultValue="18:00" />
                         <select className="search-input party" defaultValue="2">
                             <option value="1">1 person</option>
                             <option value="2">2 people</option>

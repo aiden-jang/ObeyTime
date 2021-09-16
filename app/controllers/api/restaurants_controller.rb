@@ -2,9 +2,9 @@ class Api::RestaurantsController < ApplicationController
     def index
 
         if params[:search]
-            restaurants = Restaurant.where('lower(cuisine) like ?', params[:search].downcase)
-            .or(Restaurant.where('lower(neighborhood) like ?', params[:search].downcase))
-            .or(Restaurant.where('lower(name) like ?', params[:search].downcase))
+            restaurants = Restaurant.where('lower(cuisine) like ?', "%#{params[:search].downcase}%")
+            .or(Restaurant.where('lower(neighborhood) like ?', "%#{params[:search].downcase}%"))
+            .or(Restaurant.where('lower(name) like ?', "%#{params[:search].downcase}%"))
         else
             restaurants = Restaurant.all
         end
@@ -19,12 +19,10 @@ class Api::RestaurantsController < ApplicationController
         end
         
         @restaurants = restaurants
-        render :index 
     end
 
     def show
         @restaurant = Restaurant.find(params[:id]) 
-        render :show 
     end
 
     private 

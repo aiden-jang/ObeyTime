@@ -4,7 +4,6 @@ import SearchFilter from './seach_filter';
 import RestaurantIndex from '../restaurant/restaurant_index';
 
 const SearchPage = ({ restaurants, updateFilter, fetchRestaurants, location}) => {
-// { location.state ? (location.state.input) : (<p>empty</p>)}
     return (
         <div className="search-page">
             <SearchPageSearchBar 
@@ -13,6 +12,9 @@ const SearchPage = ({ restaurants, updateFilter, fetchRestaurants, location}) =>
             <div className="search-filter-container">
                 <SearchFilter 
                     updateFilter={updateFilter}
+                    searchTarget={
+                        location.state ? location.state.searchTarget : null
+                    }
                     fetchRestaurants={fetchRestaurants}
                 />
             </div>
