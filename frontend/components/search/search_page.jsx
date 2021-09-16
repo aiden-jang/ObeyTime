@@ -8,6 +8,9 @@ const SearchPage = ({ restaurants, updateFilter, fetchRestaurants, location}) =>
         <div className="search-page">
             <SearchPageSearchBar 
                 updateFilter={updateFilter}
+                searchTarget={
+                    location.state ? location.state.searchTarget : null
+                }
             />
             <div className="search-filter-container">
                 <SearchFilter 
