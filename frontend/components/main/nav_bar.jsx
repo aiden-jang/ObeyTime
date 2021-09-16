@@ -7,7 +7,7 @@ const NavBar = props => {
     <div className="navbar">
       <div className="logo">
         <Link to={"/"}>
-          <img src={window.logo} alt='Logo' />
+          <img src="https://obeytime-seeds.s3.amazonaws.com/logo.png" alt='Logo' />
         </Link>
       </div>
 
