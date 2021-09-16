@@ -24,8 +24,8 @@ class Profile extends React.Component {
                 </div>
                 <div className="user-profile-body">
                     <div className="user-profile-side">
-                        <Link className="link-styling" to="/my/profile"><h2>My Profile</h2></Link>
-                        <Link className="link-styling" to="/my/reservations"><h2>My Reservations</h2></Link>
+                        <Link className="user-profile-link-styling" to="/my/profile"><h2>Account Details</h2></Link>
+                        <Link className="user-profile-link-styling" to="/my/reservations"><h2>Reservations</h2></Link>
                     </div>
                     <div className="user-profile-page-main">
                         <h2>About me</h2>
