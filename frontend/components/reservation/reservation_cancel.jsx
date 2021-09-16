@@ -41,7 +41,6 @@ const ReservationCancel = props => {
                             </Link>
                         </div>
                         <hr />
-                        {console.log(currentUser)}
                         <Link to={{
                             pathname: '/book/cancel/confirm',
                             state: {
@@ -49,7 +48,7 @@ const ReservationCancel = props => {
                                 currentUser: currentUser,
                             }
                         }}>
-                            <input type="submit" value='Cancel reservation' />
+                            <input type="submit" onClick={() => props.deleteReservation(reservation.id)} value='Cancel reservation' />
                         </Link>
                     </div>
                 </div>
