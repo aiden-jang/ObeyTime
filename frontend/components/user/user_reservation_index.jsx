@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UserReservationList = ({reservation, restaurants}) => {
+const UserReservationIndex = ({reservation, restaurants}) => {
     return (
         <div>
             <p>List</p>
@@ -8,4 +8,4 @@ const UserReservationList = ({reservation, restaurants}) => {
     )
 }
 
-export default UserReservationList;
+export default UserReservationIndex;
