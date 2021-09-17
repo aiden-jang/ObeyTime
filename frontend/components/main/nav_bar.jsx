@@ -7,7 +7,7 @@ const NavBar = ({ currentUser, logout, openModal }) => {
     <div className="navbar">
       <div className="logo">
         <Link to={"/"}>
-          <img src="https://obeytime-seeds.s3.amazonaws.com/logo.png" alt='Logo' />
+          <img src={window.logoURL} alt='Logo' />
         </Link>
       </div>
 

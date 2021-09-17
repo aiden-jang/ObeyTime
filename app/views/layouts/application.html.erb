@@ -8,8 +8,11 @@
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-    
-    <link rel="icon" type="image/png" href="https://obeytime-seeds.s3.amazonaws.com/favicon.png">
+
+    <script type="text/javascript">
+      window.logoURL = "<%= image_url('logo.png') %>";
+    </script>
+    <link rel="icon" type="image/png" href="<%= image_url('favicon.png') %>">
   </head>
 
   <body>
