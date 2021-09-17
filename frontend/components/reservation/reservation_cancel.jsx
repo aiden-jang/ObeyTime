@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { deleteReservation } from '../../actions/reservation_actions'
+import { deleteReservation } from '../../actions/reservation_actions';
 import { Link } from 'react-router-dom';
 
 const ReservationCancel = props => {
@@ -9,7 +9,8 @@ const ReservationCancel = props => {
         window.location.reload();
     }
 
-    const { reservation, restaurant, currentUser } = props.location.state
+    const { reservation, restaurant, currentUser } = props.location.state;
+    
     return(
         <div className="reservation-cancel">
             <div className="reservation-cancel-head">
@@ -55,7 +56,7 @@ const ReservationCancel = props => {
             </div>
         </div>
     )
-}
+};
 
 const mapDispatchToProps = dispatch => ({
         deleteReservation: reservationId => dispatch(deleteReservation(reservationId))

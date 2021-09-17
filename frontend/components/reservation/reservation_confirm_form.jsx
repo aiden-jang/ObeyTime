@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { connect } from 'react-redux';
 import { createReservation } from '../../actions/reservation_actions';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -30,7 +30,7 @@ class ReservationConfirmForm extends React.Component {
       email: currentUser.email,
       phone_number: 1234567890,
       special_request: ""
-    }
+    };
   }
 
   handleSubmit(e) {

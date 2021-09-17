@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const UserReservationIndexItem = ({ reservation, restaurants }) => {
+    if (!restaurants.length) return null;
+
     const today = new Date().toISOString().slice(0, 10);
 
     const restaurant = restaurants.find(restaurant =>

@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faUser as farUser,
-  faClock as farClock,
-  faCalendar as farCalendar,
+    faUser as farUser,
+    faClock as farClock,
+    faCalendar as farCalendar,
 } from '@fortawesome/free-regular-svg-icons';
 
 class ReservationModify extends React.Component {
@@ -31,15 +31,15 @@ class ReservationModify extends React.Component {
     modifyReservation (e) {
         e.preventDefault();
         this.props.updateReservation(this.state)
-        .then(this.props.history.push('/booking/details/edit'))
+            .then(this.props.history.push('/booking/details/edit'))
     }
 
-    displayTime (e) {
-        this.setState({displayTime: true})
+    displayTime () {
+        this.setState({displayTime: true});
     }
 
     render () {
-        const {currentUser, restaurant, reservation} = this.props.location.state
+        const {currentUser, restaurant, reservation} = this.props.location.state;
 
         return(
             <div className="reservation-modify">
@@ -92,8 +92,7 @@ class ReservationModify extends React.Component {
                                 </Link>
                             ) : (
                                 <div></div>
-                            )
-                            }
+                            )}
                         </div>
                     </div>
                 </div>

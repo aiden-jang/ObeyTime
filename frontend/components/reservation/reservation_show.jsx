@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faUser as farUser,
-  faClock as farClock,
-  faCalendar as farCalendar,
+    faUser as farUser,
+    faClock as farClock,
+    faCalendar as farCalendar,
 } from '@fortawesome/free-regular-svg-icons';
 import {
     faCheckCircle as fasCheckCircle,
@@ -28,13 +28,10 @@ class ReservationShow extends React.Component {
         if (!this.props.reservation) return null;
         if (Object.keys(this.props.restaurants).length === 0) return null;
         
-        const {
-            currentUser,
-            reservation,
-        } = this.props;
+        const { currentUser, reservation } = this.props;
         const  restaurant  = this.props.restaurants[reservation.restaurant_id];
         
-        if (currentUser.email !== reservation.email){
+        if (currentUser.email !== reservation.email) {
             this.props.history.push('/');
             window.location.reload();
         }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { connect } from 'react-redux';
 import { updateReservation } from '../../actions/reservation_actions';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -20,7 +20,7 @@ class ReservationEditForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.update = this.update.bind(this);
 
-        const { party_size, date, time, restaurant, currentUser, special_request, phone_number} = this.props.location.state
+        const { party_size, date, time, restaurant, currentUser, special_request, phone_number} = this.props.location.state;
         this.state = {
             id: this.props.location.state.reservationId,
             party_size,
@@ -31,7 +31,7 @@ class ReservationEditForm extends React.Component {
             email: currentUser.email,
             phone_number,
             special_request 
-        }
+        };
     }
 
     handleSubmit(e) {
@@ -47,7 +47,8 @@ class ReservationEditForm extends React.Component {
     }
 
     render () {
-        const { party_size, date, time, restaurant, currentUser } = this.props.location.state
+        const { party_size, date, time, restaurant, currentUser } = this.props.location.state;
+        
         return (
             <div className="reservation-confirm-form">
                 <h1>You're almost done!</h1>

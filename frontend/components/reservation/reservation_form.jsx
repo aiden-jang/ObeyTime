@@ -7,14 +7,14 @@ class ReservationForm extends React.Component {
 
       this.update = this.update.bind(this);
       this.handleClick = this.handleClick.bind(this);
-      const today = new Date().toISOString().slice(0, 10);
 
+      const today = new Date().toISOString().slice(0, 10);
       this.state = {
         party_size: 2,
         date: today,
         time: '18:00',
         displayTime: false
-      }
+      };
   }
 
   update(field) {
@@ -30,7 +30,7 @@ class ReservationForm extends React.Component {
     } else {
       this.setState({
         displayTime: true
-      })
+      });
     }
   }
 

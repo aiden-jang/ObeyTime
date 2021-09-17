@@ -17,6 +17,6 @@ const RestaurantIndexItem = ({ restaurant }) => {
       
     </div>
   )
-}
+};
 
 export default RestaurantIndexItem;
