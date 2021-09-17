@@ -115,16 +115,20 @@ class SearchFilter extends React.Component {
                             Italian
                         </label>
                         <label>
-                            <input type="checkbox" value="Spanish" onChange={this.cuisineHandleChange} />
-                            Spanish
+                            <input type="checkbox" value="Steakhouse" onChange={this.cuisineHandleChange} />
+                            Steakhouse
                         </label>
                         <label>
-                            <input type="checkbox" value="Korean" onChange={this.cuisineHandleChange} />
-                            Korean
+                            <input type="checkbox" value="Seafood" onChange={this.cuisineHandleChange} />
+                            Seafood
                         </label>
                         <label>
-                            <input type="checkbox" value="Japanese" onChange={this.cuisineHandleChange} />
-                            Japanese
+                            <input type="checkbox" value="French" onChange={this.cuisineHandleChange} />
+                            French
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Barbecue" onChange={this.cuisineHandleChange} />
+                            Barbecue
                         </label>
                     </label>
                 </div>
@@ -138,12 +142,16 @@ class SearchFilter extends React.Component {
                             Hell's Kitchen
                         </label>
                         <label>
-                        <input type="checkbox" value="Koreatown" onChange={this.neighborhoodHandleChange} />
-                            Koreatown
+                        <input type="checkbox" value=" Meatpacking District" onChange={this.neighborhoodHandleChange} />
+                            Meatpacking District
                         </label>
                         <label>
                             <input type="checkbox" value="Hudson Yards" onChange={this.neighborhoodHandleChange} />
                             Hudson Yards
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Upper West Side" onChange={this.neighborhoodHandleChange} />
+                            Upper West Side
                         </label>
                         <label>
                             <input type="checkbox" value="Chelsea" onChange={this.neighborhoodHandleChange} />
