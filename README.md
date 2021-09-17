@@ -1,24 +1,27 @@
-# README
+# ObeyTime
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![logo](https://user-images.githubusercontent.com/43161185/133803505-31206666-48d1-4694-b725-59756ed7be78.png)
 
-Things you may want to cover:
+## Explanation
 
-* Ruby version
+ObeyTime, an OpenTable clone, is an online restaurant-reservation application that allows users to search for restaurants and make reservations based on their preferences.
 
-* System dependencies
+[Live Site](https://obeytime.herokuapp.com "ObeyTime")
 
-* Configuration
+![Capture](https://user-images.githubusercontent.com/43161185/133803601-7959e955-c412-40a5-9aff-fdcc62f5fd47.PNG)
 
-* Database creation
+## Features
 
-* Database initialization
+* User authentication
+* Find a restaurant
+* Make a reservation
 
-* How to run the test suite
+## Technologies
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Frontend
+  * React
+  * Redux
+  * Amazon Web Services
+* Backend
+  * Ruby on Rails
+  * PostgreSQL
