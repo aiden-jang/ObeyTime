@@ -23,6 +23,7 @@ class RestaurantShow extends React.Component {
     render() {
         if (!this.props.restaurant) return null;
         const { restaurant, openModal, currentUser } = this.props;
+
         return (
             <div className="restaurant-show-outer">
                 <div className="restaurant-show-image">
@@ -75,8 +76,7 @@ class RestaurantShow extends React.Component {
                             <li><FontAwesomeIcon icon={fasUtensilSpoon} /> Dining Style</li>
                             <li>{restaurant.dining_style}</li>
                             <li><FontAwesomeIcon icon={fasParking} /> Parking Details</li>
-                            <li>{restaurant.parking_details}</li>
-                            
+                            <li>{restaurant.parking_details}</li>          
                         </ul>
                     </div>
                 </div> 

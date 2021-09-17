@@ -1,6 +1,5 @@
 import React from 'react'; 
 import SearchBar from '../search/search_bar';
-import RecommendRestaurants from './recommend_restaurants';
 
 const Home = () => {
     return (
@@ -8,7 +7,6 @@ const Home = () => {
             <SearchBar />
         </div>
     )
-}
-//<RecommendRestaurants />
+};
 
 export default Home;
