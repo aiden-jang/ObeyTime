@@ -5,7 +5,7 @@ class SearchPageSearchBar extends React.Component {
     constructor(props) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.updateInput = this.updateInput.bind(this)
+        this.updateInput = this.updateInput.bind(this);
         this.state = {};
     }
 
@@ -17,7 +17,7 @@ class SearchPageSearchBar extends React.Component {
     updateInput(e) {
         this.setState({
             searchTarget: e.target.value
-        })
+        });
     }
 
     render () {

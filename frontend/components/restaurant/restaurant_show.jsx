@@ -2,10 +2,10 @@ import React from 'react';
 import ReservationForm from '../reservation/reservation_form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faMoneyBillAlt as farMoneyBillAlt,
-  faMap as farMap,
-  faClock as farClock,
-  faCreditCard as farCreditCard
+    faMoneyBillAlt as farMoneyBillAlt,
+    faMap as farMap,
+    faClock as farClock,
+    faCreditCard as farCreditCard
 } from '@fortawesome/free-regular-svg-icons';
 import {
     faUtensils as fasUtensils,

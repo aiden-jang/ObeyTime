@@ -2,25 +2,26 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 
 class SearchBar extends React.Component {
-
     constructor(props) {
         super(props);
-        this.handleSubmit = this.handleSubmit.bind(this)
-        this.updateInput = this.updateInput.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.updateInput = this.updateInput.bind(this);
         this.state = {};
     }
+
     handleSubmit (e) {
         e.preventDefault();
         this.props.history.push({
             pathname: '/search',
             state: this.state
-        })
+        });
     }
+    
     updateInput(e) {
         this.setState({
             searchTarget: e.target.value
-        })
-      }
+        });
+    }
   
     render() {
         const today = new Date().toISOString().slice(0, 10)

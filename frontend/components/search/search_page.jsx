@@ -32,4 +32,3 @@ const SearchPage = ({ restaurants, updateFilter, fetchRestaurants, location}) =>
 };
 
 export default SearchPage;
-
