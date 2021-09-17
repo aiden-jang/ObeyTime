@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchReservations } from '../../actions/reservation_actions';
-import { fetchRestaurants } from '../../actions/restaurant_actions'
+import { fetchRestaurants } from '../../actions/restaurant_actions';
 import UserReservationIndex from './user_reservation_index';
 
 class UserReservation extends React.Component {
     constructor(props){
-        super(props)
+        super(props);
     }
 
     componentDidMount() {
@@ -18,7 +18,7 @@ class UserReservation extends React.Component {
     render () {
         if (!(this.props.restaurants.length && this.props.reservations.length)) return null;
 
-        const { currentUser } = this.props;
+        const { currentUser, reservations, restaurants } = this.props;
 
         return (
             <div className="user-profile-page">
@@ -36,9 +36,9 @@ class UserReservation extends React.Component {
                     </div>
                     <div className="user-reservation-list">
                         <UserReservationIndex 
-                            reservations={this.props.reservations}
-                            restaurants={this.props.restaurants}
-                            currentUser={this.props.currentUser}
+                            reservations={reservations}
+                            restaurants={restaurants}
+                            currentUser={currentUser}
                         />
                     </div>
                 </div>
@@ -58,4 +58,4 @@ const mapDispatchToProps = dispatch => ({
     fetchRestaurants: () => dispatch(fetchRestaurants())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(UserReservation)
+export default connect(mapStateToProps, mapDispatchToProps)(UserReservation);

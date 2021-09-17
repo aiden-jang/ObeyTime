@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchUser } from '../../actions/user_actions';
 
 class Profile extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
     }
 
     componentDidMount() {
@@ -65,4 +65,4 @@ const mapDispatchToProps = dispatch => ({
     fetchUser: userId => dispatch(fetchUser(userId))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Profile)
+export default connect(mapStateToProps, mapDispatchToProps)(Profile);
