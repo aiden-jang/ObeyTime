@@ -89,7 +89,7 @@ restaurant5 = Restaurant.create!(
     description: 'Ac turpis egestas sed tempus urna et pharetra pharetra. Purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus. Habitant morbi tristique senectus et netus. Aenean pharetra magna ac placerat vestibulum lectus. '
 )
 
-restaurant5 = Restaurant.create!(
+restaurant6 = Restaurant.create!(
     name: 'Rocksport',
     address: '5 West Brewery St. New York, NY 10024',
     phone_number: '4378459742',
@@ -103,7 +103,7 @@ restaurant5 = Restaurant.create!(
     description: 'Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Tristique senectus et netus et malesuada fames. Ac tortor vitae purus faucibus ornare suspendisse sed.'
 )
 
-restaurant6 = Restaurant.create!(
+restaurant7 = Restaurant.create!(
     name: 'Wall Street Pizza',
     address: '667 Mayflower Street New York, NY 10031',
     phone_number: '2876843547',
@@ -116,7 +116,7 @@ restaurant6 = Restaurant.create!(
     parking_details: 'Street Parking',
     description: 'Venenatis urna cursus eget nunc scelerisque viverra. Ipsum suspendisse ultrices gravida dictum. Molestie ac feugiat sed lectus. Tortor condimentum lacinia quis vel eros donec ac.'
 )
-restaurant7 = Restaurant.create!(
+restaurant8 = Restaurant.create!(
     name: 'J J Jamokes Restaurant',
     address: '8198 Anderson Street New York, NY 10016',
     phone_number: '9847548254',
@@ -130,7 +130,7 @@ restaurant7 = Restaurant.create!(
     description: 'Cursus mattis molestie a iaculis. Augue ut lectus arcu bibendum at varius. Adipiscing bibendum est ultricies integer quis auctor elit sed.'
 )
 
-restaurant8 = Restaurant.create!(
+restaurant9 = Restaurant.create!(
     name: 'Paradox Cafe',
     address: '8713 Gregory Dr. New York, NY 10025',
     phone_number: '5480236405',
@@ -144,7 +144,7 @@ restaurant8 = Restaurant.create!(
     description: 'Mauris sit amet massa vitae tortor condimentum lacinia quis. Nibh sit amet commodo nulla facilisi nullam vehicula ipsum.'
 )
 
-restaurant9 = Restaurant.create!(
+restaurant10 = Restaurant.create!(
     name: 'Harvest On Hudson',
     address: '89 Water Dr. New York, NY 10040',
     phone_number: '3054128546',
@@ -156,20 +156,6 @@ restaurant9 = Restaurant.create!(
     neighborhood: 'Hudson Yards',
     parking_details: 'Street Parking',
     description: 'Ornare arcu dui vivamus arcu felis bibendum ut tristique. Velit ut tortor pretium viverra suspendisse potenti nullam. Enim neque volutpat ac tincidunt vitae. '
-)
-
-restaurant10 = Restaurant.create!(
-    name: 'Baron\'s Cafe',
-    address: '9052 Hawthorne St. New York, NY 10009',
-    phone_number: '9706408461',
-    hours: '1:00 pm–10:00 pm',
-    payment_option: 'AMEX, Discover, MasterCard, Visa',
-    price_range: '$$$',
-    dining_style: 'Elegant Dining',
-    cuisine: 'American',
-    neighborhood: 'Meatpacking District',
-    parking_details: 'Street Parking',
-    description: 'Etiam tempor orci eu lobortis elementum nibh tellus molestie. Convallis convallis tellus id interdum velit laoreet id donec ultrices. '
 )
 
 restaurant11 = Restaurant.create!(
@@ -326,53 +312,69 @@ restaurant21 = Restaurant.create!(
     description: 'Tellus cras adipiscing enim eu turpis egestas pretium. Sed lectus vestibulum mattis ullamcorper. Dictum varius duis at consectetur lorem donec. Vitae turpis massa sed elementum tempus egestas sed.'
 )
 
-photo1 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant_1.jpg')
-photo2 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant_2.jpg')
-photo3 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant_3.jpg')
-photo4 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant_4.jpg')
-photo5 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant_5.jpg')
-photo6 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant_6.jpg')
-photo7 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant_7.jpg')
-photo8 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant_8.jpg')
-photo9 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant_9.jpg')
-photo10 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant_10.jpg')
-photo11 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant_11.jpg')
-photo12 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant_12.jpg')
-photo13 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant_13.jpg')
-photo14 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant_14.jpg')
-photo15 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant_15.jpg')
-photo16 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant_16.jpg')
-photo17 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant_17.jpg')
-photo18 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant_18.jpg')
-photo19 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant_19.jpg')
-photo20 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant_20.jpg')
-photo21 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant_21.jpg')
+restaurant22 = Restaurant.create!(
+    name: 'Baron\'s Cafe',
+    address: '9052 Hawthorne St. New York, NY 10009',
+    phone_number: '9706408461',
+    hours: '1:00 pm–10:00 pm',
+    payment_option: 'AMEX, Discover, MasterCard, Visa',
+    price_range: '$$$',
+    dining_style: 'Elegant Dining',
+    cuisine: 'American',
+    neighborhood: 'Meatpacking District',
+    parking_details: 'Street Parking',
+    description: 'Etiam tempor orci eu lobortis elementum nibh tellus molestie. Convallis convallis tellus id interdum velit laoreet id donec ultrices. '
+)
 
-restaurant1.photo.attach(io: photo1, filename: 'restaurant_1.jpg')
-restaurant2.photo.attach(io: photo2, filename: 'restaurant_2.jpg')
-restaurant3.photo.attach(io: photo3, filename: 'restaurant_3.jpg')
-restaurant4.photo.attach(io: photo4, filename: 'restaurant_4.jpg')
-restaurant5.photo.attach(io: photo5, filename: 'restaurant_5.jpg')
-restaurant6.photo.attach(io: photo6, filename: 'restaurant_6.jpg')
-restaurant7.photo.attach(io: photo7, filename: 'restaurant_7.jpg')
-restaurant8.photo.attach(io: photo8, filename: 'restaurant_8.jpg')
-restaurant9.photo.attach(io: photo9, filename: 'restaurant_9.jpg')
-restaurant10.photo.attach(io: photo10, filename: 'restaurant_10.jpg')
-restaurant11.photo.attach(io: photo11, filename: 'restaurant_12.jpg')
-restaurant12.photo.attach(io: photo12, filename: 'restaurant_12.jpg')
-restaurant13.photo.attach(io: photo13, filename: 'restaurant_13.jpg')
-restaurant14.photo.attach(io: photo14, filename: 'restaurant_14.jpg')
-restaurant15.photo.attach(io: photo15, filename: 'restaurant_15.jpg')
-restaurant16.photo.attach(io: photo16, filename: 'restaurant_16.jpg')
-restaurant17.photo.attach(io: photo17, filename: 'restaurant_17.jpg')
-restaurant18.photo.attach(io: photo18, filename: 'restaurant_18.jpg')
-restaurant19.photo.attach(io: photo29, filename: 'restaurant_19.jpg')
-restaurant20.photo.attach(io: photo20, filename: 'restaurant_20.jpg')
-restaurant21.photo.attach(io: photo21, filename: 'restaurant_21.jpg')
+photo1 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant-1.jpeg')
+photo2 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant-2.jpeg')
+photo3 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant-3.jpeg')
+photo4 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant-4.jpeg')
+photo5 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant-5.jpeg')
+photo6 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant-6.jpeg')
+photo7 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant-7.jpeg')
+photo8 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant-8.jpeg')
+photo9 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant-9.jpeg')
+photo10 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant-10.jpeg')
+photo11 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant-11.jpeg')
+photo12 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant-12.jpeg')
+photo13 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant-13.jpeg')
+photo14 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant-14.jpeg')
+photo15 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant-15.jpeg')
+photo16 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant-16.jpeg')
+photo17 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant-17.jpeg')
+photo18 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant-18.jpeg')
+photo19 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant-19.jpeg')
+photo20 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant-20.jpeg')
+photo21 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant-21.jpeg')
+photo22 = URI.open('https://obeytime-seeds.s3.amazonaws.com/splash-search-bar.jpeg')
+
+restaurant1.photo.attach(io: photo1, filename: 'restaurant-1.jpeg')
+restaurant2.photo.attach(io: photo2, filename: 'restaurant-2.jpeg')
+restaurant3.photo.attach(io: photo3, filename: 'restaurant-3.jpeg')
+restaurant4.photo.attach(io: photo4, filename: 'restaurant-4.jpeg')
+restaurant5.photo.attach(io: photo5, filename: 'restaurant-5.jpeg')
+restaurant6.photo.attach(io: photo6, filename: 'restaurant-6.jpeg')
+restaurant7.photo.attach(io: photo7, filename: 'restaurant-7.jpeg')
+restaurant8.photo.attach(io: photo8, filename: 'restaurant-8.jpeg')
+restaurant9.photo.attach(io: photo9, filename: 'restaurant-9.jpeg')
+restaurant10.photo.attach(io: photo10, filename: 'restaurant-10.jpeg')
+restaurant11.photo.attach(io: photo11, filename: 'restaurant-12.jpeg')
+restaurant12.photo.attach(io: photo12, filename: 'restaurant-12.jpeg')
+restaurant13.photo.attach(io: photo13, filename: 'restaurant-13.jpeg')
+restaurant14.photo.attach(io: photo14, filename: 'restaurant-14.jpeg')
+restaurant15.photo.attach(io: photo15, filename: 'restaurant-15.jpeg')
+restaurant16.photo.attach(io: photo16, filename: 'restaurant-16.jpeg')
+restaurant17.photo.attach(io: photo17, filename: 'restaurant-17.jpeg')
+restaurant18.photo.attach(io: photo18, filename: 'restaurant-18.jpeg')
+restaurant19.photo.attach(io: photo19, filename: 'restaurant-19.jpeg')
+restaurant20.photo.attach(io: photo20, filename: 'restaurant-20.jpeg')
+restaurant21.photo.attach(io: photo21, filename: 'restaurant-21.jpeg')
+restaurant22.photo.attach(io: photo22, filename: 'restaurant-22.jpeg')
 
 reservation1 = Reservation.create!(
     user_id: user1.id,
-    restaurant_id: restaurant.id,
+    restaurant_id: restaurant1.id,
     phone_number: '2012012012',
     email: user1.email,
     party_size: 5,
@@ -382,7 +384,7 @@ reservation1 = Reservation.create!(
 )
 reservation2 = Reservation.create!(
     user_id: user1.id,
-    restaurant_id: restaurant.id,
+    restaurant_id: restaurant2.id,
     phone_number: '2012012012',
     email: user1.email,
     party_size: 2,
@@ -392,7 +394,7 @@ reservation2 = Reservation.create!(
 )
 reservation3 = Reservation.create!(
     user_id: user1.id,
-    restaurant_id: restaurant.id,
+    restaurant_id: restaurant3.id,
     phone_number: '2012012012',
     email: user1.email,
     party_size: 5,
@@ -402,7 +404,7 @@ reservation3 = Reservation.create!(
 )
 reservation4 = Reservation.create!(
     user_id: user1.id,
-    restaurant_id: restaurant.id,
+    restaurant_id: restaurant4.id,
     phone_number: '2012012012',
     email: user1.email,
     party_size: 3,
@@ -412,7 +414,7 @@ reservation4 = Reservation.create!(
 )
 reservation5 = Reservation.create!(
     user_id: user1.id,
-    restaurant_id: restaurant.id,
+    restaurant_id: restaurant5.id,
     phone_number: '2012012012',
     email: user1.email,
     party_size: 2,
