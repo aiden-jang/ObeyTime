@@ -4,6 +4,8 @@ import UserReservationIndexItem from './user_reservation_index_item';
 const UserReservationIndex = ({reservations, restaurants, currentUser}) => {
     const today = new Date().toISOString().slice(0, 10);
 
+    if (!(restaurants.length && reservations.length)) return null;
+    
     return (
         <div className="reservations">
             <div className="upcoming-reservations">
