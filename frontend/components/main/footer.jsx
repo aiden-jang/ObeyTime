@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-container">
-                <a href="https://www.linkedin.com/in/aiden-jang-50bb9914b/" target="_blank"><FontAwesomeIcon icon={fabLinkedinIn} /></a>
+                <a href="https://www.linkedin.com/in/aidenjang/" target="_blank"><FontAwesomeIcon icon={fabLinkedinIn} /></a>
                 <a href="https://github.com/skylineciel" target="_blank"><FontAwesomeIcon icon={fabGithub} /></a>
             </div>
         </footer>
