@@ -41,13 +41,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/skylineciel/ObeyTime.git"
+    "url": "git+https://github.com/aiden-jang/ObeyTime.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/skylineciel/ObeyTime/issues"
+    "url": "https://github.com/aiden-jang/ObeyTime/issues"
   },
-  "homepage": "https://github.com/skylineciel/ObeyTime#readme"
+  "homepage": "https://github.com/aiden-jang/ObeyTime#readme"
 }

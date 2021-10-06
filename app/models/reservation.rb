@@ -5,11 +5,11 @@
 #  id              :bigint           not null, primary key
 #  user_id         :integer          not null
 #  restaurant_id   :integer          not null
-#  phone_number    :integer          not null
+#  phone_number    :string           not null
 #  email           :string           not null
 #  party_size      :integer          not null
 #  date            :date             not null
-#  time            :time             not null
+#  time            :string           not null
 #  special_request :text
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null

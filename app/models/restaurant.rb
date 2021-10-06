@@ -5,7 +5,7 @@
 #  id              :bigint           not null, primary key
 #  name            :string           not null
 #  address         :string           not null
-#  phone_number    :integer          not null
+#  phone_number    :string           not null
 #  hours           :string           not null
 #  payment_option  :string           not null
 #  price_range     :string           not null
