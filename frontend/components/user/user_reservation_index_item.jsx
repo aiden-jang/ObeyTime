@@ -23,7 +23,14 @@ const UserReservationIndexItem = ({ reservation, restaurants }) => {
                         <h2>View</h2>
                     </Link>
                 ) : (
-                    null
+                    <Link className="user-review-link-styling" to={{
+                        pathname: '/feedback',
+                        state: {
+                            restaurant: restaurant
+                        }
+                    }}>
+                        <h2>Write Review</h2>
+                    </Link>
                 )}
             </div>
             <hr />
