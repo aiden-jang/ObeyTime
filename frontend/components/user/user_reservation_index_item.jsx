@@ -1,8 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
-
 import { Link } from 'react-router-dom';
-import { deleteReview } from '../../actions/review_actions';
 
 const UserReservationIndexItem = ({ reservation, restaurants, reviews, currentUser, deleteReview}) => {
     if (!restaurants.length) return null;
@@ -41,12 +38,9 @@ const UserReservationIndexItem = ({ reservation, restaurants, reviews, currentUs
                                 reservation: reservation
                             }
                         }}>
-                        <h2>See/Edit a review</h2>
+                        <h2>See/Edit your review</h2>
                         </Link>
-                        <input type="submit" onClick={() => {deleteReview(review.id);
-                                window.location.reload();
-                            }} value='Delete a review' />
-
+                
                     </div>
                 ) : (
                     <Link className="user-review-link-styling" to={{
@@ -67,8 +61,4 @@ const UserReservationIndexItem = ({ reservation, restaurants, reviews, currentUs
     )
 }
 
-const mapDispatchToProps = dispatch => ({
-    deleteReview: reviewId => dispatch(deleteReview(reviewId))
-});
-
-export default connect(null, mapDispatchToProps)(UserReservationIndexItem);
+export default UserReservationIndexItem;

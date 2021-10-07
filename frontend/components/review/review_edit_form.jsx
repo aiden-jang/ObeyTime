@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import { Link } from 'react-router-dom';
 import { updateReview } from '../../actions/review_actions';
+import { deleteReview } from '../../actions/review_actions';
 
 class ReviewEditForm extends React.Component {
     constructor(props) {
@@ -106,14 +107,18 @@ class ReviewEditForm extends React.Component {
             <div className="review-comment">
                 <textarea value={this.state.body} onChange={this.update('body')}/>
             </div>
-                <input type="submit" value="Submit your review" />
+                <input type="submit" value="Edit your review" />
+                <input type="submit" onClick={() => deleteReview(review.id).then(res => this.props.history.push('/my/reservations'))} value='Delete your review' />
+
         </form>
         )
     }
 }
 
 const mapDispatchToProps = dispatch => ({
-    updateReview: review => dispatch(updateReview(review))
+    updateReview: review => dispatch(updateReview(review)),
+    deleteReview: reviewId => dispatch(deleteReview(reviewId))
+
 });
 
 export default connect(null, mapDispatchToProps)(ReviewEditForm);
