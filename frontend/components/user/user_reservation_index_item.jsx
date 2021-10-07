@@ -26,6 +26,7 @@ const UserReservationIndexItem = ({ reservation, restaurants }) => {
                     <Link className="user-review-link-styling" to={{
                         pathname: '/feedback',
                         state: {
+                            reservation: reservation,
                             restaurant: restaurant
                         }
                     }}>
