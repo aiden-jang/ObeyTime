@@ -16,6 +16,9 @@ class ReviewShow extends React.Component {
             console.log(reviews)
         return (
             <div>
+                <br />
+                <br />
+                <br />
                 {reviews.map(review => (
                     <div key={review.id}>
                         <span>Anonymous User</span>
