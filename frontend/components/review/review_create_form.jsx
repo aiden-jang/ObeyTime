@@ -56,7 +56,6 @@ class ReviewCreateForm extends React.Component {
       }
 
       render () {
-          console.log(this.state)
           const { currentUser } = this.props;
           const { restaurant, reservation } = this.props.location.state;
         return (

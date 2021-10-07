@@ -32,7 +32,17 @@ const UserReservationIndexItem = ({ reservation, restaurants, reviews, currentUs
                     </Link>
                 ) : (review) ? (
                     <div>
-                        <p>Edit a review</p>
+                        <Link className="user-review-link-styling" to={{
+                            pathname: '/feedback/edit',
+                            state: {
+                                review: review,
+                                currentUser: currentUser,
+                                restaurant: restaurant,
+                                reservation: reservation
+                            }
+                        }}>
+                        <h2>Edit a review</h2>
+                        </Link>
                         <input type="submit" onClick={() => {deleteReview(review.id);
                                 window.location.reload();
                             }} value='Delete a review' />

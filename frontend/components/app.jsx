@@ -17,6 +17,7 @@ import ReservationCancelConfirm from './reservation/reservation_cancel_confirm';
 import UserProfile from './user/user_profile';
 import UserReservation from './user/user_reservation';
 import ReviewCreateForm from './review/review_create_form';
+import ReviewEditForm from './review/review_edit_form';
 
 const App = () => (
   <div>
@@ -36,6 +37,8 @@ const App = () => (
       <ProtectedRoute exact path='/book/cancel' component={ReservationCancel} />
       <ProtectedRoute exact path='/book/cancel/confirm' component={ReservationCancelConfirm} />
       <ProtectedRoute exact path='/feedback' component={ReviewCreateForm} />
+      <ProtectedRoute exact path='/feedback/edit' component={ReviewEditForm} />
+
     </Switch>
 
     <Route path='/' component={Footer} />
