@@ -12,7 +12,7 @@ export const fetchReview = reviewId => (
     
 export const createReview = review => (
     $.ajax({
-        method: "POST",
+        method: 'POST',
         url: '/api/reviews',
         data: { review }
     })
@@ -20,7 +20,7 @@ export const createReview = review => (
 
 export const updateReview = review => (
     $.ajax({
-        method: "PATCH",
+        method: 'PATCH',
         url: `/api/reviews/${review.id}`,
         data: { review }
     })

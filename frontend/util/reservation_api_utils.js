@@ -12,7 +12,7 @@ export const fetchReservation = reservationId => (
     
 export const createReservation = reservation => (
     $.ajax({
-        method: "POST",
+        method: 'POST',
         url: '/api/reservations',
         data: { reservation }
     })
@@ -20,7 +20,7 @@ export const createReservation = reservation => (
 
 export const updateReservation = reservation => (
     $.ajax({
-        method: "PATCH",
+        method: 'PATCH',
         url: `/api/reservations/${reservation.id}`,
         data: { reservation }
     })

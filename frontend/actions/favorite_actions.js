@@ -1,11 +1,11 @@
-import * as APIUtil from '../util/favorite_util';
+import * as APIUtil from '../util/favorite_api_utils';
 
 export const RECEIVE_FAVORITES = 'RECEIVE_FAVORITES';
 export const RECEIVE_FAVORITE = 'RECEIVE_FAVORITE';
 export const REMOVE_FAVORITE = 'REMOVE_FAVORITE';
 
 export const receiveFavorites = favorites => ({
-    type: RECEIVE_FAVORITES,
+    type: RECEIVE_FAVORITES, 
     favorites
 });
 
@@ -21,7 +21,7 @@ export const removeFavorite = favoriteId => ({
 
 export const fetchFavorites = () => dispatch => (
     APIUtil.fetchFavorites()
-        .then(favorites => (dispatch(fetchFavorites(favorites))))
+        .then(favorites => (dispatch(receiveFavorites(favorites))))
 );
 
 export const createFavorite = favorite => dispatch => (

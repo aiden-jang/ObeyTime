@@ -18,10 +18,35 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 class RestaurantShow extends React.Component {
+    constructor (props) {
+        super(props);
+
+        this.addFavorite = this.addFavorite.bind(this);
+        this.state = {}
+    }
     componentDidMount () {
         this.props.fetchRestaurant(this.props.match.params.restaurantId);
     }
 
+    addFavorite(e) {
+        e.preventDefault();
+
+        console.log({
+            user_id: this.props.currentUser.id,
+            restaurant_id: this.props.restaurant.id
+        })
+        if (!this.props.currentUser) {
+            this.props.openModal('login');
+        } else {
+            this.props.createFavorite({
+                user_id: this.props.currentUser.id,
+                restaurant_id: this.props.restaurant.id
+            })
+        }
+    }
+    // { (currentUser) ? (
+    //     <input type="submit" value="Save this restaurant" />
+    // ) : (null)}
     render() {
         if (!this.props.restaurant) return null;
         const { restaurant, openModal, currentUser } = this.props;
@@ -31,6 +56,11 @@ class RestaurantShow extends React.Component {
                 <div className="restaurant-show-image">
                     <img src={restaurant.photoUrl} />
                 </div>
+
+
+
+                <input type="submit" value="Save this restaurant" onClick={this.addFavorite} />
+            
 
                 <div className="restaurant-show-main">
                     <div className="restaurant-show-main-content">
