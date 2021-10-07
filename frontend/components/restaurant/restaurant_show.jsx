@@ -1,6 +1,8 @@
 import React from 'react';
 import ReservationForm from '../reservation/reservation_form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ReviewShow from '../review/review_show';
+
 import {
     faMoneyBillAlt as farMoneyBillAlt,
     faMap as farMap,
@@ -51,8 +53,10 @@ class RestaurantShow extends React.Component {
                             </div>
                         </div>
                     </div>
+                    <ReviewShow
+                        restaurant={restaurant}
+                    />
                 </div>
-                
                 <ReservationForm
                     restaurant={restaurant}
                     openModal={openModal}
