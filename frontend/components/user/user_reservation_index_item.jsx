@@ -41,7 +41,7 @@ const UserReservationIndexItem = ({ reservation, restaurants, reviews, currentUs
                                 reservation: reservation
                             }
                         }}>
-                        <h2>Edit a review</h2>
+                        <h2>See/Edit a review</h2>
                         </Link>
                         <input type="submit" onClick={() => {deleteReview(review.id);
                                 window.location.reload();
