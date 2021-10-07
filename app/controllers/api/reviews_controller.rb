@@ -41,7 +41,7 @@ class Api::ReviewsController < ApplicationController
 
     private
 
-    def reservation_params
+    def review_params
         params.require(:review).permit(
             :user_id,
             :restaurant_id,

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchReservations } from '../../actions/reservation_actions';
 import { fetchRestaurants } from '../../actions/restaurant_actions';
+import { fetchReviews } from '../../actions/review_actions';
 import UserReservationIndex from './user_reservation_index';
 
 class UserReservation extends React.Component {
@@ -13,12 +14,13 @@ class UserReservation extends React.Component {
     componentDidMount() {
         this.props.fetchReservations();
         this.props.fetchRestaurants();
+        this.props.fetchReviews();
     }
 
     render () {
         if (!(this.props.restaurants.length && this.props.reservations.length)) return null;
 
-        const { currentUser, reservations, restaurants } = this.props;
+        const { currentUser, reservations, restaurants, reviews } = this.props;
 
         return (
             <div className="user-profile-page">
@@ -38,6 +40,7 @@ class UserReservation extends React.Component {
                         <UserReservationIndex 
                             reservations={reservations}
                             restaurants={restaurants}
+                            reviews={reviews}
                             currentUser={currentUser}
                         />
                     </div>
@@ -50,12 +53,14 @@ class UserReservation extends React.Component {
 const mapStateToProps = state => ({
     currentUser: state.session.currentUser,
     reservations: Object.values(state.entities.reservations),
-    restaurants: Object.values(state.entities.restaurants)
+    restaurants: Object.values(state.entities.restaurants),
+    reviews: Object.values(state.entities.reviews)
 });
 
 const mapDispatchToProps = dispatch => ({
     fetchReservations: () => dispatch(fetchReservations()),
-    fetchRestaurants: () => dispatch(fetchRestaurants())
+    fetchRestaurants: () => dispatch(fetchRestaurants()),
+    fetchReviews: () => dispatch(fetchReviews())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserReservation);
