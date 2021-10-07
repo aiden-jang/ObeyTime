@@ -7,10 +7,11 @@ class ReviewCreateForm extends React.Component {
     constructor(props) {
         super(props);
     
-        if (!this.props.location.state) {
-            props.history.push('/');
-            window.location.reload();   
-        }
+        // if (!this.props.location.state) {
+        //     props.history.push('/');
+        //     window.location.reload();   
+        // }
+        this.props.location.state = {restaurant: {id:1, name: 'testing'}}
       }
     
 
