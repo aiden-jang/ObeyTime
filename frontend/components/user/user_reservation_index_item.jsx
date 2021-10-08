@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-const UserReservationIndexItem = ({ reservation, restaurants, reviews, currentUser, deleteReview}) => {
+import { deleteFavorite, createFavorite, fetchFavorites } from '../../actions/favorite_actions';
+
+const UserReservationIndexItem = ({ reservation, restaurants, reviews, currentUser, favorites, deleteFavorite, createFavorite, fetchFavorites}) => {
     if (!restaurants.length) return null;
 
     const today = new Date().toISOString().slice(0, 10);
-
     const restaurant = restaurants.find(restaurant =>
         restaurant.id === reservation.restaurant_id);
     let review = {}
@@ -14,7 +16,20 @@ const UserReservationIndexItem = ({ reservation, restaurants, reviews, currentUs
             restaurant.id === review.restaurant_id && currentUser.id === review.user_id);
     }
 
-    return (
+    let setFavorite = false;
+    const favorite = favorites.find(favorite =>
+        favorite.restaurant_id === reservation.restaurant_id);
+        if (favorite) setFavorite = true;
+        const addFavorite = (e) => {
+            e.preventDefault();
+
+            createFavorite({
+                user_id: currentUser.id,
+                restaurant_id: restaurant.id
+            })
+            setFavorite = true;
+        }
+        return (
         <div className="user-reservation-item">
             <img src={restaurant.photourl} />
             <div className="user-reservation-content">
@@ -55,11 +70,31 @@ const UserReservationIndexItem = ({ reservation, restaurants, reviews, currentUs
                     
                 )
                 }
-                
+                { (favorites.find(favorite =>
+        favorite.restaurant_id === reservation.restaurant_id)) ? (
+                    <div>
+                    <input type="submit" value="Restaurant saved" onClick={() => {
+                        deleteFavorite(favorite.id).then(fetchFavorites());
+                    setFavorite = false}} />
+                                    {console.log("SET TO FALSE")}
+                    </div>
+                ) : (
+                    <input type="submit" value="Save this restaurant" onClick={addFavorite} />
+                )}
             </div>
             <hr />
         </div>
     )
 }
 
-export default UserReservationIndexItem;
+const mapStateToProps = (state) => ({
+    favorites: Object.values(state.entities.favorites)
+});
+
+const mapDispatchToProps = dispatch => ({
+    fetchFavorites: () => dispatch(fetchFavorites()),
+    createFavorite: favorite => dispatch(createFavorite(favorite)),
+    deleteFavorite: favoriteId => dispatch(deleteFavorite(favoriteId))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(UserReservationIndexItem);
