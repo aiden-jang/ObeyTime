@@ -52,6 +52,7 @@ const UserReservationIndexItem = ({ reservation, restaurants, reviews, currentUs
                     }}>
                         <h2>Write Review</h2>
                     </Link>
+                    
                 )
                 }
                 
