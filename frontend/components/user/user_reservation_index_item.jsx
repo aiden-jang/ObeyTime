@@ -118,7 +118,6 @@ class UserReservationIndexItem extends React.Component {
     }
 }
 
-
 const mapStateToProps = (state) => ({
     favorites: Object.values(state.entities.favorites)
 });
