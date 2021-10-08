@@ -58,9 +58,6 @@ class UserReservationIndexItem extends React.Component {
                 restaurant.id === review.restaurant_id && currentUser.id === review.user_id);
         }
     
-
-
-            
             return (
             <div className="user-reservation-item">
                 <img src={restaurant.photourl} />
