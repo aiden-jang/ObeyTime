@@ -17,24 +17,32 @@ import {
     faParking as fasParking
 } from '@fortawesome/free-solid-svg-icons';
 
+
 class RestaurantShow extends React.Component {
     constructor (props) {
         super(props);
 
         this.addFavorite = this.addFavorite.bind(this);
-        this.state = {}
-    }
-    componentDidMount () {
-        this.props.fetchRestaurant(this.props.match.params.restaurantId);
+        this.removeFavorite = this.removeFavorite.bind(this);
+        this.state = { setFavorite: false }
     }
 
+    componentDidMount () {
+        this.props.fetchRestaurant(this.props.match.params.restaurantId);
+        this.props.fetchFavorites();
+    }
+
+    componentDidUpdate () {
+        const { restaurant, currentUser } = this.props;
+
+        const favorite = this.props.favorites.find(favorite =>
+            restaurant.id === favorite.restaurant_id && currentUser.id === favorite.user_id);
+            if (favorite && !this.state.setFavorite)         this.setState({ setFavorite: true })
+
+    }
     addFavorite(e) {
         e.preventDefault();
 
-        console.log({
-            user_id: this.props.currentUser.id,
-            restaurant_id: this.props.restaurant.id
-        })
         if (!this.props.currentUser) {
             this.props.openModal('login');
         } else {
@@ -43,13 +51,26 @@ class RestaurantShow extends React.Component {
                 restaurant_id: this.props.restaurant.id
             })
         }
+        this.setState({ setFavorite: true })
     }
-    // { (currentUser) ? (
-    //     <input type="submit" value="Save this restaurant" />
-    // ) : (null)}
+
+    removeFavorite(e) {
+        e.preventDefault();
+        const { restaurant, currentUser } = this.props;
+
+        const favorite = this.props.favorites.find(favorite =>
+            restaurant.id === favorite.restaurant_id && currentUser.id === favorite.user_id);
+           
+        this.props.deleteFavorite(favorite.id).then(res => this.props.fetchFavorites());
+        
+        this.setState({ setFavorite: false })
+
+    }
+
     render() {
         if (!this.props.restaurant) return null;
         const { restaurant, openModal, currentUser } = this.props;
+        console.log(this.props.favorites)
 
         return (
             <div className="restaurant-show-outer">
@@ -57,9 +78,15 @@ class RestaurantShow extends React.Component {
                     <img src={restaurant.photoUrl} />
                 </div>
 
+                { (this.props.favorites.find(favorite =>
+            restaurant.id === favorite.restaurant_id && currentUser.id === favorite.user_id)) ? ( 
+                <input type="submit" value="Restaurant saved!" onClick={this.removeFavorite} />
 
-
+                ) : (
                 <input type="submit" value="Save this restaurant" onClick={this.addFavorite} />
+
+                )}
+
             
 
                 <div className="restaurant-show-main">
