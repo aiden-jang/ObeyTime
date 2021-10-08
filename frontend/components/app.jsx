@@ -18,18 +18,20 @@ import UserProfile from './user/user_profile';
 import UserReservation from './user/user_reservation';
 import ReviewCreateForm from './review/review_create_form';
 import ReviewEditForm from './review/review_edit_form';
+import UserFavorite from './user/user_favorite';
 
 const App = () => (
   <div>
     <Modal />
     <Route path='/' component={NavBar} />
-    <Route exact path="/" component={Home}/>
+    <Route exact path='/' component={Home}/>
     <Route exact path='/search' component={SearchContainer} />
-    <Route exact path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
+    <Route exact path='/restaurants/:restaurantId' component={RestaurantShowContainer} />
 
     <Switch>
-      <ProtectedRoute exact path ="/my/profile" component={UserProfile} />
-      <ProtectedRoute exact path ="/my/reservations" component={UserReservation} />
+      <ProtectedRoute exact path ='/my/profile' component={UserProfile} />
+      <ProtectedRoute exact path ='/my/reservations' component={UserReservation} />
+      <ProtectedRoute exact path ='/my/favorites' component={UserFavorite} />
       <ProtectedRoute exact path='/booking/details' component={ReservationConfirmForm} />
       <ProtectedRoute exact path='/booking/view/:reservationId' component={ReservationShowContainer} />
       <ProtectedRoute exact path='/booking/details/edit' component={ReservationEditForm} />

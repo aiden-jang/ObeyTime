@@ -46,6 +46,9 @@ class NavBarProfile extends React.Component {
                                     <Link className="dropdown-links-styling" to="/my/reservations">
                                         <li>My Dining History</li>
                                     </Link>
+                                    <Link className="dropdown-links-styling" to="/my/favorites">
+                                        <li>My Saved Restaurants</li>
+                                    </Link>
                                     <li onClick={logout}>
                                         Sign out
                                     </li>

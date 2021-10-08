@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchUser } from '../../actions/user_actions';
+import UserSideMenu from './user_side_menu';
 
 class Profile extends React.Component {
     constructor(props) {
@@ -23,14 +24,7 @@ class Profile extends React.Component {
                     <h1>{user.first_name} {user.last_name}</h1>
                 </div>
                 <div className="user-profile-body">
-                    <div className="user-profile-side">
-                        <Link className="user-profile-link-styling" to="/my/profile">
-                            <h2>Account Details</h2>
-                        </Link>
-                        <Link className="user-profile-link-styling" to="/my/reservations">
-                            <h2>Reservations</h2>
-                        </Link>
-                    </div>
+                   <UserSideMenu />
                     <div className="user-profile-page-main">
                         <h2>About me</h2>
                         <div className="user-profile-first-name">

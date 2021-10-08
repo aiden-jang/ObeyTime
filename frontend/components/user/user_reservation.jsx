@@ -5,6 +5,7 @@ import { fetchReservations } from '../../actions/reservation_actions';
 import { fetchRestaurants } from '../../actions/restaurant_actions';
 import { fetchReviews } from '../../actions/review_actions';
 import UserReservationIndex from './user_reservation_index';
+import UserSideMenu from './user_side_menu';
 
 class UserReservation extends React.Component {
     constructor(props){
@@ -28,14 +29,7 @@ class UserReservation extends React.Component {
                     <h1>{currentUser.first_name} {currentUser.last_name}</h1>
                 </div>
                 <div className="user-profile-body">
-                    <div className="user-profile-side">
-                        <Link className="user-profile-link-styling" to="/my/profile">
-                            <h2>Account Details</h2>
-                        </Link>
-                        <Link className="user-profile-link-styling" to="/my/reservations">
-                            <h2>Reservations</h2>
-                        </Link>
-                    </div>
+                    <UserSideMenu />
                     <div className="user-reservation-list">
                         <UserReservationIndex 
                             reservations={reservations}
