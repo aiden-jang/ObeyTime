@@ -18,9 +18,7 @@ class Api::FavoritesController < ApplicationController
     def destroy
         @favorite = Favorite.find(params[:id])
 
-        if @favorite.destroy
-            
-        else
+        if !@favorite.destroy
             render json: ["Invalid"]
         end
     end

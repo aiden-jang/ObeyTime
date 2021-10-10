@@ -1,5 +1,5 @@
 class Api::ReviewsController < ApplicationController    
-    before_action :require_logged_in, only:
+    before_action :require_logged_in, only: [:update, :destroy]
 
     def index
         @reviews = Review.all
@@ -32,9 +32,7 @@ class Api::ReviewsController < ApplicationController
     def destroy
         @review = Review.find(params[:id])
 
-        if @review.destroy
-            
-        else
+        if !@review.destroy
             render json: ["Invalid"]
         end
     end

@@ -32,10 +32,8 @@ class Api::ReservationsController < ApplicationController
     def destroy
         @reservation = Reservation.find(params[:id])
 
-        if @reservation.destroy
-            
-        else
-            render json: ["Invalid"]
+        if !@reservation.destroy
+           render json: ["Invalid"]
         end
     end
 
