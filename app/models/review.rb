@@ -18,11 +18,6 @@
 class Review < ApplicationRecord
     validates :user_id, :restaurant_id, :rating_overall, :rating_food, :rating_service, :rating_ambience, :rating_value, :noise_level, presence: true
 
-    belongs_to :user,
-        foreign_key: :user_id,
-        class_name: :User
-
-    belongs_to :restaurant, 
-        foreign_key: :restaurant_id,
-        class_name: :Restaurant
+    belongs_to :user
+    belongs_to :restaurant
 end
