@@ -17,13 +17,11 @@
  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
  
  @import './reset';
+ @import './main';
+
  @import './modal';
  @import './nav_bar';
  @import './search_bar';
  @import './restaurant.scss';
  @import './search_page.scss';
 @import './user_profile.scss';
-
- body {
-  font-family: 'Raleway', sans-serif;
-}
