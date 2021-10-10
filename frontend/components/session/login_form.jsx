@@ -24,6 +24,7 @@ class LogInForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    
     this.props.clearErrors();
     const user = Object.assign({}, this.state);
     this.props.processForm(user)
