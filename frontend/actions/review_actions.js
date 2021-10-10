@@ -21,25 +21,25 @@ export const removeReview = reviewId => ({
 
 export const fetchReviews = () => dispatch => (
     APIUtil.fetchReviews()
-        .then(reviews => (dispatch(receiveReviews(reviews))))
+        .then(reviews => dispatch(receiveReviews(reviews)))
 );
 
 export const fetchReview = reviewId => dispatch => (
     APIUtil.fetchReview(reviewId)
-        .then(review => (dispatch(receiveReview(review))))
+        .then(review => dispatch(receiveReview(review)))
 );
 
 export const createReview = review => dispatch => (
     APIUtil.createReview(review)
-        .then(review => (dispatch(receiveReview(review))))
+        .then(review => dispatch(receiveReview(review)))
 );
 
 export const updateReview = review => dispatch => (
     APIUtil.updateReview(review)
-        .then(review => (dispatch(receiveReview(review))))
+        .then(review => dispatch(receiveReview(review)))
 );
 
 export const deleteReview = reviewId => dispatch => (
     APIUtil.deleteReview(reviewId)
-        .then(() => (dispatch(removeReview())))
+        .then(() => dispatch(removeReview()))
 );

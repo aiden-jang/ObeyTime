@@ -15,10 +15,10 @@ export const receiveRestaurant = restaurant => ({
 
 export const fetchRestaurants = filters => dispatch => (
     APIUtil.fetchRestaurants(filters)
-        .then(restaurants => (dispatch(receiveRestaurants(restaurants))))
+        .then(restaurants => dispatch(receiveRestaurants(restaurants)))
 );
 
 export const fetchRestaurant = restaurantId => dispatch => (
     APIUtil.fetchRestaurant(restaurantId)
-        .then(restaurant => (dispatch(receiveRestaurant(restaurant))))
+        .then(restaurant => dispatch(receiveRestaurant(restaurant)))
 );

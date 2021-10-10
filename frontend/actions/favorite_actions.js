@@ -21,15 +21,15 @@ export const removeFavorite = favoriteId => ({
 
 export const fetchFavorites = () => dispatch => (
     APIUtil.fetchFavorites()
-        .then(favorites => (dispatch(receiveFavorites(favorites))))
+        .then(favorites => dispatch(receiveFavorites(favorites)))
 );
 
 export const createFavorite = favorite => dispatch => (
     APIUtil.createFavorite(favorite)
-        .then(favorite => (dispatch(receiveFavorite(favorite))))
+        .then(favorite => dispatch(receiveFavorite(favorite)))
 );
 
 export const deleteFavorite = favoriteId => dispatch => (
     APIUtil.deleteFavorite(favoriteId)
-        .then(() => (dispatch(removeFavorite())))
+        .then(() => dispatch(removeFavorite()))
 );
