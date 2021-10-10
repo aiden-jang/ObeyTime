@@ -3,13 +3,13 @@ export const fetchReviews = () => (
         url: '/api/reviews'
     })
 );
-    
+
 export const fetchReview = reviewId => (
     $.ajax({
         url: `/api/reviews/${reviewId}`
     })
 );
-    
+
 export const createReview = review => (
     $.ajax({
         method: 'POST',
