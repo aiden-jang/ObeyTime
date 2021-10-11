@@ -1,60 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-
 .search-form {
     display: flex;
-    height: 550px; 
+    height: 100vh; 
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     background: linear-gradient( rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.6) ),
         url('https://obeytime-seeds.s3.amazonaws.com/splash-search-bar.jpeg');
     background-size: 100%, 100%;
-    background-position: 0px -100px;
 }
 
-#search-title {
+.search-title {
     text-align: center;
     margin-bottom: 10px;
     font-size: 40px;
     color: white;
 }
+
 .search-form-input {
     display: inline-flex;
+}
+
+.search-form-input input, .search-form-input select {
+    border: 1px solid rgb(212, 212, 212);
+    cursor: pointer;
 }
 
 .search-form-input input[type="date"]{
     width: 170px;
     height: 40px;
-    cursor: pointer;
-    border: 1px solid rgb(212, 212, 212);
-    font-family: 'Raleway', sans-serif;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
+
 .search-form-input input[type="time"]{
     width: 120px;
     height: 40px;
-    cursor: pointer;
-    border: 1px solid rgb(212, 212, 212);
-    font-family: 'Raleway', sans-serif;
-
 }
+
 .search-form-input select {
     width: 120px;
     text-align: center;
-    border: 1px solid rgb(212, 212, 212);
-    font-family: 'Raleway', sans-serif;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+
 .search-form-input input[type="text"]{
     margin-left: 20px;
     width: 250px;
     text-indent: 10px;
-    border: 1px solid rgb(212, 212, 212);
     border-radius: 5px;
-    font-family: 'Raleway', sans-serif;
-
+    cursor: text;
+    outline: none;
 }
 
 .search-form-input input[type="submit"]{
@@ -62,23 +57,14 @@
     width: 150px;
     text-align: center;
     background-color: #da3743;
-    border: 0px;
+    border: 0;
     border-radius: 5px;
-    font-family: 'Raleway', sans-serif;
     color: white;
     font-size: 18px;
     cursor: pointer;
     font-weight: bolder;
-}
-
-.search-form-input input[type="submit"]:hover {
-    background-color: #a1232c;
-    transition: background-color .4s;
-}
-
-    
-
-.search-form img {
-    padding-left: 10px;
-    margin-left: -10px;
+    &:hover {
+        background-color: #a1232c;
+        transition: 200ms;
+    }
 }

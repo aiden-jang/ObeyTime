@@ -4,13 +4,16 @@ import { withRouter } from 'react-router-dom';
 class SearchBar extends React.Component {
     constructor(props) {
         super(props);
+
         this.handleSubmit = this.handleSubmit.bind(this);
         this.updateInput = this.updateInput.bind(this);
+
         this.state = {};
     }
 
     handleSubmit (e) {
         e.preventDefault();
+
         this.props.history.push({
             pathname: '/search',
             state: this.state
@@ -29,8 +32,7 @@ class SearchBar extends React.Component {
         return (
             <div className="search-form">
                 <form onSubmit={this.handleSubmit} className="search-form-box">
-
-                    <h1 id="search-title">Find your table for any occasion</h1>
+                    <h1 className="search-title">Find your table for any occasion</h1>
                     <br/>
                     <div className="search-form-input">
                         <input className="search-input date" type="date" defaultValue={today} min={today} />
@@ -51,7 +53,6 @@ class SearchBar extends React.Component {
                             className="search-input filter"
                             placeholder="Location, Restaurant, or Cuisine"
                             onChange={this.updateInput}
-
                         />
                         <input className="search-input submit" type="submit" value="Let's go" />
                     </div>
