@@ -54,7 +54,9 @@ class NavBarProfile extends React.Component {
                                     </li>
                                 </ul>
                             </div>
-                        </div>) : null
+                        </div>
+                    ) :
+                        null
                     }
                 </div>
             </div>

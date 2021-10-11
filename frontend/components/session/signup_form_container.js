@@ -6,8 +6,8 @@ import SignUpForm from './signup_form';
 const mapStateToProps = ({ errors }) => ({
   errors: errors.session,
   demo: {
-    email: "demo@mail.com",
-    password: "password123"
+    email: 'demo@mail.com',
+    password: 'password123'
   }
 });
 
