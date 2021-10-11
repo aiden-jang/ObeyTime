@@ -7,27 +7,24 @@
     background: rgba(0, 0, 0, 0.7);
     z-index: 10;
 }
-  
+
 .modal-child {
     background-color: white;
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 85%;
-    width: 440px; 
+    height: fit-content;
+    width: 380px; 
     border-radius: 5px;
     overflow-y: auto;
-    padding-top:40px;
-}
-
-.session-form {
-    text-align: center;
+    padding: 40px 30px;
 }
 
 .session-form h2 {
     font-weight: 700;
     font-size: 20px;
+    text-align: left;
 }
 
 .close-x {
@@ -39,7 +36,7 @@
 }
 
 .login-input {
-    width: 350px;
+    width: 100%;
     height: 50px;
     margin-bottom: 10px;
     border-radius: 5px;
@@ -52,7 +49,7 @@
 }
 
 .session-submit {
-    width: 350px;
+    width: 100%;
     height: 50px;
     margin-bottom: 10px;
     background-color: #da3743;
@@ -67,16 +64,11 @@
     }
 }
 
-.session-form-errors{ 
-    margin: 20px 40px;
-}
-
 .session-demo {
-    width: 350px;
+    width: 100%;
     height: 50px;
     margin-bottom: 10px;
     background-color: white;
-    font-family: 'Raleway', sans-serif;
     font-size: 14px;
     font-weight: 600;
     border-radius: 5px;
@@ -88,18 +80,17 @@
     }
 }
 
+.login-input-new, .session-form-container .alternative {
+    text-align: left;
+}
+
 .session-new-signup {
     background-color: transparent;
     border: 0px;
     cursor: pointer;
     font-size: 16px;
     font-weight: 700;
-    font-family: 'Raleway', sans-serif;
     color: #da3743;
-}
-
-input{
-    text-indent: 10px;
 }
 
 hr {
@@ -107,11 +98,15 @@ hr {
     border-width: 0.5px;
 }
 
+input{
+    margin-top: 10px;
+    text-indent: 10px;
+}
+
 .session-form ul {
-    color: red;
-    margin-left: -40px;
-    font-size: 14px;
+    margin-top: 20px;
+    color: #da3743;
+    font-size: 16px;
     top: 70px;
     list-style-type: none;
-    font-size: 14px;
 }
