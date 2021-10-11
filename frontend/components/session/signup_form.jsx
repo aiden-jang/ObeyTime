@@ -102,8 +102,6 @@ class SignUpForm extends React.Component {
               className="login-input">
               <option value="" disabled hidden>Primary Dining Location *</option>
               <option value="NYC">New York / Tri-State Area</option>
-              <option value="SFB">San Francisco Bay Area</option>
-              <option value="HI">Hawaii</option>
             </select>
             <br/>
 

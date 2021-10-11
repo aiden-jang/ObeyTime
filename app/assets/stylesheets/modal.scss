@@ -11,10 +11,10 @@
 .modal-child {
     background-color: white;
     position: absolute;
-    top: 55%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: fit-content;
+    height: 440px;
     width: 380px; 
     border-radius: 5px;
     overflow-y: auto;
@@ -24,7 +24,7 @@
 .session-form h2 {
     font-weight: 700;
     font-size: 20px;
-    text-align: left;
+    margin-bottom: 15px;
 }
 
 .close-x {
@@ -80,10 +80,6 @@
     }
 }
 
-.login-input-new, .session-form-container .alternative {
-    text-align: left;
-}
-
 .session-new-signup {
     background-color: transparent;
     border: 0px;
@@ -99,12 +95,11 @@ hr {
 }
 
 input{
-    margin-top: 10px;
     text-indent: 10px;
 }
 
 .session-form ul {
-    margin-top: 20px;
+    margin: 20px 0px;
     color: #da3743;
     font-size: 16px;
     top: 70px;
