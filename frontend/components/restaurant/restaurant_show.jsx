@@ -6,14 +6,16 @@ import {
     faMoneyBillAlt as farMoneyBillAlt,
     faMap as farMap,
     faClock as farClock,
-    faCreditCard as farCreditCard
+    faCreditCard as farCreditCard,
+    faBookmark as farBookmark
 } from '@fortawesome/free-regular-svg-icons';
 import {
     faUtensils as fasUtensils,
     faMapMarkerAlt as fasMapMarkerAlt,
     faPhone as fasPhone,
     faUtensilSpoon as fasUtensilSpoon,
-    faParking as fasParking
+    faParking as fasParking,
+    faBookmark as fasBookmark
 } from '@fortawesome/free-solid-svg-icons';
 
 class RestaurantShow extends React.Component {
@@ -45,6 +47,10 @@ class RestaurantShow extends React.Component {
                         id: fav.id,
                         user_id: fav.user_id
                     });              
+                } else {
+                    this.setState({
+                        user_id: currentUser.id
+                    });    
                 }
             });
         }
@@ -92,9 +98,13 @@ class RestaurantShow extends React.Component {
                 </div>
                 <div className="restaurant-favorite">
                     { (this.state.id !== 0) ? ( 
-                        <input type="submit" value="Restaurant saved!" onClick={this.handleFavorite} />
+                        <button onClick={this.handleFavorite}>
+                            <FontAwesomeIcon className="fav-saved" icon={fasBookmark} /> Restaurant saved!
+                        </button>
                     ) : (
-                        <input type="submit" value="Save this restaurant" onClick={this.handleFavorite} />
+                        <button onClick={this.handleFavorite}>
+                            <FontAwesomeIcon icon={farBookmark} /> Save this restaurant
+                        </button>
                     )}
                 </div>
                 

@@ -13,8 +13,15 @@ class ReviewShow extends React.Component {
         const { restaurant } = this.props;
         const  reviews  = this.props.reviews.filter(review =>
             restaurant.id === review.restaurant_id);
+        // let ratingSum = 0;
+        // reviews.map(review => {
+        //     ratingSum += review.rating_overall;
+        // })
         return (
             <div>
+                {
+                //    console.log(ratingSum) 
+                }
                 <br />
                 <br />
                 <br />
