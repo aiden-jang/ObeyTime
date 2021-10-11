@@ -1,7 +1,7 @@
 export const fetchRestaurants = filters => (
     $.ajax({
         url: '/api/restaurants',
-        data: { filters }
+        data: filters
     })
 );
     

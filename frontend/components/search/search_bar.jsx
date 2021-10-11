@@ -51,7 +51,7 @@ class SearchBar extends React.Component {
                         </select>
                         <input type="text"
                             className="search-input filter"
-                            placeholder="Location, Restaurant, or Cuisine"
+                            placeholder="Location, Restaurant, or Cuisine (eg. Chelsea)"
                             onChange={this.updateInput}
                         />
                         <input className="search-input submit" type="submit" value="Let's go" />
