@@ -90,13 +90,14 @@ class RestaurantShow extends React.Component {
                 <div className="restaurant-show-image">
                     <img src={restaurant.photoUrl} />
                 </div>
-
-                { (this.state.id !== 0) ? ( 
-                    <input type="submit" value="Restaurant saved!" onClick={this.handleFavorite} />
-                ) : (
-                    <input type="submit" value="Save this restaurant" onClick={this.handleFavorite} />
-                )}
-
+                <div className="restaurant-favorite">
+                    { (this.state.id !== 0) ? ( 
+                        <input type="submit" value="Restaurant saved!" onClick={this.handleFavorite} />
+                    ) : (
+                        <input type="submit" value="Save this restaurant" onClick={this.handleFavorite} />
+                    )}
+                </div>
+                
                 <div className="restaurant-show-main">
                     <div className="restaurant-show-main-content">
                         <h1>{restaurant.name}</h1>
