@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-
 .modal-background {
     position: fixed;
     top: 0;
@@ -24,20 +22,19 @@
 }
 
 .session-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
 }
 
 .session-form h2 {
+    font-weight: 700;
     font-size: 20px;
 }
+
 .close-x {
     position: absolute;
     right: 20px;
-    top: 40px;
+    top: 20px;
     font-size: 20px;
-    font-family: 'Raleway', sans-serif;
     cursor: pointer;
 }
 
@@ -47,7 +44,11 @@
     margin-bottom: 10px;
     border-radius: 5px;
     border: .05rem solid #d8d9db;
-
+    &:hover, &:focus {
+        border: .05rem solid darkgray;
+        outline: .05rem solid darkgray;
+        transition: 200ms;
+    }
 }
 
 .session-submit {
@@ -55,18 +56,17 @@
     height: 50px;
     margin-bottom: 10px;
     background-color: #da3743;
-    font-family: 'Raleway', sans-serif;
     color: white;
     font-size: 18px;
     border: 0px;
     border-radius: 5px;
     cursor: pointer;
+    &:hover {
+        background-color: #a1232c;
+        transition: 200ms;
+    }
 }
 
-.session-submit:hover {
-    background-color: #a1232c;
-    transition: background-color .4s;
-}
 .session-form-errors{ 
     margin: 20px 40px;
 }
@@ -82,7 +82,10 @@
     border-radius: 5px;
     border: .05rem solid #d8d9db;
     cursor: pointer;
-
+    &:hover {
+        border: 2px solid #a1232c;
+        transition: 200ms;
+    }
 }
 
 .session-new-signup {
@@ -95,11 +98,6 @@
     color: #da3743;
 }
 
-.session-demo:hover {
-    border: 2px solid #a1232c;
-    transition: border .4s;
-}
-
 input{
     text-indent: 10px;
 }
@@ -107,14 +105,12 @@ input{
 hr {
     border: 1px solid rgba(0,0,0,.12);
     border-width: 0.5px;
-
 }
 
 .session-form ul {
     color: red;
     margin-left: -40px;
     font-size: 14px;
-    position: static;
     top: 70px;
     list-style-type: none;
     font-size: 14px;

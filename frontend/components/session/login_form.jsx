@@ -24,7 +24,7 @@ class LogInForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    
+
     this.props.clearErrors();
     const user = Object.assign({}, this.state);
     this.props.processForm(user)
@@ -33,6 +33,7 @@ class LogInForm extends React.Component {
 
   handleDemo(e) {
     e.preventDefault();
+    
     this.props.clearErrors();
     const demoUser = Object.assign({}, this.props.demo);
     this.props.processForm(demoUser)
@@ -63,7 +64,6 @@ class LogInForm extends React.Component {
           <hr/>
           <div className="session-form-errors">
             {this.renderErrors()}
-
           </div>
           <br/>
 
