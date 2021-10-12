@@ -20,9 +20,21 @@ class ReservationShow extends React.Component {
         Promise.all([
             this.props.fetchReservation(this.props.match.params.reservationId)
         ]).then(() => {
-            this.props.fetchRestaurant(this.props.reservation.restaurant_id)
-        })
+            this.props.fetchRestaurant(this.props.reservation.restaurant_id);
+        });
     }
+
+    convertTime (time) {
+        let newTime = "";
+        let hour = parseInt(time.slice(0,2));
+        if (hour >= 12) {
+          hour -= 12;
+          newTime = hour + time.slice(2,6) + " PM";
+        } else {
+          newTime = hour + time.slice(2,6) + " AM";
+        }
+        return newTime
+      }
 
     render () {
         if (!this.props.reservation) return null;
@@ -46,7 +58,7 @@ class ReservationShow extends React.Component {
                             <p><FontAwesomeIcon  className="confirm" icon={fasCheckCircle} /> Reservation confirmed</p>
                         </div>
                         <p><FontAwesomeIcon icon={farCalendar} /> {reservation.date}</p>
-                        <p><FontAwesomeIcon icon={farClock} /> {reservation.time}</p>
+                        <p><FontAwesomeIcon icon={farClock} /> {this.convertTime(reservation.time)}</p>
                         <p><FontAwesomeIcon icon={farUser} /> {reservation.party_size} people</p>
                         <Link to={{
                             pathname: '/book/modify',

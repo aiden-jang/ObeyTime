@@ -37,12 +37,11 @@ class ReservationForm extends React.Component {
   convertTime (time) {
     let newTime = "";
     let hour = parseInt(time.slice(0,2));
-    console.log(hour)
     if (hour >= 12) {
       hour -= 12;
-      newTime = hour + time.slice(2,6) + " PM"
+      newTime = hour + time.slice(2,6) + " PM";
     } else {
-      newTime = hour + time.slice(2,6) + " AM"
+      newTime = hour + time.slice(2,6) + " AM";
     }
     return newTime
   }

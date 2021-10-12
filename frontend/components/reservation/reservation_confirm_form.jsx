@@ -46,6 +46,18 @@ class ReservationConfirmForm extends React.Component {
     });
   }
 
+  convertTime (time) {
+    let newTime = "";
+    let hour = parseInt(time.slice(0,2));
+    if (hour >= 12) {
+      hour -= 12;
+      newTime = hour + time.slice(2,6) + " PM";
+    } else {
+      newTime = hour + time.slice(2,6) + " AM";
+    }
+    return newTime
+  }
+
   render () {
     const { party_size, date, time, restaurant, currentUser } = this.props.location.state;
       
@@ -60,7 +72,7 @@ class ReservationConfirmForm extends React.Component {
           <br />
           
           <p><FontAwesomeIcon icon={farCalendar} /> {date}</p>
-          <p><FontAwesomeIcon icon={farClock} /> {time}</p>
+          <p><FontAwesomeIcon icon={farClock} /> {this.convertTime(time)}</p>
           <p><FontAwesomeIcon icon={farUser} /> {party_size} people</p>
           <br />  
         </div>
@@ -91,7 +103,7 @@ class ReservationConfirmForm extends React.Component {
 
 const mapDispatchToProps = dispatch => ({
     logout: () => dispatch(logout()),
-    createReservation: (reservation) => dispatch(createReservation(reservation)),
+    createReservation: reservation => dispatch(createReservation(reservation)),
 });
 
 export default connect(null, mapDispatchToProps)(ReservationConfirmForm);
