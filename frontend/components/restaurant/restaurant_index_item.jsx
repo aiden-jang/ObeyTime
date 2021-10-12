@@ -7,7 +7,9 @@ const RestaurantIndexItem = ({ restaurant }) => {
     <div className="search-result-restaurant">
       <hr />
       <div className="search-result-restaurant-wrapper">
-        <img src={restaurant.photourl} />
+        <Link className="restaurant-index-item-link-styling" to={`/restaurants/${restaurant.id}`}>
+          <img src={restaurant.photourl} />
+        </Link>
         <div className="search-result-restaurant-content">
           <Link className="restaurant-index-item-link-styling" to={`/restaurants/${restaurant.id}`}>
             <h2>{restaurant.name}</h2>
