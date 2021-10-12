@@ -33,7 +33,7 @@ class RestaurantShow extends React.Component {
     }
 
     componentDidMount () {
-        if (!this.props.restaurant) this.props.fetchRestaurant(this.props.match.params.restaurantId);
+        this.props.fetchRestaurant(this.props.match.params.restaurantId);
     }
 
     componentDidUpdate () {

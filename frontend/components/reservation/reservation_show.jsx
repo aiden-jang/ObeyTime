@@ -34,7 +34,7 @@ class ReservationShow extends React.Component {
           newTime = hour + time.slice(2,6) + " AM";
         }
         return newTime
-      }
+    }
 
     render () {
         if (!this.props.reservation) return null;

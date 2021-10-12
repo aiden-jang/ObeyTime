@@ -9,6 +9,18 @@ const ReservationCancel = props => {
         window.location.reload();
     }
 
+    const convertTime = time => {
+        let newTime = "";
+        let hour = parseInt(time.slice(0,2));
+        if (hour >= 12) {
+          hour -= 12;
+          newTime = hour + time.slice(2,6) + " PM";
+        } else {
+          newTime = hour + time.slice(2,6) + " AM";
+        }
+        return newTime
+    }
+
     const { reservation, restaurant, currentUser } = props.location.state;
     
     return(
@@ -30,7 +42,7 @@ const ReservationCancel = props => {
                         </div>
                         <div className="reservation-cancel-info-time">
                             <h2>TIME</h2>
-                            <p>{reservation.time}</p>
+                            <p>{convertTime(reservation.time)}</p>
                         </div>
                         <div className="reservation-cancel-info-rest">
                             <h2>RESTAURANT</h2>

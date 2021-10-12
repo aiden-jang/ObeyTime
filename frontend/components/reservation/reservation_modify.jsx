@@ -31,11 +31,23 @@ class ReservationModify extends React.Component {
     modifyReservation (e) {
         e.preventDefault();
         this.props.updateReservation(this.state)
-            .then(this.props.history.push('/booking/details/edit'))
+            .then(this.props.history.push('/booking/details/edit'));
     }
 
     displayTime () {
         this.setState({displayTime: true});
+    }
+
+    convertTime (time) {
+        let newTime = "";
+        let hour = parseInt(time.slice(0,2));
+        if (hour >= 12) {
+          hour -= 12;
+          newTime = hour + time.slice(2,6) + " PM";
+        } else {
+          newTime = hour + time.slice(2,6) + " AM";
+        }
+        return newTime
     }
 
     render () {
@@ -50,7 +62,7 @@ class ReservationModify extends React.Component {
                     <h2>{restaurant.name}</h2>
 
                     <p><FontAwesomeIcon icon={farCalendar} /> {reservation.date}</p>
-                    <p><FontAwesomeIcon icon={farClock} /> {reservation.time}</p>
+                    <p><FontAwesomeIcon icon={farClock} /> {this.convertTime(reservation.time)}</p>
                     <p><FontAwesomeIcon icon={farUser} /> {reservation.party_size} People</p>
                 </div>
                 <hr />
@@ -88,10 +100,10 @@ class ReservationModify extends React.Component {
                                         phone_number: this.state.phone_number
                                     }
                                 }}>
-                                    <input className="reservation-modify-new-time" type="submit" value={this.state.time} />
+                                    <input className="reservation-modify-new-time" type="submit" value={this.convertTime(this.state.time)} />
                                 </Link>
                             ) : (
-                                <div></div>
+                                null
                             )}
                         </div>
                     </div>

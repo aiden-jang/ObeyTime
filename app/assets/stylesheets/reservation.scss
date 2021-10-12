@@ -2,41 +2,39 @@
     display: block;
     margin-left: 10%;
     width: 80%;
+    h1 {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bolder;
+    }
 }
-.reservation-confirm-form h1 {
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bolder;
-}
+
 .reservation-confirm-form-overview{
     display: block;
     width: 65%;
-}
-
-.reservation-confirm-form-overview img {
-    display: block;
-    width: 70px;
-    height: 70px;
-    border-radius: 5px;
-}
-
-.reservation-confirm-form-overview h2 {
-    display: inline;
-    position: relative;
-    font-size: 24px;
-    left: 90px;
-    top: -65px;
-    font-weight: bolder;
-
-}
-.reservation-confirm-form-overview p {
-    display: inline;
-    position: relative;
-    font-size: 16px;
-    left: 90px;
-    top: -45px;
-    margin-right: 30px;
-    
+    img {
+        display: block;
+        width: 70px;
+        height: 70px;
+        border-radius: 5px;
+    }
+    h2 {
+        display: inline;
+        position: relative;
+        font-size: 24px;
+        left: 90px;
+        top: -65px;
+        font-weight: bolder;
+    }
+    p {
+        display: inline;
+        position: relative;
+        font-size: 16px;
+        left: 90px;
+        top: -45px;
+        margin-right: 30px;
+        
+    }
 }
 
 .reservation-confirm-form-info {
@@ -92,9 +90,11 @@
     font-weight: lighter;
     font-size: 14px;
 }
+
 .reservation-confirm-form-terms span{
     color: #da3743;
 } 
+
 .reservation-confirm-form-note {
     display: block;
     position: absolute;
@@ -102,37 +102,25 @@
     top: 150px;
     left: 65%;
     font-weight: lighter;
+    h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    h4 {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    p {
+        font-size: 14px;
+        color: darkgray;
+    }
 }
-
-.reservation-confirm-form-note h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-.reservation-confirm-form-note h4 {
-    font-size: 14px;
-    margin-bottom: 10px;
-
-}
-.reservation-confirm-form-note p {
-    font-size: 14px;
-    color: darkgray;
-}
-
-
-
-
 
 .reservation-show {
     background-color: #f1f2f4;
     padding-bottom: 70px;
 }
-.reservation-restaurant-confirm {
-    position: relative;
-    top: -20px;
-}
-.reservation-restaurant-confirm .confirm{
-    color: green;
-}
+
 .reservation-confirm {
     display: block;
     left: 10%;
@@ -144,60 +132,67 @@
     background-color: white;
 }
 
-.reservation-restaurant img{
+.reservation-restaurant-confirm {
     position: relative;
-    border-radius: 10px;
-    margin: 40px 40px;
-    width: 120px;
-    height: 120px;
-}
-.reservation-restaurant h2{
-    position: relative;
-    left: 180px;
-    top: -155px;
-    font-size: 24px;
-    font-weight: bolder;
+    top: -20px;
+    .confirm{
+        color: green;
+    }
 }
 
-.reservation-restaurant p{
-    display: inline-block;
-    position: relative;
-    left: 180px;
-    top: -110px;
-    margin-right:30px;
+.reservation-restaurant  {
+    img{
+        position: relative;
+        border-radius: 10px;
+        margin: 40px 40px;
+        width: 120px;
+        height: 120px;
+    }
+    h2{
+        position: relative;
+        left: 180px;
+        top: -155px;
+        font-size: 24px;
+        font-weight: bolder;
+    }
+    p{
+        display: inline-block;
+        position: relative;
+        left: 180px;
+        top: -110px;
+        margin-right:30px;
+    }
+    button {
+        display: inline-block;
+        position: relative;
+        left: -170px;
+        top: -70px;
+        background-color: white;
+        border: none;
+        color: #da3743;
+        font-size: 16px;
+        cursor: pointer;
+    }
 }
 
-.reservation-restaurant button {
-    display: inline-block;
-    position: relative;
-    left: -160px;
-    top: -70px;
-    background-color: white;
-    border: none;
-    color: #da3743;
-    font-size: 16px;
-    cursor: pointer;
-}
 .reservation-side-info {
     margin-left: 40px;
-}
-.reservation-side-info h2{
-    font-weight: bolder;
-    margin-bottom: 20px;
-    font-size:16px;
-}
-
-.reservation-side-info h3{
-    font-weight: bolder;
-    margin-bottom: 20px;
-    font-size:14px;
-}
-
-.reservation-side-info p{
-    color:rgb(112, 112, 112);
-    font-size:14px;
-    margin-right: 30px;
-
+    h2{
+        font-weight: bolder;
+        margin-bottom: 20px;
+        font-size:16px;
+    }
+    h3{
+        font-weight: bolder;
+        margin-bottom: 20px;
+        font-size:14px;
+    }
+    p{
+        color:rgb(112, 112, 112);
+        font-size:14px;
+        margin-right: 30px;
+    
+    }
 }
 
 .reservation-side-user-info {
@@ -209,16 +204,17 @@
     top: 120px;
     width: 300px;
 }
+
 .reservation-side-user-info-content {
     margin: 30px 40px;
     font-size: 20px;
     font-weight: bolder;
     line-height: 2;
-}
-.reservation-side-user-info-content h3{
-    font-weight: normal;
-    font-size: 18px;
-    color: rgb(112, 112, 112);
+    h3{
+        font-weight: normal;
+        font-size: 18px;
+        color: rgb(112, 112, 112);
+    }
 }
 
 .reservation-form {
@@ -234,49 +230,45 @@
 
 .reservation-form-box {
     margin:20px 20px;
-}
-
-.reservation-form-box h3{
-    text-align: center;
-    font-size: 18px;
-    font-weight:bolder;
+    h3{
+        text-align: center;
+        font-size: 18px;
+        font-weight:bolder;
+    }
 }
 
 .reservation-form-input {
     margin-top: -10px;
     line-height: 1.4;
-}
-
-.reservation-form-input select {
-    width: 280px;
-    height: 30px;
-    border: none;
-    border-bottom: 1px solid lightgray;
-    cursor: pointer;
-    text-indent: 20px;
-    &:hover {
-        border-bottom: 1px solid #da3743;
+    select {
+        width: 280px;
+        height: 30px;
+        border: none;
+        border-bottom: 1px solid lightgray;
+        cursor: pointer;
+        text-indent: 20px;
+        &:hover {
+            border-bottom: 1px solid #da3743;
+        }
     }
-}
-
-.reservation-form-input input {
-    width: 280px;
-    height: 30px;
-    border: none;
-    border-bottom: 1px solid lightgray;
-    cursor: pointer;
-    &:hover {
-        border-bottom: 1px solid #da3743;
+    input {
+        width: 280px;
+        height: 30px;
+        border: none;
+        border-bottom: 1px solid lightgray;
+        cursor: pointer;
+        &:hover {
+            border-bottom: 1px solid #da3743;
+        }
     }
-}
-
-.reservation-form-input input[type="submit"] {
-    margin-top: 10px;
-    border: none;
-    background-color: #da3743;
-    color: white;
-    height: 40px;
-    border-radius: 5px;
+    input[type="submit"] {
+        margin-top: 10px;
+        border: none;
+        background-color: #da3743;
+        color: white;
+        height: 40px;
+        border-radius: 5px;
+    }
 }
 
 .reservation-modify {
@@ -288,121 +280,111 @@
     position: relative;
     background-color: white;
 }
+
 .reservation-modify-info {
     margin: 20px 20px;
+    h1 {
+        font-size: 16px;
+        font-weight: bolder;
+        margin-left: 10px;
+    }
+    img {
+        position: relative;
+        margin: 20px 10px;
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+    }
+    h2{
+        position: relative;
+        left: 110px;
+        top: -90px;
+        font-size: 24px;
+        font-weight: bolder;
+    }
+    p{
+        display: inline-block;
+        position: relative;
+        left: 110px;
+        top: -70px;
+        margin-right: 30px;
+    }
+}
 
-}
-.reservation-modify-info h1 {
-    font-size: 16px;
-    font-weight: bolder;
-    margin-left: 10px;
-}
-.reservation-modify-info img{
-    position: relative;
-    margin: 20px 10px;
-    width: 80px;
-    height: 80px;
-    border-radius: 10px;
-
-}
-
-.reservation-modify-info h2{
-    position: relative;
-    left: 110px;
-    top: -90px;
-    font-size: 24px;
-    font-weight: bolder;
-}
-
-.reservation-modify-info p{
-    display: inline-block;
-    position: relative;
-    left: 110px;
-    top: -70px;
-    margin-right: 30px;
-}
 .reservation-modify hr{
     position: relative;
     top: -50px;
     margin-left: 30px;
 }
+
 .reservation-modify-form {
     position: relative;
     top: -30px;
+    h2 {
+        font-size: 18px;
+        margin-left: 30px;
+    }
 }
-.reservation-modify-form h2 {
-    font-size: 18px;
-    margin-left: 30px;
-}
+
 .reservation-modify-input {
     margin-left: -30px;
     display: inline-block;
+    input {
+        width: 150px;
+        height:50px;
+        border: 1px solid lightgray;
+    }
+    input[type="date"] {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    select {
+        width: 150px;
+        height: 50px;
+        border: 1px solid lightgray;
+    }
+    select:nth-child(3) {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    input[type="submit"] {
+        border-radius: 5px;
+        margin-left: 20px;
+        background-color: #da3743;
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        &:hover {
+            background-color: #aa2b33;
+        }
+    }
 }
 
-.reservation-modify-input input {
-    width: 150px;
-    height:50px;
-    border: 1px solid lightgray;
-}
-.reservation-modify-input input[type="date"] {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-.reservation-modify-input select {
-    font-size: 16px;
-
-    width: 150px;
-    height:50px;
-    border: 1px solid lightgray;
-}
-.reservation-modify-input select:nth-child(3) {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-.reservation-modify-input input[type="submit"] {
-    border-radius: 5px;
-    margin-left: 20px;
-    background-color: #da3743;
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-}
-.reservation-modify-input input[type="submit"]:hover {
-    background-color: #aa2b33;
-}
 .reservation-modify-new-time {
     position: relative;
     left: 50px;
     top: -140px;
 }
 
-
 .reservation-cancel-background {
     display: block;
     background-color: #f1f2f4;
     padding-bottom: 150px;
 }
+
 .reservation-cancel-head {
     display: block;
     height: 90px;
     width: 80%;
+    h1 {
+        position: relative;
+        left: 10%;
+        top: 30px;
+        font-size: 32px;
+        font-weight: bold;
+    }
 }
 
-.reservation-cancel-head h1 {
-    position: relative;
-    left: 10%;
-    top: 30px;
-    font-size: 32px;
-    font-weight: bold;
-}
-.reservation-cancel-info img {
-    position: relative;
-    display: inline-block;
-
-    width: 80px;
-    height: 80px;
-    border-radius: 5px;
-}
 .reservation-cancel-container {
     display:block;
     position: relative;
@@ -412,32 +394,40 @@
     border: 1px solid lightgray;
     background-color: white;
 }
+
 .reservation-cancel-info {
     margin: 20px 20px;
+    img {
+        position: relative;
+        display: inline-block;
+    
+        width: 80px;
+        height: 80px;
+        border-radius: 5px;
+    }
+    div {
+        position: relative;
+        display: inline-block;
+        left: 30px;
+        top: -20px;
+        margin-right: 60px;
+        line-height: 1.6;
+        h2 {
+            font-size: 16px;
+        }
+        p {
+            font-size: 18px;
+        
+            font-weight: bold;
+        }
+    }
 }
 
-.reservation-cancel-info div{
-    position: relative;
-    display: inline-block;
-    left: 30px;
-    top: -20px;
-    margin-right: 60px;
-    line-height: 1.6;
-}
-
-.reservation-cancel-info div h2{
-    font-size: 16px;
-}
-
-.reservation-cancel-info div p{
-    font-size: 18px;
-
-    font-weight: bold;
-}
 .reservation-cancel-link {
     text-decoration: none;
     color:rgb(22, 155, 144);
 }
+
 .reservation-cancel-info input {
     margin-top: 10px;
     width: 200px;
@@ -447,25 +437,23 @@
     font-size: 16px;
     border: none;
     border-radius: 5px;
-}
-
-.reservation-cancel-info input:hover {
-    background-color: #aa2b33;
+    cursor: pointer;
+    &:hover {
+        background-color: #aa2b33;
+    }
 }
 
 .reservation-cancel-confirm {
     display: block;
     position: relative;
     margin: 60px 120px;
-}
-
-.reservation-cancel-confirm h1{
-    font-size: 26px;
-    font-weight: bold;
-    margin-bottom: 50px;
-}
-
-.reservation-cancel-confirm h2{
-    font-size: 20px;
-    font-weight: bold;
+    h1 {
+        font-size: 26px;
+        font-weight: bold;
+        margin-bottom: 50px;
+    }
+    h2 {
+        font-size: 20px;
+        font-weight: bold;
+    }
 }
