@@ -1,11 +1,29 @@
 import React from 'react';
 import { connect } from 'react-redux'; 
-
 import { fetchReviews } from '../../actions/review_actions';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+    faStar as fasStar,
+    faStarHalfAlt as fasStarHalfAlt
+} from '@fortawesome/free-solid-svg-icons';
+import {
+    faStar as farStar
+} from '@fortawesome/free-regular-svg-icons';
 
 class ReviewShow extends React.Component {
     componentDidMount () {
         this.props.fetchReviews();
+    }
+
+    createElements(n){
+        let elements = [];
+        for(let i =1; i <= n; i++){
+            elements.push(<span key={i}><FontAwesomeIcon className="stars-filled" icon={fasStar} /></span>);
+        }
+        for(let i = n; i < 5; i++){
+            elements.push(<span key={10+i}><FontAwesomeIcon className="stars-unfilled" icon={farStar} /></span>);
+        }
+        return elements;
     }
 
     render () {
@@ -15,16 +33,25 @@ class ReviewShow extends React.Component {
             restaurant.id === review.restaurant_id);
 
             return (
-            <div>
+            <div className="reviews">
+                <h2>What {reviews.length} people are saying</h2>
+                <hr />
+
                 {reviews.map(review => (
-                    <div key={review.id}>
-                        <span>Anonymous User</span>
-                        <span>{review.rating_overall}</span>
-                        <span>{review.rating_food}</span>
-                        <span>{review.rating_service}</span>
-                        <span>{review.rating_ambience}</span>
-                        <span>{review.rating_value}</span>
-                        <span>{review.body}</span>
+                    <div key={review.id} className="review">
+                        <h3>Anonymous User</h3>
+                        <div className="review-container">
+                            <span>{ this.createElements(review.rating_overall) }</span>
+                            <ul>
+                                <li>Overall <span>{review.rating_overall}</span></li>
+                                <li>· Food <span>{review.rating_food}</span></li>
+                                <li>· Service <span>{review.rating_service}</span></li>
+                                <li>· Ambience <span>{review.rating_ambience}</span></li>
+                                <li>· Value <span>{review.rating_value}</span></li>
+                            </ul>
+                            <p>{review.body}</p>
+                            <hr />
+                        </div>
                     </div>
                 ))}
             </div>

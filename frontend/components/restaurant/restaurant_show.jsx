@@ -141,10 +141,10 @@ class RestaurantShow extends React.Component {
                                 <p>{restaurant.description}</p>
                             </div>
                         </div>
+                        <ReviewShow
+                            restaurant={restaurant}
+                        />
                     </div>
-                    <ReviewShow
-                        restaurant={restaurant}
-                    />
                 </div>
                 <ReservationForm
                     restaurant={restaurant}
