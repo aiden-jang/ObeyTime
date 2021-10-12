@@ -3,7 +3,7 @@ import SearchPageSearchBar from './search_page_serach_bar';
 import SearchFilter from './seach_filter';
 import RestaurantIndex from '../restaurant/restaurant_index';
 
-const SearchPage = ({ restaurants, updateFilter, fetchRestaurants, location}) => {
+const SearchPage = ({ restaurants, updateFilter, fetchRestaurants, location }) => {
     return (
         <div className="search-page">
             <SearchPageSearchBar 
@@ -22,11 +22,11 @@ const SearchPage = ({ restaurants, updateFilter, fetchRestaurants, location}) =>
                 />
             </div>
             <div className="search-result-container">
+                <h3>{restaurants.length} restaurants available in New York City </h3>
                 <RestaurantIndex 
                     restaurants={restaurants}
                 />
-            </div>  
-            
+            </div>
         </div>
     )     
 };
