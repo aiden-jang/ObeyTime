@@ -20,7 +20,6 @@ const RestaurantIndexItem = ({ restaurant }) => {
           <p>{restaurant.price_range} · {restaurant.cuisine} · {restaurant.neighborhood}</p>
         </div>
       </div>
-      
     </div>
   )
 };

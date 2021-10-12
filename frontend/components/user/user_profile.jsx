@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchUser } from '../../actions/user_actions';
 import UserSideMenu from './user_side_menu';
@@ -24,7 +23,9 @@ class Profile extends React.Component {
                     <h1>{user.first_name} {user.last_name}</h1>
                 </div>
                 <div className="user-profile-body">
-                   <UserSideMenu />
+                   <UserSideMenu 
+                    tab='profile'
+                   />
                     <div className="user-profile-page-main">
                         <h2>About me</h2>
                         <div className="user-profile-first-name">

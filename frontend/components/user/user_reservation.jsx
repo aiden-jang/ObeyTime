@@ -32,7 +32,9 @@ class UserReservation extends React.Component {
                     <h1>{currentUser.first_name} {currentUser.last_name}</h1>
                 </div>
                 <div className="user-profile-body">
-                    <UserSideMenu />
+                    <UserSideMenu
+                        tab='reservation'
+                    />
                     <div className="user-reservation-list">
                         <UserReservationIndex 
                             reservations={reservations}

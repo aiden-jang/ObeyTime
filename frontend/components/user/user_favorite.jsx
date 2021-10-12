@@ -31,7 +31,9 @@ class UserFavorite extends React.Component {
         
         return (
             <div className="user-favorite-page">
-                <UserSideMenu />
+                <UserSideMenu
+                    tab='favorite'
+                />
                 {favorites.map(favorite => {
                     const restaurant = this.props.restaurants.find(restaurant => restaurant.id === favorite.restaurant_id);
 
