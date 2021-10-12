@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import ReservationForm from '../reservation/reservation_form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ReviewShow from '../review/review_show';
+import ReviewStar from '../review/review_star';
 import {
     faMoneyBillAlt as farMoneyBillAlt,
     faMap as farMap,
@@ -114,6 +115,9 @@ class RestaurantShow extends React.Component {
                         <hr />
                         <div className="restaurant-show-info">
                             <div className="restaurant-show-main-info">
+                                <ReviewStar 
+                                    restaurant={restaurant}
+                                />
                                 <FontAwesomeIcon icon={farMoneyBillAlt} />
                                 <p> 
                                     {(restaurant.price_range === '$') ? "$15 and under": null}
