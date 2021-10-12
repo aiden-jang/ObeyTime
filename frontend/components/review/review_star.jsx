@@ -7,7 +7,8 @@ import {
     faStarHalfAlt as fasStarHalfAlt
 } from '@fortawesome/free-solid-svg-icons';
 import {
-    faStar as farStar
+    faStar as farStar,
+    faCommentAlt as farCommentAlt
 } from '@fortawesome/free-regular-svg-icons';
 
 class ReviewStar extends React.Component {
@@ -18,13 +19,13 @@ class ReviewStar extends React.Component {
     createElements(n){
         let elements = [];
         for(let i =1; i < n; i++){
-            elements.push(<span key={i}><FontAwesomeIcon className="stars" icon={fasStar} /></span>);
+            elements.push(<span key={i}><FontAwesomeIcon className="stars-filled" icon={fasStar} /></span>);
         }
         if (n % 1 != 0) {
-            elements.push(<span key={0.5}><FontAwesomeIcon className="stars" icon={fasStarHalfAlt} /></span>);
+            elements.push(<span key={0.5}><FontAwesomeIcon className="stars-half" icon={fasStarHalfAlt} /></span>);
         }
         for(let i = n; i < 4; i++){
-            elements.push(<span key={10+i}><FontAwesomeIcon className="stars" icon={farStar} /></span>);
+            elements.push(<span key={10+i}><FontAwesomeIcon className="stars-unfilled" icon={farStar} /></span>);
         }
         return elements;
     }
@@ -43,9 +44,13 @@ class ReviewStar extends React.Component {
         return (
             <div>
                 <div className="avg-rating">
-                    <span>{ this.createElements(ratingAvg) }</span>
-                    <span>{ ratingAvg }</span>
-                    <span>{ reviews.length } Reviews</span>
+                    <div className="stars">
+                        <span>{ this.createElements(ratingAvg) }</span>
+                    </div>
+                    <div className="rating">
+                        <span>{ ratingAvg }</span>
+                    </div>
+                    <span><FontAwesomeIcon className="stars" icon={farCommentAlt} /> { reviews.length } Reviews</span>
                 </div>
             </div>
         )

@@ -118,15 +118,24 @@ class RestaurantShow extends React.Component {
                                 <ReviewStar 
                                     restaurant={restaurant}
                                 />
-                                <FontAwesomeIcon icon={farMoneyBillAlt} />
-                                <p> 
-                                    {(restaurant.price_range === '$') ? "$15 and under": null}
-                                    {(restaurant.price_range === '$$') ? "$16 and $30": null}
-                                    {(restaurant.price_range === '$$$') ? "$31 to $50": null}
-                                    {(restaurant.price_range === '$$$$') ? "$50 and over": null}
-                                </p>
-                                <FontAwesomeIcon icon={fasUtensils} />
-                                <p>{restaurant.cuisine}</p>
+                                <div className="price-n-cuisine">
+                                    <span> 
+                                        <FontAwesomeIcon icon={farMoneyBillAlt} />
+                                        &nbsp;
+                                        &nbsp;
+                                        {(restaurant.price_range === '$') ? "$15 and under": null}
+                                        {(restaurant.price_range === '$$') ? "$16 and $30": null}
+                                        {(restaurant.price_range === '$$$') ? "$31 to $50": null}
+                                        {(restaurant.price_range === '$$$$') ? "$50 and over": null}
+                                    </span>
+                                    <span>
+                                        <FontAwesomeIcon icon={fasUtensils} />
+                                        &nbsp;
+                                        &nbsp;
+                                        {restaurant.cuisine}
+                                    </span>
+                                </div>
+                                
                             </div>
                             <div className="restaurant-show-description">
                                 <p>{restaurant.description}</p>
