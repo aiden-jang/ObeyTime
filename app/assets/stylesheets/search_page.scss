@@ -8,36 +8,39 @@
 }
 
 .search-filter-container {
-    width: 25%;
+    width: 22%;
     display: inline-block;
     vertical-align: top;
-    margin-top: 50px;
-    margin-left: 5%;
+    margin-top: 70px;
+    margin-left: 13%;
     margin-bottom: 50px;
 }
 
 .search-filter-content {
     display: block;
+    margin: 20px;
+    hr {
+        text-align: center;
+        margin: 20px 0px;
+    }
 }
-.search-filter-content hr {
-    width: 70%;
-    margin-left: -20px;
-}
+
 .search-filter-name {
     font-size: 18px;
-
-}
-.search-filter-name label {
-    color:rgb(87, 87, 87);
+    label {
+        color:rgb(87, 87, 87);
+    }    
 }
 
 .search-filter-price label {
     margin-bottom: 30px;
 }
+
 .search-filter-cuisine label {
     margin-top: 10px;
     display: block;
 }
+
 .search-filter-neighborhood label {
     display: block;
     margin-top: 10px;

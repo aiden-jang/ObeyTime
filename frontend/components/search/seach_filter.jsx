@@ -18,7 +18,7 @@ class SearchFilter extends React.Component {
             price: [],
             cuisine: [],
             neighborhood: []
-        }
+        };
     }
 
     componentDidMount () {
@@ -81,7 +81,7 @@ class SearchFilter extends React.Component {
             <div className="search-filter-content">
                 <div className="search-filter-price">
                     <label className="search-filter-name">
-                        <FontAwesomeIcon icon={farMoneyBillAlt} /> Price
+                        <h3><FontAwesomeIcon icon={farMoneyBillAlt} /> Price</h3>
                         <br />
                         <label>
                             <input type="checkbox" value="$" onChange={this.priceHandleChange} />
@@ -104,7 +104,7 @@ class SearchFilter extends React.Component {
                 <hr />
                 <div className="search-filter-cuisine">
                     <label className="search-filter-name">
-                        <FontAwesomeIcon icon={fasUtensils} /> Cuisine
+                        <h3><FontAwesomeIcon icon={fasUtensils} /> Cuisine</h3>
                     <br />
                         <label>
                             <input type="checkbox" value="American" onChange={this.cuisineHandleChange} />
@@ -135,7 +135,7 @@ class SearchFilter extends React.Component {
                 <hr />
                 <div className="search-filter-neighborhood">
                     <label className="search-filter-name">
-                        <FontAwesomeIcon icon={farMap} /> Neighborhood
+                        <h3><FontAwesomeIcon icon={farMap} /> Neighborhood</h3>
                         <br />
                         <label>
                             <input type="checkbox" value="Hell's Kitchen" onChange={this.neighborhoodHandleChange} />
