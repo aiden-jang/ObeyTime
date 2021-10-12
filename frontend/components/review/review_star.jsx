@@ -16,7 +16,7 @@ class ReviewStar extends React.Component {
         this.props.fetchReviews();
     }
 
-    createElements(n){
+    createElements(n) {
         let elements = [];
         if ( n > 0) {
             for(let i =1; i < n; i++){

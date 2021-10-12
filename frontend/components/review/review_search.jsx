@@ -16,7 +16,7 @@ class ReviewSearch extends React.Component {
         this.props.fetchReviews();
     }
 
-    createElements(n){
+    createElements(n) {
         let elements = [];
         if ( n > 0) {
             for(let i =1; i < n; i++){
@@ -33,8 +33,23 @@ class ReviewSearch extends React.Component {
                 elements.push(<span key={10+i}><FontAwesomeIcon className="stars-unfilled" icon={farStar} /></span>);
             }
         }
-        
         return elements;
+    }
+
+    createElement(n) {
+        if (n >= 4.5) {
+            return (<span>Exceptional</span>);
+        } else if (n >= 4.0) {
+            return (<span>Excellent</span>);
+        } else if (n >= 3.5) {
+            return (<span>Awesome</span>);
+        } else if (n >= 3.0) {
+            return (<span>Very Good</span>);
+        } else if (n >= 2.0) {
+            return (<span>Good</span>);
+        } else if (n > 0) {
+            return (<span>Oh no...</span>);
+        }
     }
 
     render () {
@@ -56,12 +71,14 @@ class ReviewSearch extends React.Component {
                     <div className="stars">
                         <span>{ this.createElements(ratingAvg) }</span>
                     </div>
+                    <span>{ this.createElement(ratingAvg) }</span>
                     <span>({ reviews.length })</span>
                 </div>
             </div>
         )
     }
 }
+
 const mapStateToProps = state => ({
     reviews: Object.values(state.entities.reviews)
 })

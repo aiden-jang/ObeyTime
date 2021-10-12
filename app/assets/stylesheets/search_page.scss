@@ -78,6 +78,8 @@
         display: flex;
         > span {
             text-indent: 5px;
+        }
+        > span:nth-child(3) {
             color:rgb(87, 87, 87);
         }
     }
