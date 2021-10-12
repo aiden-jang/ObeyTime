@@ -4,7 +4,6 @@ import { fetchReviews } from '../../actions/review_actions';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faStar as fasStar,
-    faStarHalfAlt as fasStarHalfAlt
 } from '@fortawesome/free-solid-svg-icons';
 import {
     faStar as farStar

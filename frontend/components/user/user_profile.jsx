@@ -23,9 +23,9 @@ class Profile extends React.Component {
                     <h1>{user.first_name} {user.last_name}</h1>
                 </div>
                 <div className="user-profile-body">
-                   <UserSideMenu 
-                    tab='profile'
-                   />
+                    <UserSideMenu 
+                        tab='profile'
+                    />
                     <div className="user-profile-page-main">
                         <h2>About me</h2>
                         <div className="user-profile-first-name">

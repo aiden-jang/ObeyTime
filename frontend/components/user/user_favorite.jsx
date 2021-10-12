@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchFavorites, deleteFavorite } from '../../actions/favorite_actions';
 import { fetchRestaurants } from '../../actions/restaurant_actions';
-
 import UserSideMenu from './user_side_menu';
 
 class UserFavorite extends React.Component {
@@ -19,7 +18,6 @@ class UserFavorite extends React.Component {
 
     removeFavorite(e) {
         e.preventDefault();
-        console.log(e.target.value)
         this.props.deleteFavorite(e.target.value.id).then(res => this.props.fetchFavorites());
     }
 
@@ -30,7 +28,7 @@ class UserFavorite extends React.Component {
             favorite.user_id === user.id)
         
         return (
-            <div className="user-favorite-page">
+            <div className="user-profile-body">
                 <UserSideMenu
                     tab='favorite'
                 />

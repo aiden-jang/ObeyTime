@@ -1,7 +1,7 @@
 import React from 'react';
 import UserReservationIndexItem from './user_reservation_index_item';
 
-const UserReservationIndex = ({reservations, restaurants, reviews, currentUser, favorites, deleteFavorite, createFavorite, fetchFavorites}) => {
+const UserReservationIndex = ({ reservations, restaurants, reviews, currentUser }) => {
     const today = new Date().toISOString().slice(0, 10);
 
     if (!(restaurants.length && reservations.length)) return null;
@@ -17,7 +17,6 @@ const UserReservationIndex = ({reservations, restaurants, reviews, currentUser, 
                                 reservation={reservation}
                                 restaurants={restaurants}
                                 currentUser={currentUser}
-                            
                                 key={reservation.id}
                             />  
                         )
@@ -35,7 +34,6 @@ const UserReservationIndex = ({reservations, restaurants, reviews, currentUser, 
                                 restaurants={restaurants}
                                 reviews={reviews}
                                 currentUser={currentUser}
-                                
                                 key={reservation.id}
                             />  
                         )

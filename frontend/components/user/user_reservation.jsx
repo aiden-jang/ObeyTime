@@ -1,11 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchReservations } from '../../actions/reservation_actions';
 import { fetchRestaurants } from '../../actions/restaurant_actions';
 import { fetchReviews } from '../../actions/review_actions';
 import { createFavorite, fetchFavorites, deleteFavorite } from '../../actions/favorite_actions';
-
 import UserReservationIndex from './user_reservation_index';
 import UserSideMenu from './user_side_menu';
 

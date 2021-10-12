@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
 const UserSideMenu = ({ tab }) => {
     return (
         <div className="user-profile-side">
@@ -26,8 +25,7 @@ const UserSideMenu = ({ tab }) => {
                 <h2>Account Details</h2>
             )}
         </Link>
-    </div>
-    )
+    </div>)
 }
 
 export default UserSideMenu;

@@ -1,71 +1,90 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-
 import { deleteFavorite, createFavorite, fetchFavorites } from '../../actions/favorite_actions';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+    faCommentAlt as farCommentAlt,
+    faBookmark as farBookmark
+} from '@fortawesome/free-regular-svg-icons';
+import {
+    faBookmark as fasBookmark
+} from '@fortawesome/free-solid-svg-icons';
 
 class UserReservationIndexItem extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {setFavorite: false}
+
         this.addFavorite = this.addFavorite.bind(this);
         this.removeFavorite = this.removeFavorite.bind(this);
     }
+
     componentDidMount () {
         this.props.fetchFavorites();
     }
 
-    componentDidUpdate () {
-        const {reservation} = this.props
-        const favorite = this.props.favorites.find(favorite =>
-            favorite.restaurant_id === reservation.restaurant_id);
-            if (favorite && !this.state.setFavorite)                 this.setState({setFavorite: true});
-    }
     addFavorite(e) {
         e.preventDefault();
-        const {reservation, currentUser } = this.props
-        const restaurant = this.props.restaurants.find(restaurant =>
+
+        const { reservation, currentUser, restaurants, createFavorite, fetchFavorites } = this.props
+        const restaurant = restaurants.find(restaurant =>
             restaurant.id === reservation.restaurant_id);
-        this.props.createFavorite({
+
+        createFavorite({
             user_id: currentUser.id,
             restaurant_id: restaurant.id
-        }).then(this.props.fetchFavorites())
-        this.setState({setFavorite: true});
+        }).then(res => fetchFavorites());
     }
 
     removeFavorite(e) {
         e.preventDefault();
-        const {currentUser, reservation } = this.props;
-        const restaurant = this.props.restaurants.find(restaurant =>
+
+        const {currentUser, reservation, restaurants, favorites, fetchFavorites, deleteFavorite } = this.props;
+        const restaurant = restaurants.find(restaurant =>
             restaurant.id === reservation.restaurant_id);
-        const favorite = this.props.favorites.find(favorite =>
+        const favorite = favorites.find(favorite =>
             restaurant.id === favorite.restaurant_id && currentUser.id === favorite.user_id);
            
-        this.props.deleteFavorite(favorite.id).then(res => this.props.fetchFavorites());
-        
-        this.setState({ setFavorite: false })
-
+        deleteFavorite(favorite.id).then(res => fetchFavorites());
     }
+
+    convertTime (time) {
+        let newTime = "";
+        let hour = parseInt(time.slice(0,2));
+        if (hour >= 12) {
+          hour -= 12;
+          newTime = hour + time.slice(2,6) + " PM";
+        } else {
+          newTime = hour + time.slice(2,6) + " AM";
+        }
+        return newTime
+    }
+
     render () {
         if (!this.props.restaurants.length) return null;
-        const {reservation, currentUser } = this.props
+
+        const {reservation, restaurants, currentUser, reviews, favorites } = this.props;
+
         const today = new Date().toISOString().slice(0, 10);
-        const restaurant = this.props.restaurants.find(restaurant =>
+        const restaurant = restaurants.find(restaurant =>
             restaurant.id === reservation.restaurant_id);
-        let review = {}
+        let review = {};
+
         if (reservation.date < today) {
-        review = this.props.reviews.find(review =>
+            review = reviews.find(review =>
                 restaurant.id === review.restaurant_id && currentUser.id === review.user_id);
         }
     
-            return (
+        return (
             <div className="user-reservation-item">
-                <img src={restaurant.photourl} />
+                <Link className="user-reservation-rest-link-styling" to={`/restaurants/${restaurant.id}`}>
+                    <img src={restaurant.photourl} />
+                </Link>
                 <div className="user-reservation-content">
                     <Link className="user-reservation-rest-link-styling" to={`/restaurants/${restaurant.id}`}>
                         <h2>{restaurant.name}</h2>
                     </Link>
-                    <p>{reservation.date} at {reservation.time} </p>
+                    <p>{reservation.date} at {this.convertTime(reservation.time)} </p>
                     <p>Table for {reservation.party_size} people.</p>
                     { (reservation.date >= today) ? (
                         <Link className="user-reservation-resv-link-styling" to={`/booking/view/${reservation.id}`}>
@@ -82,7 +101,12 @@ class UserReservationIndexItem extends React.Component {
                                     reservation: reservation
                                 }
                             }}>
-                            <h2>See/Edit your review</h2>
+                                <h2>
+                                    <span>
+                                        <FontAwesomeIcon className="user-profile-review" icon={farCommentAlt} />
+                                    </span>
+                                    See/Edit your review
+                                </h2>
                             </Link>
                     
                         </div>
@@ -99,14 +123,15 @@ class UserReservationIndexItem extends React.Component {
                         
                     )
                     }
-                    {console.log(this.state.setFavorite)}
-                    { (this.props.favorites.find(favorite =>
-            restaurant.id === favorite.restaurant_id && currentUser.id === favorite.user_id)) ? (
-                        <div>
-                        <input type="submit" value="Restaurant saved" onClick={this.removeFavorite} />
-                        </div>
+                    { (favorites.find(favorite =>
+                restaurant.id === favorite.restaurant_id && currentUser.id === favorite.user_id)) ? (
+                        <button onClick={this.removeFavorite}>
+                            <FontAwesomeIcon className="fav-saved" icon={fasBookmark} /> Restaurant saved!
+                        </button>
                     ) : (
-                        <input type="submit" value="Save this restaurant" onClick={this.addFavorite} />
+                        <button onClick={this.addFavorite}>
+                            <FontAwesomeIcon icon={farBookmark} /> Save this restaurant
+                        </button>
                     )}
                 </div>
                 <hr />
@@ -115,7 +140,7 @@ class UserReservationIndexItem extends React.Component {
     }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
     favorites: Object.values(state.entities.favorites)
 });
 
