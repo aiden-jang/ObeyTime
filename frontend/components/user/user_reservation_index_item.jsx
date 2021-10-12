@@ -91,7 +91,7 @@ class UserReservationIndexItem extends React.Component {
                             <h2>View</h2>
                         </Link>
                     ) : (review) ? (
-                        <div>
+                        <div className="user-profile-see-edit-review">
                             <Link className="user-review-link-styling" to={{
                                 pathname: '/feedback/edit',
                                 state: {
@@ -111,28 +111,34 @@ class UserReservationIndexItem extends React.Component {
                     
                         </div>
                     ) : (
-                        <Link className="user-review-link-styling" to={{
-                            pathname: '/feedback',
-                            state: {
-                                reservation: reservation,
-                                restaurant: restaurant
-                            }
-                        }}>
-                            <h2>Write Review</h2>
-                        </Link>
-                        
-                    )
-                    }
-                    { (favorites.find(favorite =>
-                restaurant.id === favorite.restaurant_id && currentUser.id === favorite.user_id)) ? (
-                        <button onClick={this.removeFavorite}>
-                            <FontAwesomeIcon className="fav-saved" icon={fasBookmark} /> Restaurant saved!
-                        </button>
-                    ) : (
-                        <button onClick={this.addFavorite}>
-                            <FontAwesomeIcon icon={farBookmark} /> Save this restaurant
-                        </button>
+                        <div className="user-profile-see-edit-review">
+                            <Link className="user-review-link-styling" to={{
+                                pathname: '/feedback',
+                                state: {
+                                    reservation: reservation,
+                                    restaurant: restaurant
+                                }
+                            }}>
+                                <h2>Write Review</h2>
+                            </Link>
+                        </div>
                     )}
+                    <div className="user-profile-favorites">
+                        { (favorites.find(favorite =>
+                            restaurant.id === favorite.restaurant_id && currentUser.id === favorite.user_id)) ? (
+                            <button onClick={this.removeFavorite}>
+                                <FontAwesomeIcon className="fav-saved" icon={fasBookmark} />
+                                &nbsp;
+                                Restaurant saved!
+                            </button>
+                        ) : (
+                            <button onClick={this.addFavorite}>
+                                <FontAwesomeIcon icon={farBookmark} />
+                                &nbsp;
+                                Save this restaurant
+                            </button>
+                        )}
+                    </div>           
                 </div>
                 <hr />
             </div>

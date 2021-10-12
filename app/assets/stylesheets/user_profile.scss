@@ -85,8 +85,6 @@
     border-radius: 5px;
 }
 
-
-
 .user-reservation-list {
     width: 55%;
     display: inline-block;
@@ -111,8 +109,8 @@
     height: fit-content;
     margin: 20px 20px;
     img {
-        height: 100px;
-        width: 100px;
+        height: 120px;
+        width: 120px;
         border-radius: 5px;
         display:inline-block;
     }
@@ -122,21 +120,55 @@
     vertical-align: top;
     display:inline-block;
     margin-left: 20px;
+    h2 {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    p {
+        color:rgb(59, 59, 59);
+        margin-bottom: 10px;
+    }
+    p:nth-child(3) {
+        color:rgb(110, 110, 110);
+    }
 }
 
-.user-reservation-content h2 {
-    font-size: 16px;
-    font-weight: 600;
-}
-.user-reservation-content p {
-    color:rgb(59, 59, 59);
-    margin-bottom: 10px;
-}
 .user-reservation-rest-link-styling {
     color: rgb(77, 77, 77);
     text-decoration: none;
 }
+
 .user-reservation-resv-link-styling {
     color: rgb(29, 153, 153);
     text-decoration: none;
+    display:inline-block;
+    margin-top: 10px;
+    margin-right: 20px;
+    &:hover {
+        color: rgb(16, 97, 97);
+    }
+}
+
+.user-profile-see-edit-review {
+    margin-top: 15px;
+    display:inline-block;
+}
+
+.user-review-link-styling {
+    text-decoration: none;
+    color: #da3743;
+    font-weight: lighter;
+    &:hover {
+        color: #96232b;
+    }
+}
+.user-profile-favorites { 
+    display:inline-block;
+    margin-left: 30px;
+    button {
+        border: 0;
+        background-color: white;
+        color: #da3743;
+        cursor: pointer;
+    }
 }
