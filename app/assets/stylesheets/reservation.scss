@@ -38,58 +38,55 @@
     margin-right: 30px;
     
 }
+
 .reservation-confirm-form-info {
     display: block;
     width: 65%;
     line-height: 1.4;
-}
-.reservation-confirm-form-info h3 {
-    display: block;
-    font-size: 16px;
-}
-.reservation-confirm-form-info p {
-    display: block;
-    font-size: 16px;
-}
-.reservation-confirm-form-info span {
-    color:#da3743;  
+    h3 {
+        display: block;
+        font-size: 16px;
+    }
+    p {
+        display: block;
+        font-size: 16px;
+    }
+    span {
+        color:#da3743;
+        cursor: pointer;
+    }
+    input {
+        width: 280px;
+        height: 40px;
+        margin-right: 20px;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    textarea {
+        width: 585px;
+        height: 40px;
+        margin-top: 20px;
+        margin-right: 20px;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        resize: vertical;
+    }
+    input[type="email"] {
+        background-color: rgb(230, 228, 228);
+    }
+    input[type="submit"] {
+        margin-top: 20px;
+        background-color: #da3743;
+        color: white;
+        font-size: 16px;
+        width: 585px;
+        &:hover {
+            background-color: #aa2b33;
+        }
+    }
 }
 
-.reservation-confirm-form-info input {
-    width: 280px;
-    height: 40px;
-    margin-right: 20px;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-.reservation-confirm-form-info textarea {
-    width: 585px;
-    height: 40px;
-    margin-top: 20px;
-    margin-right: 20px;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    resize: vertical;
-
-}
-
-.reservation-confirm-form-info input[type="email"] {
-    background-color: rgb(230, 228, 228);
-}
-
-.reservation-confirm-form-info input[type="submit"] {
-    margin-top: 20px;
-    background-color: #da3743;
-    color: white;
-    font-size: 16px;
-    width: 585px;
-}
-
-.reservation-confirm-form-info input[type="submit"]:hover {
-    background-color: #aa2b33;
-}
 .reservation-confirm-form-terms p {
     margin: 20px 0px;
     font-weight: lighter;

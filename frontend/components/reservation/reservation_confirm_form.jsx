@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createReservation } from '../../actions/reservation_actions';
+import { logout } from '../../actions/session_actions';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faUser as farUser,
@@ -65,7 +66,7 @@ class ReservationConfirmForm extends React.Component {
         </div>
         <form onSubmit={this.handleSubmit} className="reservation-confirm-form-info">
           <h3>Diner details</h3>
-          <p>{currentUser.first_name} {currentUser.last_name} (<span>Not {currentUser.first_name}?</span>)</p>
+          <p>{currentUser.first_name} {currentUser.last_name} (<span onClick={this.props.logout}>Not {currentUser.first_name}?</span>)</p>
               
           <input type="text" placeholder="Phone number" onChange={this.update('phone_number')} required />
           <input type="email" value={currentUser.email} readOnly/>
@@ -89,6 +90,7 @@ class ReservationConfirmForm extends React.Component {
 }
 
 const mapDispatchToProps = dispatch => ({
+    logout: () => dispatch(logout()),
     createReservation: (reservation) => dispatch(createReservation(reservation)),
 });
 

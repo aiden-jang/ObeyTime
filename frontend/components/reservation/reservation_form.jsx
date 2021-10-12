@@ -34,6 +34,19 @@ class ReservationForm extends React.Component {
     }
   }
 
+  convertTime (time) {
+    let newTime = "";
+    let hour = parseInt(time.slice(0,2));
+    console.log(hour)
+    if (hour >= 12) {
+      hour -= 12;
+      newTime = hour + time.slice(2,6) + " PM"
+    } else {
+      newTime = hour + time.slice(2,6) + " AM"
+    }
+    return newTime
+  }
+
   render () {
     return (
       <div>
@@ -85,7 +98,7 @@ class ReservationForm extends React.Component {
                         }
                       }
                     }>
-                    <input type="submit" value={this.state.time} />
+                    <input type="submit" value={this.convertTime(this.state.time)} />
                   </Link>
                     ) : (
                   <input className="reservation-input-submit" type="submit" value="Find a Table" onClick={this.handleClick} />
