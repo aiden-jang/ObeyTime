@@ -272,6 +272,7 @@
 }
 
 .reservation-modify {
+    height: 80vh; 
     left: 10%;
     width: 55%;
     top: 30px;
@@ -370,6 +371,7 @@
     display: block;
     background-color: #f1f2f4;
     padding-bottom: 150px;
+    height: 50vh; 
 }
 
 .reservation-cancel-head {
@@ -447,6 +449,7 @@
     display: block;
     position: relative;
     margin: 60px 120px;
+    height: 50vh; 
     h1 {
         font-size: 26px;
         font-weight: bold;
