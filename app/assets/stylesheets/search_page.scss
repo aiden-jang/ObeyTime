@@ -1,16 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-.search-page {
-    display: block;
-}
-
 .search-page-form {
     display: flex;
     height: 80px; 
     justify-content: center;
     align-items: center;
-    background-color: rgb(124, 124, 124);
+    background-color: rgb(104, 104, 104);
     flex-wrap: nowrap
 }
 
@@ -93,4 +86,8 @@
 .restaurant-index-item-link-styling {
     text-decoration: none;
     color:rgb(0, 127, 136);
+}
+
+.search-avg-rating {
+    display: flex;
 }

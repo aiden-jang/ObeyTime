@@ -4,8 +4,10 @@ import { withRouter } from 'react-router-dom';
 class SearchPageSearchBar extends React.Component {
     constructor(props) {
         super(props);
+
         this.handleSubmit = this.handleSubmit.bind(this);
         this.updateInput = this.updateInput.bind(this);
+        
         this.state = {};
     }
 
