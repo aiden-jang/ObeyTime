@@ -28,6 +28,7 @@
     align-items: center;
     height: 80px;
     border-bottom: 1px solid lightgray;
+    background-color: white;
     h1{
         text-indent: 100px;
         font-size: 32px;
@@ -122,7 +123,6 @@
     margin-left: 20px;
     h2 {
         font-size: 16px;
-        font-weight: 600;
     }
     p {
         color:rgb(59, 59, 59);
@@ -136,6 +136,9 @@
 .user-reservation-rest-link-styling {
     color: rgb(77, 77, 77);
     text-decoration: none;
+    &:hover {
+        color: black;
+    }
 }
 
 .user-reservation-resv-link-styling {
@@ -144,6 +147,9 @@
     display:inline-block;
     margin-top: 10px;
     margin-right: 20px;
+    h2 {
+        font-weight: 500;
+    }
     &:hover {
         color: rgb(16, 97, 97);
     }
@@ -158,6 +164,9 @@
     text-decoration: none;
     color: #da3743;
     font-weight: lighter;
+    h2 {
+        font-weight: 500;
+    }
     &:hover {
         color: #96232b;
     }
@@ -170,5 +179,111 @@
         background-color: white;
         color: #da3743;
         cursor: pointer;
+        font-size: 16px;
+        &:hover {
+            color: #96232b;
+        }
+    }
+}
+
+.user-favorite {
+    display: inline-block;
+    background-color: white;
+    width: 50%;
+    margin-top: 50px;
+    margin-bottom:50px;
+    margin-left: 3%;
+    padding: 30px;
+    border-radius: 5px;
+    h1 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    h2 {
+        margin-top: 20px;
+    }
+}
+
+.user-favorite-rest {
+    height: fit-content;
+    margin: 20px 20px;
+}
+
+.user-favorite-rest-link-styling {
+    img {
+        height: 100px;
+        width: 100px;
+        border-radius: 5px;
+        display:inline-block;
+    }
+}
+
+.user-favorite-rest-content {
+    display: inline-block;
+    margin: 0px 20px;
+    button {
+        margin-left: 10px;
+        background-color: white;
+        border: 0;
+        cursor: pointer;
+        color: rgb(77, 77, 77);
+        font-weight: 600;
+        margin-bottom: 10px;
+        &:hover {
+            color: #96232b;
+        }
+    }
+}
+
+.user-fav-saved {
+    color: #da3743;
+}
+
+.user-favorite-rest-link-styling {
+    color: rgb(77, 77, 77);
+    text-decoration: none;
+    &:hover {
+        color: black;
+    }
+    h2 {
+        margin-left: 10px;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+}
+
+.user-favorite-rest-info p {
+    display: inline-block;
+    margin: 0px 10px;
+    color: rgb(77, 77, 77);
+    margin-bottom: 20px;
+}
+
+.user-favorite-reserve-now {
+    display: inline;
+    text-decoration: none;
+    button {
+        border: 0;
+        background-color: #da3743;
+        color: white;
+        border-radius: 5px;
+        padding: 20px;
+        float: right;
+        margin-top: 30px;
+        cursor: pointer;
+        &:hover {
+            color: white;
+            background-color: #96232b;
+            transition: 200ms;
+        }
+    } 
+}
+
+.user-favorite-stars {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    * {
+        display: inline-block;
     }
 }

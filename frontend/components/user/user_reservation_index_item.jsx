@@ -105,6 +105,7 @@ class UserReservationIndexItem extends React.Component {
                                     <span>
                                         <FontAwesomeIcon className="user-profile-review" icon={farCommentAlt} />
                                     </span>
+                                    &nbsp;
                                     See/Edit your review
                                 </h2>
                             </Link>
@@ -119,7 +120,11 @@ class UserReservationIndexItem extends React.Component {
                                     restaurant: restaurant
                                 }
                             }}>
-                                <h2>Write Review</h2>
+                                <h2>
+                                    <FontAwesomeIcon className="user-profile-review" icon={farCommentAlt} />
+                                    &nbsp;
+                                    Write Review
+                                </h2>
                             </Link>
                         </div>
                     )}

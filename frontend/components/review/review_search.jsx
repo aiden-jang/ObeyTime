@@ -7,8 +7,7 @@ import {
     faStarHalfAlt as fasStarHalfAlt
 } from '@fortawesome/free-solid-svg-icons';
 import {
-    faStar as farStar,
-    faCommentAlt as farCommentAlt
+    faStar as farStar
 } from '@fortawesome/free-regular-svg-icons';
 
 class ReviewSearch extends React.Component {
