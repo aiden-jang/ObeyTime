@@ -498,6 +498,6 @@ review2 = Review.create!(
         rating_ambience: Faker::Number.within(range: 1..5),
         rating_value: Faker::Number.within(range: 1..5),
         noise_level: Faker::Number.within(range: 1..4),
-        body: BetterLorem.w(Faker::Number.within(range: 10..50), true, true)
+        body: BetterLorem.w(Faker::Number.within(range: 20..50), true, true)
     )
 end
