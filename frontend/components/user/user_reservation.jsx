@@ -20,7 +20,7 @@ class UserReservation extends React.Component {
     }
 
     render () {
-        if (!(this.props.restaurants.length && this.props.reservations.length)) return null;
+        if (this.props.restaurants.length < 1 ||  this.props.reservations.length < 1) return null;
 
         const { currentUser, reservations, restaurants, reviews, favorites } = this.props;
 
