@@ -48,8 +48,8 @@
         justify-content: space-between;
     }
     label:nth-child(11) div {
-            margin-right: 30px;
-        }
+        margin-right: 30px;
+    }
 }
 
 .review-comment {
@@ -65,6 +65,7 @@
         resize: none;
     }
 }
+
 .review-form input[type="submit"] {
     background-color: #da3743;
     color: white;

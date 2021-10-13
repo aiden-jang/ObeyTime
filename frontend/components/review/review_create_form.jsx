@@ -6,18 +6,9 @@ class ReviewCreateForm extends React.Component {
     constructor(props) {
         super(props);
     
-        // if (!this.props.location.state) {
-        //     props.history.push('/');
-        //     window.location.reload();   
-        // }
-        this.props.location.state = {
-            restaurant: {
-                id:133,
-                name: 'testing'
-            },
-            reservation: {
-                date: '10/01/2021'
-            }
+        if (!this.props.location.state) {
+            props.history.push('/');
+            window.location.reload();   
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -32,6 +23,7 @@ class ReviewCreateForm extends React.Component {
       
     handleSubmit(e) {
         e.preventDefault();
+        
         this.props.createReview(this.state)
           .then(res => this.props.history.push('my/reservations'));
     }
