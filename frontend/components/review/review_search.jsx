@@ -37,17 +37,17 @@ class ReviewSearch extends React.Component {
 
     createElement(n) {
         if (n >= 4.5) {
-            return (<span>Exceptional</span>);
+            return (<span>&nbsp;Exceptional&nbsp;</span>);
         } else if (n >= 4.0) {
-            return (<span>Excellent</span>);
+            return (<span>&nbsp;Excellent&nbsp;</span>);
         } else if (n >= 3.5) {
-            return (<span>Awesome</span>);
+            return (<span>&nbsp;Awesome&nbsp;</span>);
         } else if (n >= 3.0) {
-            return (<span>Very Good</span>);
+            return (<span>&nbsp;Very Good&nbsp;</span>);
         } else if (n >= 2.0) {
-            return (<span>Good</span>);
+            return (<span>&nbsp;Good&nbsp;</span>);
         } else if (n > 0) {
-            return (<span>Oh no...</span>);
+            return (<span>&nbsp;Oh no...&nbsp;</span>);
         }
     }
 
