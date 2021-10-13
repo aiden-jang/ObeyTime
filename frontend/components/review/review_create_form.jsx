@@ -59,8 +59,10 @@ class ReviewCreateForm extends React.Component {
         const { currentUser } = this.props;
         const { restaurant, reservation } = this.props.location.state;
 
+        console.log(this.state)
         return (
-            <form className="review-form" onSubmit={this.handleSubmit}>
+            <div className="review-background">
+<form className="review-form" onSubmit={this.handleSubmit}>
                 <div className="review-heading">
                     <h1>{currentUser.first_name}, how was your experience at {restaurant.name}</h1>
                     <h2>Rate your dining experience (required)</h2>
@@ -69,55 +71,96 @@ class ReviewCreateForm extends React.Component {
                 <div className="review-stars">
                     <label>
                         Overall
-                        <input type="radio" name="rating-overall" value="1" onChange={this.update('rating_overall')} />
-                        <input type="radio" name="rating-overall" value="2" onChange={this.update('rating_overall')} />
-                        <input type="radio" name="rating-overall" value="3" onChange={this.update('rating_overall')} />
-                        <input type="radio" name="rating-overall" value="4" onChange={this.update('rating_overall')} />
-                        <input type="radio" name="rating-overall" value="5" onChange={this.update('rating_overall')} />
+                        <div>
+                            <input type="radio" id="ro1" name="rating-overall" value="5" onChange={this.update('rating_overall')} />
+                            <label htmlFor="ro1">★</label>
+                            <input type="radio" id="ro2" name="rating-overall" value="4" onChange={this.update('rating_overall')} />
+                            <label htmlFor="ro2">★</label>
+                            <input type="radio" id="ro3" name="rating-overall" value="3" onChange={this.update('rating_overall')} />
+                            <label htmlFor="ro3">★</label>
+                            <input type="radio" id="ro4" name="rating-overall" value="2" onChange={this.update('rating_overall')} />
+                            <label htmlFor="ro4">★</label>
+                            <input type="radio" id="ro5" name="rating-overall" value="1" onChange={this.update('rating_overall')} />
+                            <label htmlFor="ro5">★</label>
+                        </div>
                     </label>
                     <br />
                     <label>
                         Food
-                        <input type="radio" name="rating-food" value="1" onChange={this.update('rating_food')} />
-                        <input type="radio" name="rating-food" value="2" onChange={this.update('rating_food')} />
-                        <input type="radio" name="rating-food" value="3" onChange={this.update('rating_food')} />
-                        <input type="radio" name="rating-food" value="4" onChange={this.update('rating_food')} />
-                        <input type="radio" name="rating-food" value="5" onChange={this.update('rating_food')} />
+                        <div>
+                            <input type="radio" id="rf1" name="rating-food" value="5" onChange={this.update('rating_food')} />
+                            <label htmlFor="rf1">★</label>
+                            <input type="radio" id="rf2" name="rating-food" value="4" onChange={this.update('rating_food')} />
+                            <label htmlFor="rf2">★</label>
+                            <input type="radio" id="rf3" name="rating-food" value="3" onChange={this.update('rating_food')} />
+                            <label htmlFor="rf3">★</label>
+                            <input type="radio" id="rf4" name="rating-food" value="2" onChange={this.update('rating_food')} />
+                            <label htmlFor="rf4">★</label>
+                            <input type="radio" id="rf5" name="rating-food" value="1" onChange={this.update('rating_food')} />
+                            <label htmlFor="rf5">★</label>
+                        </div>
                     </label>
                     <br />
                     <label>
                         Service
-                        <input type="radio" name="rating-service" value="1" onChange={this.update('rating_service')} />
-                        <input type="radio" name="rating-service" value="2" onChange={this.update('rating_service')} />
-                        <input type="radio" name="rating-service" value="3" onChange={this.update('rating_service')} />
-                        <input type="radio" name="rating-service" value="4" onChange={this.update('rating_service')} />
-                        <input type="radio" name="rating-service" value="5" onChange={this.update('rating_service')} />
+                        <div>
+                            <input type="radio" id="rs1" name="rating-service" value="5" onChange={this.update('rating_service')} />
+                            <label htmlFor="rs1">★</label>
+                            <input type="radio" id="rs2" name="rating-service" value="4" onChange={this.update('rating_service')} />
+                            <label htmlFor="rs2">★</label>
+                            <input type="radio" id="rs3" name="rating-service" value="3" onChange={this.update('rating_service')} />
+                            <label htmlFor="rs3">★</label>
+                            <input type="radio" id="rs4" name="rating-service" value="2" onChange={this.update('rating_service')} />
+                            <label htmlFor="rs4">★</label>
+                            <input type="radio" id="rs5" name="rating-service" value="1" onChange={this.update('rating_service')} />
+                            <label htmlFor="rs5">★</label>
+                        </div>
                     </label>
                     <br />
                     <label>
                         Ambience
-                        <input type="radio" name="rating-ambience" value="1" onChange={this.update('rating_ambience')} />
-                        <input type="radio" name="rating-ambience" value="2" onChange={this.update('rating_ambience')} />
-                        <input type="radio" name="rating-ambience" value="3" onChange={this.update('rating_ambience')} />
-                        <input type="radio" name="rating-ambience" value="4" onChange={this.update('rating_ambience')} />
-                        <input type="radio" name="rating-ambience" value="5" onChange={this.update('rating_ambience')} />
+                        <div>
+                            <input type="radio" id="ra1" name="rating-ambience" value="5" onChange={this.update('rating_ambience')} />
+                            <label htmlFor="ra1">★</label>
+                            <input type="radio" id="ra2" name="rating-ambience" value="4" onChange={this.update('rating_ambience')} />
+                            <label htmlFor="ra2">★</label>
+                            <input type="radio" id="ra3" name="rating-ambience" value="3" onChange={this.update('rating_ambience')} />
+                            <label htmlFor="ra3">★</label>
+                            <input type="radio" id="ra4" name="rating-ambience" value="2" onChange={this.update('rating_ambience')} />
+                            <label htmlFor="ra4">★</label>
+                            <input type="radio" id="ra5" name="rating-ambience" value="1" onChange={this.update('rating_ambience')} />
+                            <label htmlFor="ra5">★</label>
+                        </div>
                     </label>
                     <br />
                     <label>
                         Value
-                        <input type="radio" name="rating-value" value="1" onChange={this.update('rating_value')} />
-                        <input type="radio" name="rating-value" value="2" onChange={this.update('rating_value')} />
-                        <input type="radio" name="rating-value" value="3" onChange={this.update('rating_value')} />
-                        <input type="radio" name="rating-value" value="4" onChange={this.update('rating_value')} />
-                        <input type="radio" name="rating-value" value="5" onChange={this.update('rating_value')} />
+                        <div>
+                            <input type="radio" id="rv1" name="rating-value" value="5" onChange={this.update('rating_value')} />
+                            <label htmlFor="rv1">★</label>
+                            <input type="radio" id="rv2" name="rating-value" value="4" onChange={this.update('rating_value')} />
+                            <label htmlFor="rv2">★</label>
+                            <input type="radio" id="rv3" name="rating-value" value="3" onChange={this.update('rating_value')} />
+                            <label htmlFor="rv3">★</label>
+                            <input type="radio" id="rv4" name="rating-value" value="2" onChange={this.update('rating_value')} />
+                            <label htmlFor="rv4">★</label>
+                            <input type="radio" id="rv5" name="rating-value" value="1" onChange={this.update('rating_value')} />
+                            <label htmlFor="rv5">★</label>
+                        </div>
                     </label>
                     <br />
                     <label>
                         Noise level
-                        <input type="radio" name="rating-noise" value="1" onChange={this.update('noise_level')} />
-                        <input type="radio" name="rating-noise" value="2" onChange={this.update('noise_level')} />
-                        <input type="radio" name="rating-noise" value="3" onChange={this.update('noise_level')} />
-                        <input type="radio" name="rating-noise" value="4" onChange={this.update('noise_level')} />
+                        <div>
+                            <input type="radio" id="rn1" name="rating-noise" value="4" onChange={this.update('noise_level')} />
+                            <label htmlFor="rn1">▮</label>
+                            <input type="radio" id="rn2" name="rating-noise" value="3" onChange={this.update('noise_level')} />
+                            <label htmlFor="rn2">◼</label>
+                            <input type="radio" id="rn3" name="rating-noise" value="2" onChange={this.update('noise_level')} />
+                            <label htmlFor="rn3">▪</label>
+                            <input type="radio" id="rn4" name="rating-noise" value="1" onChange={this.update('noise_level')} />
+                            <label htmlFor="rn4">⬝</label>
+                        </div>
                     </label>
                 </div>
                 <div className="review-heading-2">
@@ -129,6 +172,8 @@ class ReviewCreateForm extends React.Component {
                 </div>
                     <input type="submit" value="Submit your review" />
             </form>
+            </div>
+            
         )
     }
 }
