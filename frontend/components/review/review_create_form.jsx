@@ -37,27 +37,28 @@ class ReviewCreateForm extends React.Component {
           };
       }
       
-      handleSubmit(e) {
+    handleSubmit(e) {
         e.preventDefault();
         this.props.createReview(this.state)
           .then(res => this.props.history.push('my/reservations'));
-      }
+    }
 
-      update(field) {
-          if (field === 'body') {
+    update(field) {
+        if (field === 'body') {
             return e => this.setState({
                 [field]: e.target.value
               });
-          } else {
+        } else {
             return e => this.setState({
                 [field]: parseInt(e.target.value)
-              });
-          }
-      }
+            });
+        }
+    }
 
-      render () {
-          const { currentUser } = this.props;
-          const { restaurant, reservation } = this.props.location.state;
+    render () {
+        const { currentUser } = this.props;
+        const { restaurant, reservation } = this.props.location.state;
+
         return (
             <form className="review-form" onSubmit={this.handleSubmit}>
                 <div className="review-heading">
@@ -131,11 +132,13 @@ class ReviewCreateForm extends React.Component {
         )
     }
 }
+
 const mapStateToProps = state => ({
     currentUser: state.session.currentUser,
-})
+});
+
 const mapDispatchToProps = dispatch => ({
-    createReview: (review) => dispatch(createReview(review)),
+    createReview: review => dispatch(createReview(review)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ReviewCreateForm);
