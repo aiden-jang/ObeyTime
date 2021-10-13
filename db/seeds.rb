@@ -380,8 +380,9 @@ reservation1 = Reservation.create!(
     party_size: 5,
     date: '2021-07-04',
     time: '17:00',
-    special_request: ""
+    special_request: ''
 )
+
 reservation2 = Reservation.create!(
     user_id: user1.id,
     restaurant_id: restaurant2.id,
@@ -390,8 +391,9 @@ reservation2 = Reservation.create!(
     party_size: 2,
     date: '2021-08-21',
     time: '17:30',
-    special_request: ""
+    special_request: ''
 )
+
 reservation3 = Reservation.create!(
     user_id: user1.id,
     restaurant_id: restaurant3.id,
@@ -400,8 +402,9 @@ reservation3 = Reservation.create!(
     party_size: 5,
     date: '2021-09-04',
     time: '17:00',
-    special_request: ""
+    special_request: ''
 )
+
 reservation4 = Reservation.create!(
     user_id: user1.id,
     restaurant_id: restaurant4.id,
@@ -410,8 +413,9 @@ reservation4 = Reservation.create!(
     party_size: 3,
     date: '2021-12-04',
     time: '17:00',
-    special_request: ""
+    special_request: ''
 )
+
 reservation5 = Reservation.create!(
     user_id: user1.id,
     restaurant_id: restaurant5.id,
@@ -420,5 +424,68 @@ reservation5 = Reservation.create!(
     party_size: 2,
     date: '2021-12-20',
     time: '18:00',
-    special_request: ""
+    special_request: ''
 )
+
+favorite1 = Favorite.create!(
+    user_id: user1.id,
+    restaurant_id: restaurant5.id
+)
+
+favorite2 = Favorite.create!(
+    user_id: user1.id,
+    restaurant_id: restaurant8.id
+)
+
+favorite3 = Favorite.create!(
+    user_id: user1.id,
+    restaurant_id: restaurant14.id
+)
+
+favorite4 = Favorite.create!(
+    user_id: user1.id,
+    restaurant_id: restaurant2.id
+)
+
+favorite5 = Favorite.create!(
+    user_id: user1.id,
+    restaurant_id: restaurant17.id
+)
+
+review1 = Review.create!(
+    user_id: user1.id,
+    restaurant_id: restaurant3.id,
+    rating_overall: 2,
+    rating_food: 5,
+    rating_service: 4,
+    rating_ambience: 2,
+    rating_value: 1,
+    noise_level: 2,
+    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum curabitur vitae nunc sed velit.'
+)
+
+review2 = Review.create!(
+    user_id: user1.id,
+    restaurant_id: restaurant5.id,
+    rating_overall: 5,
+    rating_food: 5,
+    rating_service: 5,
+    rating_ambience: 5,
+    rating_value: 5,
+    noise_level: 2,
+    body: 'Nisl vel pretium lectus quam id leo in vitae turpis. Cum sociis natoque penatibus et magnis. Diam vel quam elementum pulvinar. Nec dui nunc mattis enim ut tellus. Viverra nam libero justo laoreet sit amet cursus sit. Eget felis eget nunc lobortis mattis aliquam faucibus purus. Faucibus purus in massa tempor nec feugiat. '
+)
+
+20.times do 
+    Review.create!(
+        user_id: user1.id + 1,
+        restaurant_id: restaurant1.id,
+        rating_overall: 5,
+        rating_food: 5,
+        rating_service: 5,
+        rating_ambience: 5,
+        rating_value: 5,
+        noise_level: 2,
+        body: ''
+    )
+end
