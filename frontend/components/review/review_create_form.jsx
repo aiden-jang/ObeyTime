@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createReview } from '../../actions/review_actions';
 
-
 class ReviewCreateForm extends React.Component {
     constructor(props) {
         super(props);
@@ -62,9 +61,10 @@ class ReviewCreateForm extends React.Component {
         console.log(this.state)
         return (
             <div className="review-background">
-<form className="review-form" onSubmit={this.handleSubmit}>
+                <form className="review-form" onSubmit={this.handleSubmit}>
                 <div className="review-heading">
                     <h1>{currentUser.first_name}, how was your experience at {restaurant.name}</h1>
+                    <hr />
                     <h2>Rate your dining experience (required)</h2>
                     <h2>Reservation made on {reservation.date}</h2>
                 </div>
@@ -163,6 +163,7 @@ class ReviewCreateForm extends React.Component {
                         </div>
                     </label>
                 </div>
+                <hr />
                 <div className="review-heading-2">
                     <h1>Write a review</h1>
                     <h2>Help diners decide where to eat. Remember to keep it short, simple and specific.</h2>
