@@ -6,15 +6,27 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'open-uri'
+require 'faker'
+require 'betterlorem'
 
 Restaurant.destroy_all
 Reservation.destroy_all
 User.destroy_all
+Favorite.destroy_all
+Review.destroy_all
 
 user1 = User.create!(
     email: 'demo@mail.com',
-    first_name: 'Aiden',
-    last_name: 'Jang',
+    first_name: 'Demo',
+    last_name: 'Demo',
+    password: 'password123',
+    primary_location: 'New York / Tri-State Area'
+)
+
+user2 = User.create!(
+    email: 'admin@mail.com',
+    first_name: 'admin',
+    last_name: 'admin',
     password: 'password123',
     primary_location: 'New York / Tri-State Area'
 )
@@ -476,16 +488,16 @@ review2 = Review.create!(
     body: 'Nisl vel pretium lectus quam id leo in vitae turpis. Cum sociis natoque penatibus et magnis. Diam vel quam elementum pulvinar. Nec dui nunc mattis enim ut tellus. Viverra nam libero justo laoreet sit amet cursus sit. Eget felis eget nunc lobortis mattis aliquam faucibus purus. Faucibus purus in massa tempor nec feugiat. '
 )
 
-20.times do 
-    Review.create!(
-        user_id: user1.id + 1,
-        restaurant_id: restaurant1.id,
-        rating_overall: 5,
-        rating_food: 5,
-        rating_service: 5,
-        rating_ambience: 5,
-        rating_value: 5,
-        noise_level: 2,
-        body: ''
+80.times do 
+    Review.create(
+        user_id: user2.id,
+        restaurant_id: Faker::Number.within(range: 23..44),
+        rating_overall: Faker::Number.within(range: 1..5),
+        rating_food: Faker::Number.within(range: 1..5),
+        rating_service: Faker::Number.within(range: 1..5),
+        rating_ambience: Faker::Number.within(range: 1..5),
+        rating_value: Faker::Number.within(range: 1..5),
+        noise_level: Faker::Number.within(range: 1..4),
+        body: BetterLorem.w(Faker::Number.within(range: 10..50), true, true)
     )
 end

@@ -17,15 +17,16 @@ class ReviewStar extends React.Component {
     }
 
     createElements(n) {
+        console.log(n)
         let elements = [];
         if ( n > 0) {
-            for(let i =1; i < n; i++){
+            for(let i =1; i <= n; i++){
                 elements.push(<span key={i}><FontAwesomeIcon className="stars-filled" icon={fasStar} /></span>);
             }
             if (n % 1 != 0) {
                 elements.push(<span key={0.5}><FontAwesomeIcon className="stars-half" icon={fasStarHalfAlt} /></span>);
             }
-            for(let i = n; i < 4; i++){
+            for(let i = n; i <= 4; i++){
                 elements.push(<span key={10+i}><FontAwesomeIcon className="stars-unfilled" icon={farStar} /></span>);
             }
         } else {
