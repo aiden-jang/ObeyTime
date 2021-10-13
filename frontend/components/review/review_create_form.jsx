@@ -26,12 +26,6 @@ class ReviewCreateForm extends React.Component {
         this.state = {
             user_id: this.props.currentUser.id,
             restaurant_id: this.props.location.state.restaurant.id,
-            rating_overall : 5,
-            rating_food : 5,
-            rating_service : 5,
-            rating_ambience : 5,
-            rating_value : 5,
-            noise_level: 1,
             body: ''
         };
     }
@@ -79,7 +73,7 @@ class ReviewCreateForm extends React.Component {
                                 <label htmlFor="ro3">★</label>
                                 <input type="radio" id="ro4" name="rating-overall" value="2" onChange={this.update('rating_overall')} />
                                 <label htmlFor="ro4">★</label>
-                                <input type="radio" id="ro5" name="rating-overall" value="1" onChange={this.update('rating_overall')} />
+                                <input type="radio" id="ro5" name="rating-overall" value="1" onChange={this.update('rating_overall')} required />
                                 <label htmlFor="ro5">★</label>
                             </div>
                         </label>
@@ -95,7 +89,7 @@ class ReviewCreateForm extends React.Component {
                                 <label htmlFor="rf3">★</label>
                                 <input type="radio" id="rf4" name="rating-food" value="2" onChange={this.update('rating_food')} />
                                 <label htmlFor="rf4">★</label>
-                                <input type="radio" id="rf5" name="rating-food" value="1" onChange={this.update('rating_food')} />
+                                <input type="radio" id="rf5" name="rating-food" value="1" onChange={this.update('rating_food')} required />
                                 <label htmlFor="rf5">★</label>
                             </div>
                         </label>
@@ -111,7 +105,7 @@ class ReviewCreateForm extends React.Component {
                                 <label htmlFor="rs3">★</label>
                                 <input type="radio" id="rs4" name="rating-service" value="2" onChange={this.update('rating_service')} />
                                 <label htmlFor="rs4">★</label>
-                                <input type="radio" id="rs5" name="rating-service" value="1" onChange={this.update('rating_service')} />
+                                <input type="radio" id="rs5" name="rating-service" value="1" onChange={this.update('rating_service')} required />
                                 <label htmlFor="rs5">★</label>
                             </div>
                         </label>
@@ -127,7 +121,7 @@ class ReviewCreateForm extends React.Component {
                                 <label htmlFor="ra3">★</label>
                                 <input type="radio" id="ra4" name="rating-ambience" value="2" onChange={this.update('rating_ambience')} />
                                 <label htmlFor="ra4">★</label>
-                                <input type="radio" id="ra5" name="rating-ambience" value="1" onChange={this.update('rating_ambience')} />
+                                <input type="radio" id="ra5" name="rating-ambience" value="1" onChange={this.update('rating_ambience')} required />
                                 <label htmlFor="ra5">★</label>
                             </div>
                         </label>
@@ -143,7 +137,7 @@ class ReviewCreateForm extends React.Component {
                                 <label htmlFor="rv3">★</label>
                                 <input type="radio" id="rv4" name="rating-value" value="2" onChange={this.update('rating_value')} />
                                 <label htmlFor="rv4">★</label>
-                                <input type="radio" id="rv5" name="rating-value" value="1" onChange={this.update('rating_value')} />
+                                <input type="radio" id="rv5" name="rating-value" value="1" onChange={this.update('rating_value')} required />
                                 <label htmlFor="rv5">★</label>
                             </div>
                         </label>
@@ -157,7 +151,7 @@ class ReviewCreateForm extends React.Component {
                                 <label htmlFor="rn2">◼</label>
                                 <input type="radio" id="rn3" name="rating-noise" value="2" onChange={this.update('noise_level')} />
                                 <label htmlFor="rn3">▪</label>
-                                <input type="radio" id="rn4" name="rating-noise" value="1" onChange={this.update('noise_level')} />
+                                <input type="radio" id="rn4" name="rating-noise" value="1" onChange={this.update('noise_level')} required />
                                 <label htmlFor="rn4">⬝</label>
                             </div>
                         </label>
@@ -168,7 +162,7 @@ class ReviewCreateForm extends React.Component {
                         <h2>Help diners decide where to eat. Remember to keep it short, simple and specific.</h2>
                     </div>
                     <div className="review-comment">
-                        <textarea placeholder="Write a review" onChange={this.update('body')}/>
+                        <textarea placeholder="Write a review" onChange={this.update('body')} />
                     </div>
                     <input type="submit" value="Submit your review" />
                 </form>

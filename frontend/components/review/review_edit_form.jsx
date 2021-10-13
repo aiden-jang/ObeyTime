@@ -31,19 +31,20 @@ class ReviewEditForm extends React.Component {
 
     modifyReview (e) {
         e.preventDefault();
+        console.log(this.state)
         this.props.updateReview(this.state)
             .then(res => this.props.history.push('/my/reservations'));
     }
 
     render () {
-        const { restaurant, reservation, currentUser, review } = this.props.location.state;
+        const { restaurant, reservation, currentUser } = this.props.location.state;
         const { deleteReview } = this.props;
 
-        if (!review) return null;
-        
+        if (!this.props.location.state.review) return null;
+
         return(
             <div className="review-background">
-            <form className="review-form" onSubmit={this.handleSubmit}>
+            <form className="review-form" onSubmit={this.modifyReview}>
                 <div className="review-heading">
                     <h1>{currentUser.first_name}, how was your experience at {restaurant.name}</h1>
                     <hr />
@@ -154,7 +155,7 @@ class ReviewEditForm extends React.Component {
                     <textarea value={this.state.body} onChange={this.update('body')}/>
                 </div>
                 <input type="submit" value="Edit your review" />
-                <input type="submit" onClick={() => deleteReview(review.id).then(res => this.props.history.push('/my/reservations'))} value='Delete your review' />
+                <input type="submit" onClick={() => deleteReview(this.state.id).then(res => this.props.history.push('/my/reservations'))} value='Delete your review' />
             </form>
         </div>
         )

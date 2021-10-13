@@ -39,7 +39,7 @@
         }
     }
     input {
-        display: none;
+        opacity: 0;
     }
     input:checked ~ label {
         color: #da3743;
