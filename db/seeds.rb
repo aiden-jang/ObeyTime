@@ -515,7 +515,7 @@ review2 = Review.create!(
 80.times do 
     Review.create(
         user_id: user2.id,
-        restaurant_id: Faker::Number.within(range: 23..44),
+        restaurant_id: Faker::Number.within(range: 1..22),
         rating_overall: Faker::Number.within(range: 1..5),
         rating_food: Faker::Number.within(range: 1..5),
         rating_service: Faker::Number.within(range: 1..5),
