@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 require 'open-uri'
 require 'faker'
 require 'betterlorem'
@@ -42,7 +43,7 @@ restaurant1 = Restaurant.create!(
     cuisine: 'American',
     neighborhood: 'Hell\'s Kitchen',
     parking_details: 'Street Parking',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    description: Faker::Restaurant.description 
 )
 
 restaurant2 = Restaurant.create!(
@@ -56,7 +57,7 @@ restaurant2 = Restaurant.create!(
     cuisine: 'Italian',
     neighborhood: 'Meatpacking District',
     parking_details: 'Street Parking',
-    description: 'Habitant morbi tristique senectus et netus. Sed odio morbi quis commodo odio aenean sed adipiscing. '
+    description: Faker::Restaurant.description 
 )
 
 restaurant3 = Restaurant.create!(
@@ -70,7 +71,7 @@ restaurant3 = Restaurant.create!(
     cuisine: 'Italian',
     neighborhood: 'Chelsea',
     parking_details: 'Street Parking',
-    description: 'Neque laoreet suspendisse interdum consectetur libero. Et malesuada fames ac turpis egestas. In hac habitasse platea dictumst vestibulum rhoncus est pellentesque.'
+    description: Faker::Restaurant.description 
 )
 
 restaurant4 = Restaurant.create!(
@@ -84,7 +85,7 @@ restaurant4 = Restaurant.create!(
     cuisine: 'French',
     neighborhood: 'East Village',
     parking_details: 'Street Parking',
-    description: 'Ac tortor dignissim convallis aenean et. Id faucibus nisl tincidunt eget nullam non. Elit ullamcorper dignissim cras tincidunt lobortis. Sit amet risus nullam eget.'
+    description: Faker::Restaurant.description 
 )
 
 restaurant5 = Restaurant.create!(
@@ -98,7 +99,7 @@ restaurant5 = Restaurant.create!(
     cuisine: 'French',
     neighborhood: 'SoHo',
     parking_details: 'Street Parking',
-    description: 'Ac turpis egestas sed tempus urna et pharetra pharetra. Purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus. Habitant morbi tristique senectus et netus. Aenean pharetra magna ac placerat vestibulum lectus. '
+    description: Faker::Restaurant.description
 )
 
 restaurant6 = Restaurant.create!(
@@ -112,7 +113,7 @@ restaurant6 = Restaurant.create!(
     cuisine: 'Steakhouse',
     neighborhood: 'Hudson Yards',
     parking_details: 'Street Parking',
-    description: 'Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Tristique senectus et netus et malesuada fames. Ac tortor vitae purus faucibus ornare suspendisse sed.'
+    description: Faker::Restaurant.description
 )
 
 restaurant7 = Restaurant.create!(
@@ -126,8 +127,9 @@ restaurant7 = Restaurant.create!(
     cuisine: 'American',
     neighborhood: 'Upper West Side',
     parking_details: 'Street Parking',
-    description: 'Venenatis urna cursus eget nunc scelerisque viverra. Ipsum suspendisse ultrices gravida dictum. Molestie ac feugiat sed lectus. Tortor condimentum lacinia quis vel eros donec ac.'
+    description: Faker::Restaurant.description
 )
+
 restaurant8 = Restaurant.create!(
     name: 'J J Jamokes Restaurant',
     address: '8198 Anderson Street New York, NY 10016',
@@ -139,7 +141,7 @@ restaurant8 = Restaurant.create!(
     cuisine: 'Barbecue',
     neighborhood: 'East Village',
     parking_details: 'Street Parking',
-    description: 'Cursus mattis molestie a iaculis. Augue ut lectus arcu bibendum at varius. Adipiscing bibendum est ultricies integer quis auctor elit sed.'
+    description: Faker::Restaurant.description
 )
 
 restaurant9 = Restaurant.create!(
@@ -153,7 +155,7 @@ restaurant9 = Restaurant.create!(
     cuisine: 'American',
     neighborhood: 'Little Italy',
     parking_details: 'Street Parking',
-    description: 'Mauris sit amet massa vitae tortor condimentum lacinia quis. Nibh sit amet commodo nulla facilisi nullam vehicula ipsum.'
+    description: Faker::Restaurant.description
 )
 
 restaurant10 = Restaurant.create!(
@@ -167,7 +169,7 @@ restaurant10 = Restaurant.create!(
     cuisine: 'Seafood',
     neighborhood: 'Hudson Yards',
     parking_details: 'Street Parking',
-    description: 'Ornare arcu dui vivamus arcu felis bibendum ut tristique. Velit ut tortor pretium viverra suspendisse potenti nullam. Enim neque volutpat ac tincidunt vitae. '
+    description: Faker::Restaurant.description
 )
 
 restaurant11 = Restaurant.create!(
@@ -181,7 +183,7 @@ restaurant11 = Restaurant.create!(
     cuisine: 'Barbecue',
     neighborhood: 'Hell\'s Kitchen',
     parking_details: 'Street Parking',
-    description: 'Varius duis at consectetur lorem donec massa sapien faucibus. Est placerat in egestas erat imperdiet sed. '
+    description: Faker::Restaurant.description
 )
 
 restaurant12 = Restaurant.create!(
@@ -195,7 +197,7 @@ restaurant12 = Restaurant.create!(
     cuisine: 'Barbecue',
     neighborhood: 'Hell\'s Kitchen',
     parking_details: 'Street Parking',
-    description: 'Est placerat in egestas erat imperdiet sed. Turpis egestas maecenas pharetra convallis. In ante metus dictum at tempor. Integer vitae justo eget magna fermentum iaculis eu.'
+    description: Faker::Restaurant.description
 )
 
 restaurant13 = Restaurant.create!(
@@ -209,7 +211,7 @@ restaurant13 = Restaurant.create!(
     cuisine: 'French',
     neighborhood: 'Meatpacking District',
     parking_details: 'Street Parking',
-    description: 'Pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus. Cursus turpis massa tincidunt dui ut ornare lectus. Volutpat est velit egestas dui id ornare arcu odio ut. '
+    description: Faker::Restaurant.description
 )
 
 restaurant14 = Restaurant.create!(
@@ -223,7 +225,7 @@ restaurant14 = Restaurant.create!(
     cuisine: 'American',
     neighborhood: 'Meatpacking District',
     parking_details: 'Street Parking',
-    description: 'Eget nullam non nisi est sit amet. Varius duis at consectetur lorem donec massa sapien faucibus et. Quam viverra orci sagittis eu volutpat. Integer malesuada nunc vel risus commodo viverra maecenas. Tempus quam pellentesque nec nam aliquam sem et tortor consequat. '
+    description: Faker::Restaurant.description
 )
 
 restaurant15 = Restaurant.create!(
@@ -237,7 +239,7 @@ restaurant15 = Restaurant.create!(
     cuisine: 'French',
     neighborhood: 'Chelsea',
     parking_details: 'Street Parking',
-    description: ' Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Non odio euismod lacinia at quis risus sed. '
+    description: Faker::Restaurant.description
 )
 
 restaurant16 = Restaurant.create!(
@@ -251,7 +253,7 @@ restaurant16 = Restaurant.create!(
     cuisine: 'Steakhouse',
     neighborhood: 'Chelsea',
     parking_details: 'Street Parking',
-    description: 'Venenatis tellus in metus vulputate. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Malesuada pellentesque elit eget gravida cum sociis. Sed arcu non odio euismod.'
+    description: Faker::Restaurant.description
 )
 
 restaurant17 = Restaurant.create!(
@@ -265,7 +267,7 @@ restaurant17 = Restaurant.create!(
     cuisine: 'Italian',
     neighborhood: 'SoHo',
     parking_details: 'Street Parking',
-    description: 'Lectus mauris ultrices eros in cursus. Suspendisse potenti nullam ac tortor. Nulla malesuada pellentesque elit eget gravida cum sociis.'
+    description: Faker::Restaurant.description
 )
 
 restaurant18 = Restaurant.create!(
@@ -279,7 +281,7 @@ restaurant18 = Restaurant.create!(
     cuisine: 'Seafood',
     neighborhood: 'SoHo',
     parking_details: 'Street Parking',
-    description: 'Interdum velit laoreet id donec. Laoreet suspendisse interdum consectetur libero id. Sit amet luctus venenatis lectus magna fringilla urna porttitor. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. Augue neque gravida in fermentum et sollicitudin ac orci phasellus.'
+    description: Faker::Restaurant.description
 )
 
 restaurant19 = Restaurant.create!(
@@ -293,7 +295,7 @@ restaurant19 = Restaurant.create!(
     cuisine: 'Seafood',
     neighborhood: 'East Village',
     parking_details: 'Street Parking',
-    description: 'In hac habitasse platea dictumst vestibulum rhoncus. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. In cursus turpis massa tincidunt dui ut ornare lectus. Id volutpat lacus laoreet non curabitur gravida arcu ac tortor.'
+    description: Faker::Restaurant.description
 )
 
 restaurant20 = Restaurant.create!(
@@ -307,7 +309,7 @@ restaurant20 = Restaurant.create!(
     cuisine: 'French',
     neighborhood: 'Upper West Side',
     parking_details: 'Street Parking',
-    description: 'Tortor condimentum lacinia quis vel eros donec ac odio tempor. '
+    description: Faker::Restaurant.description
 )
 
 restaurant21 = Restaurant.create!(
@@ -321,7 +323,7 @@ restaurant21 = Restaurant.create!(
     cuisine: 'American',
     neighborhood: 'SoHo',
     parking_details: 'Street Parking',
-    description: 'Tellus cras adipiscing enim eu turpis egestas pretium. Sed lectus vestibulum mattis ullamcorper. Dictum varius duis at consectetur lorem donec. Vitae turpis massa sed elementum tempus egestas sed.'
+    description: Faker::Restaurant.description
 )
 
 restaurant22 = Restaurant.create!(
@@ -335,7 +337,7 @@ restaurant22 = Restaurant.create!(
     cuisine: 'American',
     neighborhood: 'Meatpacking District',
     parking_details: 'Street Parking',
-    description: 'Etiam tempor orci eu lobortis elementum nibh tellus molestie. Convallis convallis tellus id interdum velit laoreet id donec ultrices. '
+    description: Faker::Restaurant.description
 )
 
 photo1 = URI.open('https://obeytime-seeds.s3.amazonaws.com/restaurant-1.jpeg')
@@ -473,7 +475,7 @@ review1 = Review.create!(
     rating_ambience: 2,
     rating_value: 1,
     noise_level: 2,
-    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum curabitur vitae nunc sed velit.'
+    body: Faker::Restaurant.review
 )
 
 review2 = Review.create!(
@@ -485,7 +487,7 @@ review2 = Review.create!(
     rating_ambience: 5,
     rating_value: 5,
     noise_level: 2,
-    body: 'Nisl vel pretium lectus quam id leo in vitae turpis. Cum sociis natoque penatibus et magnis. Diam vel quam elementum pulvinar. Nec dui nunc mattis enim ut tellus. Viverra nam libero justo laoreet sit amet cursus sit. Eget felis eget nunc lobortis mattis aliquam faucibus purus. Faucibus purus in massa tempor nec feugiat. '
+    body: Faker::Restaurant.review
 )
 
 80.times do 
@@ -498,6 +500,6 @@ review2 = Review.create!(
         rating_ambience: Faker::Number.within(range: 1..5),
         rating_value: Faker::Number.within(range: 1..5),
         noise_level: Faker::Number.within(range: 1..4),
-        body: BetterLorem.w(Faker::Number.within(range: 20..50), true, true)
+        body: Faker::Restaurant.review
     )
 end
