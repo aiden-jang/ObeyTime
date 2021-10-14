@@ -15,6 +15,8 @@ ObeyTime, an OpenTable clone, is an online restaurant-reservation application th
 * User authentication
 * Find a restaurant
 * Make a reservation
+* Save a restaurant
+* Write a review
 
 ## Technologies
 
