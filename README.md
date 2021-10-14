@@ -101,7 +101,7 @@ createElements(n) {
     }
 ```
 
-### Review Stars
+### Reservations List and Sort
 
 Instead of making two separate backend requests to get the reservations, this function can work with only one request. It separates the reservations by today's date and reverses the order so the most recent ones will stay on the top.
 
