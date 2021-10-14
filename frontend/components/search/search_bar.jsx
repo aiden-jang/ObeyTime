@@ -51,10 +51,12 @@ class SearchBar extends React.Component {
                         </select>
                         <input type="text"
                             className="search-input filter"
-                            placeholder="Location, Restaurant, or Cuisine (eg. SoHo)"
+                            placeholder="Location, Restaurant, Cuisine (eg. SoHo)"
                             onChange={this.updateInput}
+                            required
                         />
                         <input className="search-input submit" type="submit" value="Let's go" />
+                        <input className="search-input submit" type="submit" value="Explore" onClick={ () => this.props.history.push({ pathname: '/search' }) } />
                     </div>
                 </form>
             </div>

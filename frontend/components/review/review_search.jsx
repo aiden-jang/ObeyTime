@@ -47,7 +47,7 @@ class ReviewSearch extends React.Component {
         } else if (n >= 2.0) {
             return (<span>&nbsp;Good&nbsp;</span>);
         } else if (n > 0) {
-            return (<span>&nbsp;Oh no...&nbsp;</span>);
+            return (<span>&nbsp;Below Average&nbsp;</span>);
         }
     }
 

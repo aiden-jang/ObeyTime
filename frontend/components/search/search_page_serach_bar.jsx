@@ -46,8 +46,10 @@ class SearchPageSearchBar extends React.Component {
                             className="search-input filter"
                             placeholder="Location, Restaurant, or Cuisine"
                             onChange={this.updateInput}
+                            required
                         />
                         <input className="search-input submit" type="submit" value="Find a Table" />
+                        <input className="search-input submit" type="submit" value="Explore" onClick={ () => window.location.reload() } />
                     </div>
                 </form>
             </div>

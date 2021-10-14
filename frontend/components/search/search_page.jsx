@@ -22,7 +22,11 @@ const SearchPage = ({ restaurants, updateFilter, fetchRestaurants, location }) =
                 />
             </div>
             <div className="search-result-container">
-                <h3>{restaurants.length} restaurants available in New York City </h3>
+                {restaurants.length === 0 ? (
+                    <h3>Search is currently limited to New York City. Please try again.</h3>
+                ) : (
+                    <h3>{restaurants.length} restaurants available in New York City </h3>                    
+                )}
                 <RestaurantIndex 
                     restaurants={restaurants}
                 />
