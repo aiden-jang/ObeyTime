@@ -12,11 +12,32 @@ ObeyTime, an OpenTable clone, is an online restaurant-reservation application th
 
 ## Features
 
-* User authentication
-* Find a restaurant
-* Make a reservation
-* Save a restaurant
-* Write a review
+### User authentication
+
+![screenshot-1](/assets/screenshot-1.PNG)
+
+### Find a restaurant
+
+![screenshot-2](/assets/screenshot-1.PNG)
+
+### Make a reservation
+
+![screenshot-3](/assets/screenshot-1.PNG)
+
+### Save a restaurant
+
+![screenshot-4](/assets/screenshot-1.PNG)
+
+### Write a review
+
+![screenshot-5](/assets/screenshot-1.PNG)
+
+### User profile
+
+![screenshot-6](/assets/screenshot-1.PNG)
+
+![screenshot-7](/assets/screenshot-1.PNG)
+
 
 ## Technologies
 
@@ -27,3 +48,27 @@ ObeyTime, an OpenTable clone, is an online restaurant-reservation application th
 * Backend
   * Ruby on Rails
   * PostgreSQL
+
+## Code Snippet
+
+###
+
+```ruby
+  def index
+    if params[:search]
+      restaurants = Restaurant.where('lower(cuisine) like ? OR lower(neighborhood) like ? OR lower(name) like ?',
+        "%#{params[:search].downcase}%",
+        "%#{params[:search].downcase}%",
+        "%#{params[:search].downcase}%"
+        )
+    else
+      restaurants = Restaurant.all
+    end
+        
+    restaurants = restaurants.where('price_range IN (?)', params[:price]) if params[:price]
+    restaurants = restaurants.where('cuisine IN (?)', params[:cuisine]) if params[:cuisine]
+    restaurants = restaurants.where('neighborhood IN (?)', params[:neighborhood]) if params[:neighborhood]
+        
+    @restaurants = restaurants
+  end
+```
