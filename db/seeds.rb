@@ -441,6 +441,28 @@ reservation5 = Reservation.create!(
     special_request: ''
 )
 
+reservation6 = Reservation.create!(
+    user_id: user1.id,
+    restaurant_id: restaurant6.id,
+    phone_number: '2012012012',
+    email: user1.email,
+    party_size: 2,
+    date: '2021-02-20',
+    time: '18:00',
+    special_request: ''
+)
+
+reservation7 = Reservation.create!(
+    user_id: user1.id,
+    restaurant_id: restaurant19.id,
+    phone_number: '2012012012',
+    email: user1.email,
+    party_size: 2,
+    date: '2021-05-20',
+    time: '18:00',
+    special_request: ''
+)
+
 favorite1 = Favorite.create!(
     user_id: user1.id,
     restaurant_id: restaurant5.id
