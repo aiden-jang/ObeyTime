@@ -1,6 +1,8 @@
 class Api::RestaurantsController < ApplicationController    
     def index
-        if params[:search]
+        if params[:search].downcase == 'new york city' 
+            restaurants = Restaurant.all
+        elsif params[:search]
             restaurants = Restaurant.where('lower(cuisine) like ? OR lower(neighborhood) like ? OR lower(name) like ?',
                 "%#{params[:search].downcase}%",
                 "%#{params[:search].downcase}%",
