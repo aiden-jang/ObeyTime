@@ -90,7 +90,7 @@ class ReservationEditForm extends React.Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-    updateReservation: (reservation) => dispatch(updateReservation(reservation)),
+    updateReservation: reservation => dispatch(updateReservation(reservation)),
 });
 
 export default connect(null, mapDispatchToProps)(ReservationEditForm);
